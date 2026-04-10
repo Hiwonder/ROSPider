@@ -1,4 +1,4 @@
-# ROSSpider
+# ROSpider
 
 [English](README.md) | 中文
 
@@ -8,7 +8,7 @@
 
 ## 产品概述
 
-### 关于 ROSSpider
+### 关于 ROSpider
 
 ROSpider 是一个面向真实硬件落地的开源六足机器人 ROS 工作区。它不是单独的步态 demo，也不是只做视觉识别的小项目，而是把底层舵机控制、全身运动学、传感器驱动、AI 视觉玩法、SLAM 建图、自主导航，甚至多机编队，整合进了一套完整开发栈里。
 
@@ -67,7 +67,7 @@ ROSpider 的重点不只是“会走路”，它的软件层很完整：
 - ROS Melodic
 - Python 3
 - Jetson 系主控
-- 搭载激光雷达、RGB 相机、IMU 和总线舵机的 ROSSpider 硬件平台
+- 搭载激光雷达、RGB 相机、IMU 和总线舵机的 ROSpider 硬件平台
 
 ### 安装
 

@@ -1,4 +1,4 @@
-# ROSSpider
+# ROSpider
 
 English | [中文](README_cn.md)
 
@@ -8,13 +8,13 @@ English | [中文](README_cn.md)
 
 ## Product Overview
 
-### About ROSSpider
+### About ROSpider
 
 ROSpider is an open-source hexapod robot workspace built around ROS and real hardware deployment. Instead of being just a gait demo or a single perception example, this repository combines low-level servo control, whole-body kinematics, sensor drivers, AI vision applications, SLAM, autonomous navigation, and even multi-robot formation into one integrated development stack.
 
-The pain point it solves is straightforward: legged robots are exciting, but getting one to move stably, perceive the environment, and run real ROS applications usually means stitching together many disconnected packages yourself. ROSSpider packages that work into a practical stack, so you can move from hardware bringup to vision tracking, mapping, route planning, and experimental interaction much faster.
+The pain point it solves is straightforward: legged robots are exciting, but getting one to move stably, perceive the environment, and run real ROS applications usually means stitching together many disconnected packages yourself. ROSpider packages that work into a practical stack, so you can move from hardware bringup to vision tracking, mapping, route planning, and experimental interaction much faster.
 
-If you are building a teaching robot, prototyping a Jetson-based legged platform, or learning how locomotion and perception fit together in ROS, ROSSpider gives you a codebase that is much closer to a complete robot product than a toy example.
+If you are building a teaching robot, prototyping a Jetson-based legged platform, or learning how locomotion and perception fit together in ROS, ROSpider gives you a codebase that is much closer to a complete robot product than a toy example.
 
 ### The Core: A Hexapod Platform Built for Real ROS Work
 
@@ -67,7 +67,7 @@ This repository is especially valuable as a learning platform.
 - ROS Melodic
 - Python 3
 - Jetson-based controller board
-- ROSSpider hardware with LiDAR, RGB camera, IMU, and serial bus servos
+- ROSpider hardware with LiDAR, RGB camera, IMU, and serial bus servos
 
 ### Installation
 
