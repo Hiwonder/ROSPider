@@ -1,0 +1,1175 @@
+[2020/01/09 11:49:07 500][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:result_encoding  :  UTF-8  ]
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00008c0,843730) [in]
+[2020/01/09 11:49:07 500][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1313:init aitalk in ssb  ]
+[2020/01/09 11:49:07 500][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 500][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 500][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1176:esr_init | params:  engine_type=local,asr_res_path=fo|res/asr/common.jet,sample_rate=16000,grm_build_path=res/asr/GrmBuilld,local_grammar=call,result_type=xml,result_encoding=UTF-8  ]
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 500][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 500][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:engine_type  :  local  ]
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:4:0
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 500][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:asr_res_path  :  fo|res/asr/common.jet  ]
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 500][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 500][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:sample_rate  :  16000  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 501][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 501][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 501][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 501][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 501][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:grm_build_path  :  res/asr/GrmBuilld  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:local_grammar  :  call  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:result_type  :  xml  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:804:result_encoding  :  UTF-8  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1084: lucEsr.new   ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   201  Esr_New(900415e8, 90045c58, c9ffa8ec) [in]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   245  Esr_New(90045d50, 0) [out]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1001:file count =   1  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:924:file open type is:   fo  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:957:res/asr/common.jet  0  0  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1019:speech_plus_setting  0  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1032:2  nil  res/asr/common.jet  0  0  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   115  Esr_ResCheck(2, c9ffa840) [in]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   116  Esr_ResCheck(2, 90046558, 0, 0) [in]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   192  Esr_ResCheck( 0) [out]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1034:res_ver  2  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1035:res 5  af34a8bda449ea2bb2b5494a8caf585b  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1036:res_new_old_mark  v5pp  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1037:res_usr_name  ""  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1038:res_expires  1582774666  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1039:err  0  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1070:now expires:  1578541747  1582774666  ]
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1742 GetResFileInfoList_FO(90045d50, 90046558, 256, 0)
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1620 GetResPathInfo [in]
+[2020/01/09 11:49:07 501][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 501][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1478 ParseHeaderInfo() [in]
+[2020/01/09 11:49:07 501][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 501][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 1(ms) (fea=0)
+[2020/01/09 11:49:07 501][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 501][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00008c0,843730) [in]
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1599 ParseHeaderInfo() [out]
+[2020/01/09 11:49:07 502][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 502][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1728 GetResPathInfo(ret=0) [out]
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1781 GetResFileInfoList_FO(0)[out]
+[2020/01/09 11:49:07 502][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LENGINE    luac_auth. 182  luac_auth_read| enter
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LENGINE    luac_auth. 266  read_cnt| enter
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:5:0
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LENGINE    luac_auth. 361  read_cnt| leave
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [auth:82:aitalk  app  nil  nil  {"aitalk":{"ver":"2","bus":{"expire_date":1582774666,"forbid":"0","nlimit":10}}}  ]
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 502][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [auth:354:nil  ]
+[2020/01/09 11:49:07 502][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   255  Esr_Create(90045d50, 160, 90dc47b8) [in]
+[2020/01/09 11:49:07 503][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 503][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 503][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 1(ms) (fea=0)
+[2020/01/09 11:49:07 503][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 503][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 503][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 503][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 503][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 503][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 503][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 503][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 503][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 503][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:ivEsrSes
+[2020/01/09 11:49:07 503][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 503][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 503][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:ivTMRes_16K.irf
+[2020/01/09 11:49:07 503][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1873 GetResFileInfo(90045d50, ivTMRes_16K.irf, c9ffa11c)[in]
+[2020/01/09 11:49:07 503][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1894 GetResFileInfo | File[ivTMRes_16K.irf] Found!
+[2020/01/09 11:49:07 503][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1934 GetResFileInfo(0)[out]
+[2020/01/09 11:49:07 503][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1968 CBOpenFile | res_file_info=900475e0
+[2020/01/09 11:49:07 504][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1975 CBOpenFile | type=2
+[2020/01/09 11:49:07 504][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1978 CBOpenFile | ESR_FILE_OP_TYPE_FO : resource file name=res/asr/common.jet
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:6:0
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00021d0,843730) [in]
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 504][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 505][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 505][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 505][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 2(ms) (fea=0)
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 505][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 505][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 505][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 505][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:7:0
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00021d0,843730) [in]
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 505][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST EsrService:1:1:0
+[2020/01/09 11:49:07 506][Px45cd][Txa97fa700][DBG] MSPTHREAD  MSPThreadP 826  EsrService IDLE
+[2020/01/09 11:49:07 506][Px45cd][Txa97fa700][DBG] MSPTHREAD  MSPThreadP 868  EsrService RUN <EsrService>
+[2020/01/09 11:49:07 506][Px45cd][Txa97fa700][TRC] LENGINE    aitalk.c   356  ESRRunThread() [in]| esr->hObj = 0x9019d850
+[2020/01/09 11:49:07 506][Px45cd][Txa97fa700][TRC] LENGINE    aitalk.c   1443 service begin!
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   347  Esr_Create(0) [out]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   583  Esr_SetParam(90045d50, 103, 1) [in]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   598  Esr_SetParam(0) [out]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   583  Esr_SetParam(90045d50, 2, 10000) [in]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   598  Esr_SetParam(23102) [out]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   583  Esr_SetParam(90045d50, 110, 2000) [in]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   598  Esr_SetParam(0) [out]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [isr_local:1328:authorized_aitalk=  nil  ]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [isr_local:1329:forbid_aitalk=  0  ]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [auth:621:app  nil  nil  nil  ]
+[2020/01/09 11:49:07 506][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [auth:678:ath rquest  {"authorize":[{"busin":"aitalk","ver":"2.1.1"}]}  ]
+[2020/01/09 11:49:07 506][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 506][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 506][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 1(ms) (fea=0)
+[2020/01/09 11:49:07 506][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 507][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 507][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 507][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [config:91:select default  ]
+[2020/01/09 11:49:07 507][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [config:113:use general cloud  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:8:0
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00021d0,843730) [in]
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 507][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:645:paramkvsport is   nil  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:657:ns_enable=  1  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:659:2017-08--24 is_ns_need_close =   nil  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:665:net.nettype=  unknown  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:675:url.full=  nil  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:680:server_url_host=, server_url_port=, server_url_path=  open.xf-yun.com  nil  /msp.do  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:907:net type:  unknown  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:908:net operator:  def  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:909:use proxy:  false  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][WAR] LMOD       luac_logge 168  [auth:733:not login!  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [auth:570:[session] send auth request  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1105:session.domain=  open.xf-yun.com  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1106:url.host=  open.xf-yun.com  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1083:NAMESERVER START  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1086:name =   ath  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:634:ntt=  unknown  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1089:trans,ns_inprog =  0  ]
+[2020/01/09 11:49:07 507][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [ns:582:name server start  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:588:ns_sub =   ath  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:596:ns_host =   open.xf-yun.com  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:475:ns_host=  open.xf-yun.com  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:555:net_type =  standard  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:556:cmwapascmnet =  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:557:uniwapasuninet =  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:558:ctwapasctnet =  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:576:host=  hdns.xf-yun.com  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [network:263:gethostbyname  hdns.xf-yun.com  ns1  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] MSPADNS    MSPAsyncDn 328  MSPAsyncDns_Start() [in]
+[2020/01/09 11:49:07 508][Px45cd][Txaa7fc700][DBG] MSPADNS    MSPAsyncDn 195  gethostbyname(hdns.xf-yun.com) start [id=-1878757224]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] MSPADNS    MSPAsyncDn 328  MSPAsyncDns_Start() [in]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [auth:577:0  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [auth:540:lver:  nil  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [auth:545:cfg_ver:  nil  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1860:transport_obj.send | in  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1866:self.msg_flag_q  table(9004d7e0) ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1867:self.msg_q  table(90094750) ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1799:transport_obj.try2send | in  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1800:self.soc  nil  ]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1801:self.connected  false  ]
+[2020/01/09 11:49:07 508][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1802:self.latesterr  0  ]
+[2020/01/09 11:49:07 508][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 508][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 1(ms) (fea=0)
+[2020/01/09 11:49:07 508][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 508][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 508][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 508][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1873:transport_obj.send | out  ]
+[2020/01/09 11:49:07 508][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 508][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 508][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 508][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 508][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 508][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   583  Esr_SetParam(90045d50, 103, 1) [in]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   598  Esr_SetParam(0) [out]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   583  Esr_SetParam(90045d50, 2, 10000) [in]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   598  Esr_SetParam(23102) [out]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   583  Esr_SetParam(90045d50, 110, 2000) [in]
+[2020/01/09 11:49:07 508][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   598  Esr_SetParam(0) [out]
+[2020/01/09 11:49:07 508][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:2080:commit path:   res/asr/GrmBuilld/temp/commit  ]
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:9:0
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00021d0,843730) [in]
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 509][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   608  Esr_CommitNetWork(90045d50) [in]
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:call.g
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1214 CBCopyFile| pName=c, pGrmName=call_16K, ret=0
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1214 CBCopyFile| pName=c, pGrmName=call.g, ret=0
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:call.g
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1214 CBCopyFile| pName=b, pGrmName=bzvskdaa.d, ret=0
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1214 CBCopyFile| pName=a, pGrmName=aybifwaa.d, ret=0
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1214 CBCopyFile| pName=u, pGrmName=uikawbda.d, ret=0
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   650  Esr_CommitNetWork(0) [out]
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:2118:commit success!  ]
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   493  Esr_Start(90045d50, 90016878) [in]
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:call.g
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:bzvskdaa.d
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:aybifwaa.d
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:uikawbda.d
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   1081 CBOpenFile: open file name:call_16K
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   544  Esr_Start(0) [out]
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1451:esr_session_begin | esr_obj:start ret =  0  ]
+[2020/01/09 11:49:07 509][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2164:esr_session_begin, ret =   0  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac0365c0,ac02ff10) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9004c128) 1  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac033be0,ac02ff10) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9007c458) 2  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac035700,ac02ff10) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9003b768) 2  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac038150,ac02ff10) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9003b638) 2  ]
+[2020/01/09 11:49:07 510][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac0359f0,ac02ff10) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 510][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 1(ms) (fea=0)
+[2020/01/09 11:49:07 510][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9003b078) 2  ]
+[2020/01/09 11:49:07 510][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 510][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac035c30,ac02ff10) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:4:0
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 510][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9003af68) 2  ]
+[2020/01/09 11:49:07 510][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00021d0,843730) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac290200,ac02ff10) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9004bd58) 2  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac295280,ac02ff10) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9004bbf8) 2  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac295520,ac02ff10) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(90023618) 2  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac0359f0,ac02ff10) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(90023718) 2  ]
+[2020/01/09 11:49:07 511][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 511][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 511][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 511][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 1(ms) (fea=0)
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 511][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 511][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 512][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 6400, 2
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 512][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 6400
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac0359f0,ac02ff10) [in]
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00021d0,843730) [in]
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 512][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 512][Px45cd][Txaa7fc700][DBG] MSPADNS    MSPAsyncDn 270  gethostbyname(hdns.xf-yun.com), errno=0, h_errno=1
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(90023818) 2  ]
+[2020/01/09 11:49:07 512][Px45cd][Txaa7fc700][TRC] MSPADNS    MSPAsyncDn 292  gethostbyname(hdns.xf-yun.com) success! ip=42.62.116.35 ipv=v4 [id=-1878757224]
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 512][Px45cd][Txaa7fc700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:0
+[2020/01/09 11:49:07 512][Px45cd][Txaa7fc700][DBG] MSPADNS    MSPAsyncDn 195  gethostbyname(open.xf-yun.com) start [id=-1878873528]
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(b8000910,ac02ff10) [in]
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [network:245:dns resp  0  ns1  ]
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:422:ns dns ok  42.62.116.35  ]
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:202:iplist not avail  ]
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][TRC] LENGINE    leng_shell 109  lEngine_Start(90050dd8,90050dd8,0, 0) [in]
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  327  load waiter
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  339  a intalled entry
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  365  from rom
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][PRF] LLOADER    lloader.c  397  load waiter cost 0 (ms)
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] LENGINE    leng_shell 204  env=900797d0,waiter,waiter
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_3:6:1:1
+[2020/01/09 11:49:07 512][Px45cd][Txc9ffb700][TRC] LENGINE    leng_shell 275  lEngine_Start() [out] 0
+[2020/01/09 11:49:07 512][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 565  ENGINE_MSG_LOAD
+[2020/01/09 11:49:07 513][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 209  lEngine_LoadEnv(d6273740,900797d0) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(900797d0,6,0,) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][WAR] LENGINE    leng_shell 390  msg send while not active
+[2020/01/09 11:49:07 513][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_3:10:1:0
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:429:is_voicecloud_ip=  0  ]
+[2020/01/09 11:49:07 513][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 6400 Bytes WaveData
+[2020/01/09 11:49:07 513][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 6400(Bytes) Wav cost 1(ms) (fea=0)
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:436:ip_is_expected=  true  ]
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:444:ip_is_expected=  true  ]
+[2020/01/09 11:49:07 513][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 0
+[2020/01/09 11:49:07 513][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  327  load debug
+[2020/01/09 11:49:07 513][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [network:445:gethttpresp2  42.62.116.35  80  ns2  ]
+[2020/01/09 11:49:07 513][Px45cd][Txca7fc700][ERR] LLOADER    lloader.c  390  not found!
+[2020/01/09 11:49:07 513][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  327  load network
+[2020/01/09 11:49:07 513][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  339  a intalled entry
+[2020/01/09 11:49:07 513][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 12544, 2
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [network:465:prot_type  tcp  ]
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00021d0,843730) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 273  MSPSocket_New(1, 1) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  365  from rom
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 330  socket(2,1,) ret=19, detail=2
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 12160
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 420  MSPSocket_New() [out] 90db21f0 0
+[2020/01/09 11:49:07 513][Px45cd][Txca7fc700][PRF] LLOADER    lloader.c  397  load network cost 0 (ms)
+[2020/01/09 11:49:07 513][Px45cd][Txaaffd700][DBG] null       audio_code 227  iFlyFixFrontAppendData 12544
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5760
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac2a0800
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:0
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 5760
+[2020/01/09 11:49:07 513][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 510  MSPSocket_Connect(90db21f0) [in]
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 524  connect(19,42.62.116.35,) ret=-1, hd=90db21f0
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 535  connecting... 19,90db21f0
+[2020/01/09 11:49:07 513][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST socket_main_0:6:1:1
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 574  MSPSocket_Connect() [out] 0
+[2020/01/09 11:49:07 514][Px45cd][Txabfff700][TRC] MSPSOCKET  MSPSocket. 1183 CONN MSG
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac0359f0,ac02ff10) [in]
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(90024398) 2  ]
+[2020/01/09 11:49:07 514][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  327  load ecode
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  339  a intalled entry
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  365  from rom
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][PRF] LLOADER    lloader.c  397  load ecode cost 0 (ms)
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  327  load config
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  339  a intalled entry
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  365  from rom
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][PRF] LLOADER    lloader.c  397  load config cost 0 (ms)
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [config:43:use general cloud  ]
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  327  load perf
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][ERR] LLOADER    lloader.c  390  not found!
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  327  load ns
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  339  a intalled entry
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][INF] LLOADER    lloader.c  365  from rom
+[2020/01/09 11:49:07 514][Px45cd][Txca7fc700][PRF] LLOADER    lloader.c  397  load ns cost 0 (ms)
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 263  precall return 0
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 288  [waiter], ACTIVE
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(98006da0,900797d0) [in]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [waiter:120:waiter loaded!  ]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 312  [waiter], loaded
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(98006da0,900797d0) [in]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 345  lEngine_LoadEnv() [out] successfully
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 571  waiter, eng = l_engine_3, env = 900797d0, L = 90023f50
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][INF] LENGINE    leng_main. 572  l_engine_3 occupancy: 1 (33%)
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 525  [waiter], stat = 1
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(90049390,900797d0) [in]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:854:update_iplist  ]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:536:gethttpresp3  http://open.xf-yun.com:80/ipcfg.txt  unknown  nil  nil  ]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:501:gethttpresp  http://open.xf-yun.com:80/ipcfg.txt  nil  ]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:263:gethostbyname  open.xf-yun.com  1  ]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][TRC] MSPADNS    MSPAsyncDn 328  MSPAsyncDns_Start() [in]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [waiter:197:last gc at  1578541747  ]
+[2020/01/09 11:49:07 515][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][TRC] null       audio_code 254  fetch from VAD 12480 Bytes WaveData
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][PRF] null       audio_code 255  fetch 12480(Bytes) Wav cost 2(ms) (fea=0)
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 6
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0002710,843730) [in]
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:0
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][TRC] null       audio_code 184  ENCODE 0, 4
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] null       audio_code 237  iFlyFixFrontEndAudioData
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 0, availEncodedSize = 18240
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:2:0
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] null       audio_code 271  vadStat = 8
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][TRC] null       audio_code 282  VAD: finished!
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:3:0
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 11840
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac29bde0
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][TRC] null       audio_code 312  encoding completed!
+[2020/01/09 11:49:07 515][Px45cd][Txaaffd700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:4:0
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 515][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac0359f0,ac02ff10) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 1, availEncodedSize = 11840
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 5440
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 2, data = ac29bde0
+[2020/01/09 11:49:07 516][Px45cd][Txaa7fc700][DBG] MSPADNS    MSPAsyncDn 270  gethostbyname(open.xf-yun.com), errno=0, h_errno=1
+[2020/01/09 11:49:07 516][Px45cd][Txaa7fc700][TRC] MSPADNS    MSPAsyncDn 292  gethostbyname(open.xf-yun.com) success! ip=42.62.116.18 ipv=v4 [id=-1878873528]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 516][Px45cd][Txaa7fc700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:0
+[2020/01/09 11:49:07 516][Px45cd][Txaa7fc700][DBG] MSPADNS    MSPAsyncDn 195  gethostbyname(open.xf-yun.com) start [id=-1744736568]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:2:0
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(90024448) 2  ]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] null       audio_code 1061 completed = 1, availEncodedSize = 5440
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] null       audio_code 1079 after read, availEncodedSize = 0
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] null       audio_code 1091 stat = 4, data = ac2a0910
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(b8000910,ac02ff10) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(ac02ff10,303,2,) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:2:0
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:194:[dns] [1] response 42.62.116.18  ]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:202:42  62  116  18  ]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a00008c0,843730) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:204:ipv =  v4  ]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:208:dns ip is v4  ]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0000b80,843730) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:130:iplist not avail  ]
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][TRC] LENGINE    leng_shell 109  lEngine_Start(90050dd8,90050dd8,0, 0) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][TRC] LENGINE    leng_shell 380  lEngine_PostMessage(900797d0,6,0,) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_3:10:1:1
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 516][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0000e20,843730) [in]
+[2020/01/09 11:49:07 516][Px45cd][Txc9ffb700][TRC] LENGINE    leng_shell 407  lEngine_PostMessage() [out] 0
+[2020/01/09 11:49:07 516][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 516][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 525  [waiter], stat = 1
+[2020/01/09 11:49:07 516][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(9009af20,900797d0) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:247:no iplist now  ]
+[2020/01/09 11:49:07 517][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:854:update_iplist  ]
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:854:[aud] speech end  ]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [network:95:iptoenv ,  ipcache  open.xf-yun.com  def  42.62.116.18  ]
+[2020/01/09 11:49:07 517][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [waiter:197:last gc at  1578541747  ]
+[2020/01/09 11:49:07 517][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  327  load dkjson
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  339  a intalled entry
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] null       audio_code 922  audioEncoder_GetVADParam(, 10002) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  365  from rom
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] null       audio_code 922  audioEncoder_GetVADParam(, 10003) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] null       audio_code 922  audioEncoder_GetVADParam(, 10004) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] null       audio_code 922  audioEncoder_GetVADParam(, 10005) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][PRF] LLOADER    lloader.c  397  load dkjson cost 0 (ms)
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:798:3  msc  ]
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(a0001110,843730) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  327  load debug
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][TRC] null       audio_code 1047 audioEncoder_Read(, -914384568) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][ERR] LLOADER    lloader.c  390  not found!
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:291:dns cb start conn  ]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1304:[soc] connect   42.62.116.18  1028  ]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 1604 MSPSocketTCPConnPool_Query(42.62.116.18, 1028) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 1629 MSPSocketTCPConnPool_Query() [out] ret=0
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1316:mspsoc.open,prot_type=  tcp  ]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 273  MSPSocket_New(1, 1) [in]
+[2020/01/09 11:49:07 517][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 330  socket(2,1,) ret=1b, detail=2
+[2020/01/09 11:49:07 518][Px45cd][Txaa7fc700][DBG] MSPADNS    MSPAsyncDn 270  gethostbyname(open.xf-yun.com), errno=0, h_errno=1
+[2020/01/09 11:49:07 518][Px45cd][Txaa7fc700][TRC] MSPADNS    MSPAsyncDn 292  gethostbyname(open.xf-yun.com) success! ip=42.62.116.18 ipv=v4 [id=-1744736568]
+[2020/01/09 11:49:07 518][Px45cd][Txaa7fc700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_3:10:1:1
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 525  [waiter], stat = 1
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(b8000cb0,900797d0) [in]
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:245:dns resp  0  1  ]
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:487:gethttpresp dns ok  42.62.116.18  ]
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:445:gethttpresp2  42.62.116.18  80  2  ]
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][TRC] LMOD       luac_logge 170  [network:465:prot_type  tcp  ]
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][TRC] MSPSOCKET  MSPSocket. 273  MSPSocket_New(1, 1) [in]
+[2020/01/09 11:49:07 518][Px45cd][Txca7fc700][DBG] MSPSOCKET  MSPSocket. 330  socket(2,1,) ret=18, detail=2
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 420  MSPSocket_New() [out] 90dc8f50 0
+[2020/01/09 11:49:07 544][Px45cd][Txca7fc700][TRC] MSPSOCKET  MSPSocket. 420  MSPSocket_New() [out] 980173a0 0
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 510  MSPSocket_Connect(90dc8f50) [in]
+[2020/01/09 11:49:07 544][Px45cd][Txca7fc700][TRC] MSPSOCKET  MSPSocket. 510  MSPSocket_Connect(980173a0) [in]
+[2020/01/09 11:49:07 544][Px45cd][Txca7fc700][DBG] MSPSOCKET  MSPSocket. 524  connect(18,42.62.116.18,) ret=-1, hd=980173a0
+[2020/01/09 11:49:07 544][Px45cd][Txca7fc700][DBG] MSPSOCKET  MSPSocket. 535  connecting... 18,980173a0
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 524  connect(1b,42.62.116.18,) ret=-1, hd=90dc8f50
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 535  connecting... 1b,90dc8f50
+[2020/01/09 11:49:07 544][Px45cd][Txca7fc700][DBG] MSPTHREAD  MSPThreadP 734  POST socket_main_0:6:1:1
+[2020/01/09 11:49:07 544][Px45cd][Txca7fc700][TRC] MSPSOCKET  MSPSocket. 574  MSPSocket_Connect() [out] 0
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST socket_main_0:6:2:0
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 574  MSPSocket_Connect() [out] 0
+[2020/01/09 11:49:07 544][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac290200,ac02ff10) [in]
+[2020/01/09 11:49:07 544][Px45cd][Txabfff700][TRC] MSPSOCKET  MSPSocket. 1183 CONN MSG
+[2020/01/09 11:49:07 544][Px45cd][Txabfff700][TRC] MSPSOCKET  MSPSocket. 1183 CONN MSG
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9003df58) 2  ]
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(ac0359f0,ac02ff10) [in]
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [isr_local:2168:ASR_LOCAL_MSG_AUW  ]
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:602:audio buffered :   udata(9007b1a8) 4  ]
+[2020/01/09 11:49:07 544][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 554][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 447  connected! 90db21f0,19
+[2020/01/09 11:49:07 554][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 474  mss=1460 90db21f0,19
+[2020/01/09 11:49:07 554][Px45cd][Txabfff700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 554][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(94002cd0,ac02ff10) [in]
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [network:350:connected  ns2  ]
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 716  MSPSocket_Send(90db21f0, 90046b30) [in]
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 674  send(19,,268,) ret=268, hd=90db21f0
+[2020/01/09 11:49:07 554][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:0
+000000  47 45 54 20 2f 73 69 70  2f 72 65 73 6f 6c 76 65    GET /sip /resolve 
+000016  72 3f 73 72 61 6e 64 3d  30 31 30 39 31 31 34 39    r?srand= 01091149 
+000032  31 31 2e 33 32 20 48 54  54 50 2f 31 2e 31 0d 0a    11.32 HT TP/1.1.. 
+000048  48 6f 73 74 3a 20 68 64  6e 73 2e 78 66 2d 79 75    Host: hd ns.xf-yu 
+000064  6e 2e 63 6f 6d 0d 0a 43  6f 6e 6e 65 63 74 69 6f    n.com..C onnectio 
+000080  6e 3a 20 4b 65 65 70 2d  41 6c 69 76 65 0d 0a 58    n: Keep- Alive..X 
+000096  2d 50 61 72 3a 20 76 65  72 3d 31 2e 33 26 61 70    -Par: ve r=1.3&ap 
+000112  70 69 64 3d 35 64 65 30  39 32 38 33 26 6f 70 65    pid=5de0 9283&ope 
+000128  72 61 74 6f 72 3d 55 4e  4b 4e 4f 57 26 6e 65 74    rator=UN KNOW&net 
+000144  74 79 70 65 3d 53 54 41  4e 44 41 52 44 26 63 76    type=STA NDARD&cv 
+000160  65 72 3d 35 2e 30 2e 34  32 2e 31 32 32 36 26 73    er=5.0.4 2.1226&s 
+000176  76 63 3d 61 74 68 26 68  6f 73 74 3d 6f 70 65 6e    vc=ath&h ost=open 
+000192  2e 78 66 2d 79 75 6e 2e  63 6f 6d 26 73 69 67 6e    .xf-yun. com&sign 
+000208  3d 63 37 38 66 62 62 62  64 65 30 35 65 34 65 33    =c78fbbb de05e4e3 
+000224  39 66 37 34 62 36 65 65  39 31 33 63 31 61 63 63    9f74b6ee 913c1acc 
+000240  36 0d 0a 55 73 65 72 2d  41 67 65 6e 74 3a 20 69    6..User- Agent: i 
+000256  46 4c 59 43 6c 6f 75 64  0d 0a 0d 0a                FLYCloud ....
+[2020/01/09 11:49:07 555][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 733  MSPSocket_Send() [out] 0
+[2020/01/09 11:49:07 555][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 555][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 555][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 555][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(90049030,ac02ff10) [in]
+[2020/01/09 11:49:07 555][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [network:353:send ok  268  ns2  ]
+[2020/01/09 11:49:07 555][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 596][Px45cd][Txd9955780][TRC] QISR       qisr.c     390  QISRGetResult(827e60,8d799a3c,0,8d79997c) [in]
+[2020/01/09 11:49:07 596][Px45cd][Txd9955780][TRC] QISR       qisr.c     396  QISRGetResult session addr:(827e60)
+[2020/01/09 11:49:07 596][Px45cd][Txd9955780][TRC] LENGINE    leng_shell 418  lEngine_SendMessage(843730,3,0,,,) [in]
+[2020/01/09 11:49:07 596][Px45cd][Txd9955780][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:11:1:1
+[2020/01/09 11:49:07 596][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 539  ENGINE_MSG_RPC_SYNC
+[2020/01/09 11:49:07 596][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 547  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 596][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(843920,843730) [in]
+[2020/01/09 11:49:07 596][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:1636:ASR_MSG_GRSLT,   local  ]
+[2020/01/09 11:49:07 596][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:1307:0  nil  2  ]
+[2020/01/09 11:49:07 596][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 596][Px45cd][Txd9955780][TRC] LENGINE    leng_shell 461  lEngine_SendMessage() [out] 0
+[2020/01/09 11:49:07 596][Px45cd][Txd9955780][TRC] QISR       qisr.c     455  QISRGetResult() [out] 0 2 0
+[2020/01/09 11:49:07 610][Px45cd][Txa97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 610][Px45cd][Txa97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:2:0
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(9c0024c0,ac02ff10) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:656:local engine ready  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] MSPCMN     msp_cmn.c  941  statusCbStub(,,param_num = 5)
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][PRF] LENGINE    leng_main. 189  callc(msp_status_cb) cost 0 ms
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:586:esr_flush_buf_audio buffer audio num:  15  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac2a2110, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac033d60, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac28cfe0, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac032110, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac28e8f0, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac2959a0, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac2903a0, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac291db0, 6400) [in]
+[2020/01/09 11:49:07 610][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac2972b0, 6400) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac02ffb0, 6400) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac298bc0, 6400) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac29a4d0, 6400) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac29d6f0, 6400) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   6400  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac29f000, 6400) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:1600:auwl =   5440  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   429  Esr_WriteAudio(90045d50, ac29bde0, 5440) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   459  Esr_WriteAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   468  Esr_EndAudio(90045d50) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:2:0
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LENGINE    aitalk.c   483  Esr_EndAudio(0) [out]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:591:esr_audio_write, ret =  0  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(9c0010c0,ac02ff10) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [isr_local:631:local engine started  ]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][TRC] MSPCMN     msp_cmn.c  941  statusCbStub(,,param_num = 5)
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][PRF] LENGINE    leng_main. 189  callc(msp_status_cb) cost 0 ms
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(900146b0,ac02ff10) [in]
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][PRF] LENGINE    leng_main. 189  callc(local_service_cbmsg) cost 0 ms
+[2020/01/09 11:49:07 611][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 611][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 611][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 611][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(90049030,843730) [in]
+[2020/01/09 11:49:07 612][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:723:local_cbmsg_handler  ,msg=  406  param1=  nil  ]
+[2020/01/09 11:49:07 612][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 655][Px45cd][Txa97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 655][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 655][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 655][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(9c000e10,ac02ff10) [in]
+[2020/01/09 11:49:07 655][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 655][Px45cd][Txc9ffb700][PRF] LENGINE    leng_main. 189  callc(local_service_cbmsg) cost 0 ms
+[2020/01/09 11:49:07 655][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 655][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 655][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 655][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(900146b0,843730) [in]
+[2020/01/09 11:49:07 656][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:723:local_cbmsg_handler  ,msg=  404  param1=  nil  ]
+[2020/01/09 11:49:07 656][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 447  connected! 90dc8f50,1b
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 474  mss=1460 90dc8f50,1b
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 447  connected! 980173a0,18
+[2020/01/09 11:49:07 665][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 665][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 665][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(94000ee0,ac02ff10) [in]
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 474  mss=1460 980173a0,18
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_3:10:1:1
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 1316 s=90db21f0,s->stat=5
+[2020/01/09 11:49:07 665][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:473:[soc] [1] connected  ]
+[2020/01/09 11:49:07 665][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 665][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 525  [waiter], stat = 1
+[2020/01/09 11:49:07 665][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(94002cd0,900797d0) [in]
+[2020/01/09 11:49:07 665][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1799:transport_obj.try2send | in  ]
+[2020/01/09 11:49:07 665][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 819  recv(90db21f0,,,) ret=462, detail=0, hd=19
+000000  48 54 54 50 2f 31 2e 31  20 32 30 30 20 4f 4b 0d    HTTP/1.1  200 OK. 
+000016  0a 44 61 74 65 3a 20 54  68 75 2c 20 30 39 20 4a    .Date: T hu, 09 J 
+000032  61 6e 20 32 30 32 30 20  30 33 3a 34 39 3a 30 37    an 2020  03:49:07 
+000048  20 47 4d 54 0d 0a 43 6f  6e 74 65 6e 74 2d 54 79     GMT..Co ntent-Ty 
+000064  70 65 3a 20 61 70 70 6c  69 63 61 74 69 6f 6e 2f    pe: appl ication/ 
+000080  6a 73 6f 6e 0d 0a 43 6f  6e 74 65 6e 74 2d 4c 65    json..Co ntent-Le 
+000096  6e 67 74 68 3a 20 33 30  37 0d 0a 43 6f 6e 6e 65    ngth: 30 7..Conne 
+000112  63 74 69 6f 6e 3a 20 6b  65 65 70 2d 61 6c 69 76    ction: k eep-aliv 
+000128  65 0d 0a 53 65 72 76 65  72 3a 20 69 66 6c 79 74    e..Serve r: iflyt 
+000144  65 6b 2f 68 64 6e 73 0d  0a 0d 0a 7b 22 64 6e 73    ek/hdns. ...{"dns 
+000160  22 3a 5b 7b 22 68 6f 73  74 22 3a 22 6f 70 65 6e    ":[{"hos t":"open 
+000176  2e 78 66 2d 79 75 6e 2e  63 6f 6d 22 2c 22 73 69    .xf-yun. com","si 
+000192  70 22 3a 5b 7b 22 73 76  63 22 3a 22 61 74 68 22    p":[{"sv c":"ath" 
+000208  2c 22 69 70 73 22 3a 5b  7b 22 69 70 22 3a 22 34    ,"ips":[ {"ip":"4 
+000224  32 2e 36 32 2e 34 32 2e  31 30 22 2c 22 70 6f 72    2.62.42. 10","por 
+000240  74 22 3a 31 30 32 38 2c  22 69 64 63 22 3a 22 64    t":1028, "idc":"d 
+000256  78 22 7d 2c 7b 22 69 70  22 3a 22 34 32 2e 36 32    x"},{"ip ":"42.62 
+000272  2e 34 32 2e 31 38 22 2c  22 70 6f 72 74 22 3a 38    .42.18", "port":8 
+000288  30 2c 22 69 64 63 22 3a  22 64 78 22 7d 5d 2c 22    0,"idc": "dx"}]," 
+000304  74 74 6c 22 3a 36 30 30  30 2c 22 63 6f 6d 70 65    ttl":600 0,"compe 
+000320  6c 22 3a 30 7d 5d 7d 5d  2c 22 64 65 66 61 75 6c    l":0}]}] ,"defaul 
+000336  74 22 3a 5b 7b 22 68 6f  73 74 22 3a 22 6f 70 65    t":[{"ho st":"ope 
+000352  6e 2e 78 66 2d 79 75 6e  2e 63 6f 6d 22 2c 22 73    n.xf-yun .com","s 
+000368  69 70 22 3a 5b 7b 22 73  76 63 22 3a 22 61 74 68    ip":[{"s vc":"ath 
+000384  22 2c 22 69 70 73 22 3a  5b 7b 22 69 70 22 3a 22    ","ips": [{"ip":" 
+000400  34 32 2e 36 32 2e 34 32  2e 31 38 22 2c 22 70 6f    42.62.42 .18","po 
+000416  72 74 22 3a 38 30 2c 22  69 64 63 22 3a 22 64 78    rt":80," idc":"dx 
+000432  22 7d 5d 2c 22 74 74 6c  22 3a 36 30 30 30 2c 22    "}],"ttl ":6000," 
+000448  63 6f 6d 70 65 6c 22 3a  30 7d 5d 7d 5d 7d          compel": 0}]}]}
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:350:connected  2  ]
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1800:self.soc  udata(90dc8d98) ]
+[2020/01/09 11:49:07 666][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 819  recv(90db21f0,,,) ret=-1, detail=11, hd=19
+[2020/01/09 11:49:07 666][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 1321 recvable! 90db21f0,19
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][TRC] MSPSOCKET  MSPSocket. 716  MSPSocket_Send(980173a0, 98016ca0) [in]
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 666][Px45cd][Txabfff700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:0
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1801:self.connected  true  ]
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] MSPSOCKET  MSPSocket. 674  send(18,,92,) ret=92, hd=980173a0
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_3:10:1:0
+000000  47 45 54 20 2f 69 70 63  66 67 2e 74 78 74 20 48    GET /ipc fg.txt H 
+000016  54 54 50 2f 31 2e 31 0d  0a 48 6f 73 74 3a 20 6f    TTP/1.1. .Host: o 
+000032  70 65 6e 2e 78 66 2d 79  75 6e 2e 63 6f 6d 0d 0a    pen.xf-y un.com.. 
+000048  55 73 65 72 2d 41 67 65  6e 74 3a 20 69 46 4c 59    User-Age nt: iFLY 
+000064  43 6c 6f 75 64 0d 0a 43  6f 6e 6e 65 63 74 69 6f    Cloud..C onnectio 
+000080  6e 3a 20 43 6c 6f 73 65  0d 0a 0d 0a                n: Close ....
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][TRC] MSPSOCKET  MSPSocket. 733  MSPSocket_Send() [out] 0
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1802:self.latesterr  0  ]
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] LENGINE    leng_main. 525  [waiter], stat = 1
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(98017f70,900797d0) [in]
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1819:transport:try2send,#msg_q=  1  ]
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][INF] LMOD       luac_logge 172  [network:353:send ok  92  2  ]
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1359:build http request.  ]
+[2020/01/09 11:49:07 666][Px45cd][Txca7fc700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [transport:1476:POST /msp.do HTTP/1.1
+X-Sub: auth
+X-Par: ver=MSSP+0%2E9&sub=auth&cmd=rath&key=08q4uLVXNWZAI=
+Host: open.xf-yun.com
+CT: multipart/mixed;boundary=--
+CL: 351
+
+----
+Content-Length:48
+Content-Type:text/appinfo
+Content-Encoding:gzip
+
+36
+xœËN­´5°H67²H´LMMK63375I±00LK1356LJN66  ]
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 716  MSPSocket_Send(90dc8f50, 900497e0) [in]
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 674  send(1b,,514,) ret=514, hd=90dc8f50
+[2020/01/09 11:49:07 666][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:2:0
+000000  50 4f 53 54 20 2f 6d 73  70 2e 64 6f 20 48 54 54    POST /ms p.do HTT 
+000016  50 2f 31 2e 31 0d 0a 58  2d 53 75 62 3a 20 61 75    P/1.1..X -Sub: au 
+000032  74 68 0d 0a 58 2d 50 61  72 3a 20 76 65 72 3d 4d    th..X-Pa r: ver=M 
+000048  53 53 50 2b 30 25 32 45  39 26 73 75 62 3d 61 75    SSP+0%2E 9&sub=au 
+000064  74 68 26 63 6d 64 3d 72  61 74 68 26 6b 65 79 3d    th&cmd=r ath&key= 
+000080  30 38 71 34 75 4c 56 58  4e 57 5a 41 49 3d 0d 0a    08q4uLVX NWZAI=.. 
+000096  48 6f 73 74 3a 20 6f 70  65 6e 2e 78 66 2d 79 75    Host: op en.xf-yu 
+000112  6e 2e 63 6f 6d 0d 0a 43  54 3a 20 6d 75 6c 74 69    n.com..C T: multi 
+000128  70 61 72 74 2f 6d 69 78  65 64 3b 62 6f 75 6e 64    part/mix ed;bound 
+000144  61 72 79 3d 2d 2d 0d 0a  43 4c 3a 20 33 35 31 0d    ary=--.. CL: 351. 
+000160  0a 0d 0a 2d 2d 2d 2d 0d  0a 43 6f 6e 74 65 6e 74    ...----. .Content 
+000176  2d 4c 65 6e 67 74 68 3a  34 38 0d 0a 43 6f 6e 74    -Length: 48..Cont 
+000192  65 6e 74 2d 54 79 70 65  3a 74 65 78 74 2f 61 70    ent-Type :text/ap 
+000208  70 69 6e 66 6f 0d 0a 43  6f 6e 74 65 6e 74 2d 45    pinfo..C ontent-E 
+000224  6e 63 6f 64 69 6e 67 3a  67 7a 69 70 0d 0a 0d 0a    ncoding: gzip.... 
+000240  33 36 0d 0a 78 9c cb 4e  ad b4 35 b0 48 36 37 b2    36..x..N ..5.H67. 
+000256  48 b4 4c 4d 4d 4b 36 33  33 37 35 49 b1 30 30 4c    H.LMMK63 375I.00L 
+000272  4b 31 33 35 36 4c 4a 4e  36 36 06 00 c5 e4 0a 50    K1356LJN 66.....P 
+000288  0d 0a 2d 2d 2d 2d 0d 0a  43 6f 6e 74 65 6e 74 2d    ..----.. Content- 
+000304  4c 65 6e 67 74 68 3a 31  33 39 0d 0a 43 6f 6e 74    Length:1 39..Cont 
+000320  65 6e 74 2d 54 79 70 65  3a 74 65 78 74 2f 70 61    ent-Type :text/pa 
+000336  72 61 6d 73 0d 0a 43 6f  6e 74 65 6e 74 2d 45 6e    rams..Co ntent-En 
+000352  63 6f 64 69 6e 67 3a 67  7a 69 70 0d 0a 0d 0a 31    coding:g zip....1 
+000368  37 38 0d 0a 78 9c 3d 8c  cb 0e c2 20 10 45 bf 66    78..x.=. ... .E.f 
+000384  58 e3 90 09 ba 60 61 ad  fe 07 02 4d 89 7d 90 42    X....`a. ...M.}.B 
+000400  35 ed d7 3b a4 c6 c5 9c  dc c7 e4 da d2 c7 a9 9b    5..;.... ........ 
+000416  0d e8 06 10 ed 5a fa 79  89 7b 60 0d ea 0a d4 1c    .....Z.y .{`..... 
+000432  f9 73 cd 71 fa 65 fc 15  8b 1d 5e d5 e2 8d f9 0e    .s.q.e.. ..^..... 
+000448  cb bf e2 e8 7e 3a 0e 41  b7 40 2d 53 d4 59 a0 47    ....~:.A .@-S.Y.G 
+000464  d9 52 30 36 25 c1 17 bd  21 1f e4 05 cf 4a 8c d9    .R06%... !....J.. 
+000480  71 3b 5a 67 3e 43 c2 2c  79 ca 57 38 aa 4a 31 a8    q;Zg>C., y.W8.J1. 
+000496  63 c8 50 ad fe 02 6f 7e  31 17 0d 0a 2d 2d 2d 2d    c.P...o~ 1...---- 
+000512  2d 2d                                               --
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 733  MSPSocket_Send() [out] 0
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1819:transport:try2send,#msg_q=  0  ]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(94000d30,ac02ff10) [in]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [network:362:readable  ns2  ]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 877  MSPSocket_Recv(90db21f0) [in]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 901  MSPSocket_Recv() [out] 94000e80 0
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][DBG] LMOD       luac_logge 178  [network:366:HTTP/1.1 200 OK
+Date: Thu, 09 Jan 2020 03:49:07 GMT
+Content-Type: application/json
+Content-Length: 307
+Connection: keep-alive
+Server: iflytek/hdns
+
+{"dns":[{"host":"open.xf-yun.com","sip":[{"svc":"ath","ips":[{"ip":"42.62.42.10","port":1028,"idc":"dx"},{"ip":"42.62.42.18","port":80,"idc":"dx"}],"ttl":6000,"compel":0}]}],"default":[{"host":"open.xf-yun.com","sip":[{"svc":"ath","ips":[{"ip":"42.62.42.18","port":80,"idc":"dx"}],"ttl":6000,"compel":0}]}]}  ]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 877  MSPSocket_Recv(90db21f0) [in]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 901  MSPSocket_Recv() [out] 0 0
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 1025 MSPSocket_Close(90db21f0) [in]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][DBG] MSPSOCKET  MSPSocket. 1045 close(19), 90db21f0
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 1079 MSPSocket_Close() [out] 0
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:253:name server http resp  0  ]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:266:ns response OK for this time!  ]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:277:from_server=  iflytek/hdns  ]
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  327  load dkjson
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  339  a intalled entry
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  365  from rom
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][PRF] LLOADER    lloader.c  397  load dkjson cost 0 (ms)
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LLOADER    lloader.c  327  load debug
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][ERR] LLOADER    lloader.c  390  not found!
+[2020/01/09 11:49:07 667][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:360:compel :  0  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1063:ns_ip =   42.62.42.10  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1064:ip_type =  assigned_athopen.xf-yun.com_host  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:670:no data in ns_q  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [ns:671:conti_ns,ns_inprog =   1  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(900146b0,ac02ff10) [in]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:482:[soc] [1] send ok  514  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1799:transport_obj.try2send | in  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1800:self.soc  udata(90dc8d98) ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1801:self.connected  true  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:1802:self.latesterr  0  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][INF] LMOD       luac_logge 172  [transport:1819:transport:try2send,#msg_q=  0  ]
+[2020/01/09 11:49:07 668][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 674][Px45cd][Txa97fa700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 674][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 674][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 674][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(9c000e10,ac02ff10) [in]
+[2020/01/09 11:49:07 674][Px45cd][Txc9ffb700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:10:1:1
+[2020/01/09 11:49:07 674][Px45cd][Txc9ffb700][PRF] LENGINE    leng_main. 189  callc(local_service_cbmsg) cost 0 ms
+[2020/01/09 11:49:07 674][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 525  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(90047070,843730) [in]
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:723:local_cbmsg_handler  ,msg=  405  param1=  nil  ]
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:729:local speech end  ]
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:798:3  local  ]
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][WAR] LMOD       luac_logge 168  [isr:800:already speech end  ]
+[2020/01/09 11:49:07 674][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 696][Px45cd][Txd9955780][TRC] QISR       qisr.c     390  QISRGetResult(827e60,8d799a3c,0,8d79997c) [in]
+[2020/01/09 11:49:07 696][Px45cd][Txd9955780][TRC] QISR       qisr.c     396  QISRGetResult session addr:(827e60)
+[2020/01/09 11:49:07 696][Px45cd][Txd9955780][TRC] LENGINE    leng_shell 418  lEngine_SendMessage(843730,3,0,,,) [in]
+[2020/01/09 11:49:07 696][Px45cd][Txd9955780][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_5:11:1:1
+[2020/01/09 11:49:07 696][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 539  ENGINE_MSG_RPC_SYNC
+[2020/01/09 11:49:07 696][Px45cd][Txc97fa700][DBG] LENGINE    leng_main. 547  [cisr1PdHHBHx120f2sqraamBSa25k72PT7], stat = 1
+[2020/01/09 11:49:07 697][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(87f0f0,843730) [in]
+[2020/01/09 11:49:07 697][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:1636:ASR_MSG_GRSLT,   local  ]
+[2020/01/09 11:49:07 697][Px45cd][Txc97fa700][TRC] LMOD       luac_logge 170  [isr:1307:0  nil  2  ]
+[2020/01/09 11:49:07 697][Px45cd][Txc97fa700][DBG] LENGINE    leng_rpc.c 533  luacRPCFuncProto_Invoke() [out] ret = 0
+[2020/01/09 11:49:07 697][Px45cd][Txd9955780][TRC] LENGINE    leng_shell 461  lEngine_SendMessage() [out] 0
+[2020/01/09 11:49:07 697][Px45cd][Txd9955780][TRC] QISR       qisr.c     455  QISRGetResult() [out] 0 2 0
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 592  try2send|s->type=1,s->stat=5.
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 1316 s=90dc8f50,s->stat=5
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 819  recv(90dc8f50,,,) ret=351, detail=11, hd=1b
+000000  48 54 54 50 2f 31 2e 31  20 32 30 30 20 4f 4b 0d    HTTP/1.1  200 OK. 
+000016  0a 43 6f 6e 74 65 6e 74  2d 4c 65 6e 67 74 68 3a    .Content -Length: 
+000032  20 38 37 0d 0a 58 2d 52  65 71 2d 44 61 74 65 3a     87..X-R eq-Date: 
+000048  20 32 30 32 30 2f 30 31  2f 30 39 20 31 31 3a 34     2020/01 /09 11:4 
+000064  39 3a 30 37 20 37 33 39  0d 0a 58 2d 50 61 72 3a    9:07 739 ..X-Par: 
+000080  20 76 65 72 3d 4d 53 53  50 2b 30 25 32 45 39 26     ver=MSS P+0%2E9& 
+000096  72 65 74 3d 30 26 6b 65  79 3d 30 39 56 36 59 42    ret=0&ke y=09V6YB 
+000112  75 79 72 4a 55 53 30 72  4d 5a 74 61 31 36 2f 51    uyrJUS0r MZta16/Q 
+000128  56 6a 33 61 68 58 7a 74  55 50 65 5e 57 55 71 6c    Vj3ahXzt UPe^WUql 
+000144  61 79 39 42 66 6b 41 38  55 79 50 58 4f 5a 6d 53    ay9BfkA8 UyPXOZmS 
+000160  45 51 3d 3d 0d 0a 43 45  3a 20 67 7a 69 70 0d 0a    EQ==..CE : gzip.. 
+000176  43 54 3a 20 62 69 6e 61  72 79 2f 61 75 74 68 69    CT: bina ry/authi 
+000192  6e 66 6f 0d 0a 43 4c 3a  20 38 37 0d 0a 43 6f 6e    nfo..CL:  87..Con 
+000208  74 65 6e 74 2d 4c 65 6e  67 74 68 3a 20 38 37 0d    tent-Len gth: 87. 
+000224  0a 58 2d 52 65 73 2d 44  61 74 65 3a 20 32 30 32    .X-Res-D ate: 202 
+000240  30 2f 30 31 2f 30 39 20  31 31 3a 34 39 3a 30 37    0/01/09  11:49:07 
+000256  20 37 35 33 0d 0a 0d 0a  38 30 0d 0a 78 9c ab 56     753.... 80..x..V 
+000272  4a cc 2c 49 cc c9 56 b2  aa 56 2a 4b 2d 52 b2 52    J.,I..V. .V*K-R.R 
+000288  32 52 d2 51 4a 2a 2d 06  09 a4 56 14 64 16 a5 c6    2R.QJ*-. ..V.d... 
+000304  a7 24 96 a4 2a 59 19 9a  5a 18 99 9b 9b 98 99 99    .$..*Y.. Z....... 
+000320  e9 28 a5 e5 17 25 65 a6  00 15 1b 00 15 e7 e5 64    .(...%e. .......d 
+000336  e6 66 96 00 15 18 d4 d6  d6 02 00 e5 d5 18 5a       .f...... ......Z
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 819  recv(90dc8f50,,,) ret=-1, detail=11, hd=1b
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 1321 recvable! 90dc8f50,1b
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPTHREAD  MSPThreadP 734  POST l_engine_4:10:1:1
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 1316 s=980173a0,s->stat=5
+[2020/01/09 11:49:07 757][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 517  ENGINE_MSG_RPC_ASYNC
+[2020/01/09 11:49:07 757][Px45cd][Txc9ffb700][DBG] LENGINE    leng_main. 525  [isr_local], stat = 1
+[2020/01/09 11:49:07 757][Px45cd][Txc9ffb700][DBG] LENGINE    leng_rpc.c 416  luacRPCFuncProto_Invoke(94000ee0,ac02ff10) [in]
+[2020/01/09 11:49:07 757][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 819  recv(980173a0,,,) ret=1024, detail=11, hd=18
+000000  48 54 54 50 2f 31 2e 31  20 32 30 30 20 4f 4b 0d    HTTP/1.1  200 OK. 
+000016  0a 53 65 72 76 65 72 3a  20 4e 67 69 6e 78 2d 58    .Server:  Nginx-X 
+000032  46 0d 0a 44 61 74 65 3a  20 54 68 75 2c 20 30 39    F..Date:  Thu, 09 
+000048  20 4a 61 6e 20 32 30 32  30 20 30 33 3a 34 39 3a     Jan 202 0 03:49: 
+000064  30 37 20 47 4d 54 0d 0a  43 6f 6e 74 65 6e 74 2d    07 GMT.. Content- 
+000080  54 79 70 65 3a 20 74 65  78 74 2f 70 6c 61 69 6e    Type: te xt/plain 
+000096  0d 0a 43 6f 6e 74 65 6e  74 2d 4c 65 6e 67 74 68    ..Conten t-Length 
+000112  3a 20 34 33 31 30 0d 0a  4c 61 73 74 2d 4d 6f 64    : 4310.. Last-Mod 
+000128  69 66 69 65 64 3a 20 4d  6f 6e 2c 20 30 33 20 4a    ified: M on, 03 J 
+000144  75 6e 20 32 30 31 39 20  31 31 3a 33 31 3a 30 35    un 2019  11:31:05 
+000160  20 47 4d 54 0d 0a 43 6f  6e 6e 65 63 74 69 6f 6e     GMT..Co nnection 
+000176  3a 20 63 6c 6f 73 65 0d  0a 45 54 61 67 3a 20 22    : close. .ETag: " 
+000192  35 63 66 35 30 34 66 39  2d 31 30 64 36 22 0d 0a    5cf504f9 -10d6".. 
+000208  41 63 63 65 70 74 2d 52  61 6e 67 65 73 3a 20 62    Accept-R anges: b 
+000224  79 74 65 73 0d 0a 0d 0a  7b 0a 09 22 6f 70 65 6e    ytes.... {.."open 
+000240  2e 78 66 2d 79 75 6e 2e  63 6f 6d 22 3a 20 7b 0a    .xf-yun. com": {. 
+000256  09 09 22 49 44 43 22 3a  20 5b 22 62 6a 22 2c 20    .."IDC":  ["bj",  
+000272  22 67 7a 22 2c 20 22 73  68 22 5d 2c 0a 09 09 22    "gz", "s h"],..." 
+000288  62 6a 22 3a 20 7b 0a 09  09 09 22 62 67 70 22 3a    bj": {.. .."bgp": 
+000304  20 5b 22 31 31 36 2e 32  31 33 2e 36 39 2e 31 39     ["116.2 13.69.19 
+000320  39 22 2c 20 22 31 31 36  2e 32 31 33 2e 36 39 2e    9", "116 .213.69. 
+000336  31 39 35 22 2c 20 22 31  31 37 2e 31 32 31 2e 35    195", "1 17.121.5 
+000352  36 2e 38 22 2c 20 22 31  31 37 2e 31 32 31 2e 32    6.8", "1 17.121.2 
+000368  31 2e 31 34 36 22 2c 20  22 31 31 37 2e 31 32 31    1.146",  "117.121 
+000384  2e 32 31 2e 31 34 37 22  2c 20 22 31 31 37 2e 31    .21.147" , "117.1 
+000400  32 31 2e 32 31 2e 31 35  30 22 2c 20 22 31 31 37    21.21.15 0", "117 
+000416  2e 31 32 31 2e 31 33 2e  32 32 36 22 2c 20 22 31    .121.13. 226", "1 
+000432  31 37 2e 31 32 31 2e 34  2e 32 34 32 22 2c 20 22    17.121.4 .242", " 
+000448  34 32 2e 36 32 2e 34 32  2e 31 30 22 2c 20 22 34    42.62.42 .10", "4 
+000464  32 2e 36 32 2e 34 32 2e  31 38 22 2c 22 34 32 2e    2.62.42. 18","42. 
+000480  36 32 2e 34 32 2e 31 39  22 2c 22 34 32 2e 36 32    62.42.19 ","42.62 
+000496  2e 31 31 36 2e 31 39 22  2c 20 22 34 32 2e 36 32    .116.19" , "42.62 
+000512  2e 31 31 36 2e 31 38 22  2c 20 22 34 32 2e 36 32    .116.18" , "42.62 
+000528  2e 31 31 36 2e 33 34 22  2c 20 22 34 32 2e 36 32    .116.34" , "42.62 
+000544  2e 31 31 36 2e 33 35 22  2c 20 22 34 32 2e 36 32    .116.35" , "42.62 
+000560  2e 31 31 36 2e 34 32 22  2c 20 22 34 32 2e 36 32    .116.42" , "42.62 
+000576  2e 34 32 2e 31 31 22 2c  20 22 31 32 34 2e 32 34    .42.11",  "124.24 
+000592  33 2e 32 32 36 2e 31 38  22 2c 20 22 31 32 34 2e    3.226.18 ", "124. 
+000608  32 34 33 2e 32 32 36 2e  31 30 22 2c 20 22 34 32    243.226. 10", "42 
+000624  2e 36 32 2e 31 31 36 2e  32 30 22 2c 20 22 34 32    .62.116. 20", "42 
+000640  2e 36 32 2e 31 31 36 2e  33 36 22 5d 0a 09 09 7d    .62.116. 36"]...} 
+000656  2c 0a 09 09 22 73 68 22  3a 20 7b 0a 09 09 09 22    ,..."sh" : {...." 
+000672  62 67 70 22 3a 20 5b 22  31 32 30 2e 39 32 2e 32    bgp": [" 120.92.2 
+000688  33 38 2e 32 31 22 2c 20  22 31 32 30 2e 39 32 2e    38.21",  "120.92. 
+000704  32 33 38 2e 32 32 22 2c  20 22 31 32 30 2e 39 32    238.22",  "120.92 
+000720  2e 32 33 38 2e 32 33 22  2c 20 22 31 32 30 2e 39    .238.23" , "120.9 
+000736  32 2e 32 33 38 2e 32 34  22 5d 0a 09 09 7d 2c 0a    2.238.24 "]...},. 
+000752  09 09 22 67 7a 22 3a 20  7b 0a 09 09 09 22 62 67    .."gz":  {...."bg 
+000768  70 22 3a 20 5b 22 35 39  2e 31 30 37 2e 32 34 2e    p": ["59 .107.24. 
+000784  35 22 2c 20 22 35 39 2e  31 30 37 2e 32 34 2e 33    5", "59. 107.24.3 
+000800  22 2c 20 22 35 39 2e 31  30 37 2e 32 34 2e 37 22    ", "59.1 07.24.7" 
+000816  2c 20 22 35 39 2e 31 30  37 2e 32 34 2e 31 31 22    , "59.10 7.24.11" 
+000832  2c 20 22 35 39 2e 31 30  37 2e 32 34 2e 31 33 22    , "59.10 7.24.13" 
+000848  2c 20 22 35 38 2e 36 37  2e 32 32 33 2e 31 33 39    , "58.67 .223.139 
+000864  22 2c 20 22 35 38 2e 36  37 2e 32 32 33 2e 31 33    ", "58.6 7.223.13 
+000880  38 22 2c 20 22 35 38 2e  36 37 2e 32 32 33 2e 31    8", "58. 67.223.1 
+000896  34 30 22 2c 20 22 35 38  2e 36 37 2e 32 32 33 2e    40", "58 .67.223. 
+000912  31 34 31 22 2c 20 22 35  38 2e 36 37 2e 32 32 33    141", "5 8.67.223 
+000928  2e 31 34 32 22 2c 20 22  35 38 2e 36 37 2e 31 36    .142", " 58.67.16 
+000944  31 2e 31 33 31 22 5d 0a  09 09 7d 0a 09 7d 2c 0a    1.131"]. ..}..},. 
+000960  09 22 64 7a 2d 69 6d 65  2e 78 66 2d 79 75 6e 2e    ."dz-ime .xf-yun. 
+000976  63 6f 6d 22 3a 20 7b 0a  09 09 22 49 44 43 22 3a    com": {. .."IDC": 
+000992  20 5b 22 62 6a 22 2c 20  22 67 7a 22 2c 20 22 73     ["bj",  "gz", "s 
+001008  68 22 5d 2c 0a 09 09 22  62 6a 22 3a 20 7b 0a 09    h"],..." bj": {.. 
+[2020/01/09 11:49:07 758][Px45cd][Txc9ffb700][TRC] LMOD       luac_logge 170  [transport:494:[soc] [1] readable  ]
+[2020/01/09 11:49:07 758][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 877  MSPSocket_Recv(90dc8f50) [in]
+[2020/01/09 11:49:07 758][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 901  MSPSocket_Recv() [out] 94000e80 0
+[2020/01/09 11:49:07 758][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 877  MSPSocket_Recv(90dc8f50) [in]
+[2020/01/09 11:49:07 758][Px45cd][Txc9ffb700][TRC] MSPSOCKET  MSPSocket. 901  MSPSocket_Recv() [out] 0 0
+[2020/01/09 11:49:07 758][Px45cd][Txabfff700][DBG] MSPSOCKET  MSPSocket. 819  recv(980173a0,,,) ret=1024, detail=11, hd=18
+000000  09 09 22 62 67 70 22 3a  20 5b 22 31 31 36 2e 32    .."bgp":  ["116.2 
+000016  31 33 2e 36 39 2e 31 39  39 22 2c 20 22 31 31 36    13.69.19 9", "116 
+000032  2e 32 31 33 2e 36 39 2e  31 39 35 22 2c 20 22 31    .213.69. 195", "1 
+000048  31 37 2e 31 32 31 2e 35  36 2e 38 22 2c 20 22 31    17.121.5 6.8", "1 
+000064  31 37 2e 31 32 31 2e 32  31 2e 31 34 36 22 2c 20    17.121.2 1.146",  
+000080  22 31 31 37 2e 31 32 31  2e 32 31 2e 31 34 37 22    "117.121 .21.147" 
+000096  2c 20 22 31 31 37 2e 31  32 31 2e 32 31 2e 31 35    , "117.1 21.21.15 
+000112  30 22 2c 20 22 31 31 37  2e 31 32 31 2e 31 33 2e    0", "117 .121.13. 
+000128  32 32 36 22 2c 20 22 31  31 37 2e 31 32 31 2e 34    226", "1 17.121.4 
+000144  2e 32 34 32 22 2c 20 22  34 32 2e 36 32 2e 34 32    .242", " 42.62.42 
+000160  2e 31 30 22 2c 20 22 34  32 2e 36 32 2e 34 32 2e    .10", "4 2.62.42. 
+000176  31 38 22 2c 22 34 32 2e  36 32 2e 34 32 2e 31 39    18","42. 62.42.19 
+000192  22 2c 22 34 32 2e 36 32  2e 31 31 36 2e 31 39 22    ","42.62 .116.19" 
+000208  2c 20 22 34 32 2e 36 32  2e 31 31 36 2e 31 38 22    , "42.62 .116.18" 
+000224  2c 20 22 34 32 2e 36 32  2e 31 31 36 2e 33 34 22    , "42.62 .116.34" 
+000240  2c 20 22 34 32 2e 36 32  2e 31 31 36 2e 33 35 22    , "42.62 .116.35" 
+000256  2c 20 22 34 32 2e 36 32  2e 31 31 36 2e 34 32 22    , "42.62 .116.42" 
+000272  2c 20 22 34 32 2e 36 32  2e 34 32 2e 31 31 22 2c    , "42.62 .42.11", 
+000288  20 22 34 32 2e 36 32 2e  31 31 36 2e 32 30 22 2c     "42.62. 116.20", 
+000304  20 22 34 32 2e 36 32 2e  31 31 36 2e 33 36 22 5d     "42.62. 116.36"] 
+000320  0a 09 09 7d 2c 0a 09 09  22 73 68 22 3a 20 7b 0a    ...},... "sh": {. 
+000336  09 09 09 22 62 67 70 22  3a 20 5b 22 31 32 30 2e    ..."bgp" : ["120. 
+000352  39 32 2e 32 33 38 2e 32  31 22 2c 20 22 31 32 30    92.238.2 1", "120 
+000368  2e 39 32 2e 32 33 38 2e  32 32 22 2c 20 22 31 32    .92.238. 22", "12 
+000384  30 2e 39 32 2e 32 33 38  2e 32 33 22 2c 20 22 31    0.92.238 .23", "1 
+000400  32 30 2e 39 32 2e 32 33  38 2e 32 34 22 5d 0a 09    20.92.23 8.24"].. 
+000416  09 7d 2c 0a 09 09 22 67  7a 22 3a 20 7b 0a 09 09    .},..."g z": {... 
+000432  09 22 62 67 70 22 3a 20  5b 22 35 39 2e 31 30 37    ."bgp":  ["59.107 
+000448  2e 32 34 2e 35 22 2c 20  22 35 39 2e 31 30 37 2e    .24.5",  "59.107. 
+000464  32 34 2e 33 22 2c 20 22  35 39 2e 31 30 37 2e 32    24.3", " 59.107.2 
+000480  34 2e 37 22 2c 20 22 35  39 2e 31 30 37 2e 32 34    4.7", "5 9.107.24 
+000496  2e 31 31 22 2c 20 22 35  39 2e 31 30 37 2e 32 34    .11", "5 9.107.24 
+000512  2e 31 33 22 2c 20 22 35  38 2e 36 37 2e 32 32 33    .13", "5 8.67.223 
+000528  2e 31 33 39 22 2c 20 22  35 38 2e 36 37 2e 32 32    .139", " 58.67.22 
+000544  33 2e 31 33 38 22 2c 20  22 35 38 2e 36 37 2e 32    3.138",  "58.67.2 
+000560  32 33 2e 31 34 30 22 2c  20 22 35 38 2e 36 37 2e    23.140",  "58.67. 
+000576  32 32 33 2e 31 34 31 22  2c 20 22 35 38 2e 36 37    223.141" , "58.67 
+000592  2e 32 32 33 2e 31 34 32  22 2c 20 22 35 38 2e 36    .223.142 ", "58.6 
+000608  37 2e 31 36 31 2e 31 33  31 22 5d 0a 09 09 7d 0a    7.161.13 1"]...}. 
+000624  09 7d 2c 09 0a 09 22 64  65 76 2e 76 6f 69 63 65    .},..."d ev.voice 
+000640  63 6c 6f 75 64 2e 63 6e  22 3a 20 7b 0a 09 09 22    cloud.cn ": {..." 
+000656  49 44 43 22 3a 20 5b 22  62 6a 22 2c 20 22 67 7a    IDC": [" bj", "gz 
+000672  22 2c 20 22 73 68 22 5d  2c 0a 09 09 22 62 6a 22    ", "sh"] ,..."bj" 
+000688  3a 20 7b 0a 09 09 09 22  62 67 70 22 3a 20 5b 22    : {...." bgp": [" 
+000704  31 31 36 2e 32 31 33 2e  36 39 2e 31 39 39 22 2c    116.213. 69.199", 
+000720  20 22 31 31 36 2e 32 31  33 2e 36 39 2e 31 39 35     "116.21 3.69.195 
+000736  22 2c 20 22 31 31 37 2e  31 32 31 2e 35 36 2e 38    ", "117. 121.56.8 
+000752  22 2c 20 22 31 31 37 2e  31 32 31 2e 32 31 2e 31    ", "117. 121.21.1 
+000768  34 36 22 2c 20 22 31 31  37 2e 31 32 31 2e 32 31    46", "11 7.121.21 
+000784  2e 31 34 37 22 2c 20 22  31 31 37 2e 31 32 31 2e    .147", " 117.121. 
+000800  32 31 2e 31 35 30 22 2c  20 22 31 31 37 2e 31 32    21.150",  "117.12 
+000816  31 2e 31 33 2e 32 32 36  22 2c 20 22 31 31 37 2e    1.13.226 ", "117. 
+000832  31 32 31 2e 34 2e 32 34  32 22 2c 20 22 34 32 2e    121.4.24 2", "42. 
+000848  36 32 2e 34 32 2e 31 30  22 2c 20 22 34 32 2e 36    62.42.10 ", "42.6 
+000864  32 2e 34 32 2e 31 38 22  2c 22 34 32 2e 36 32 2e    2.42.18" ,"42.62. 
+000880  34 32 2e 31 39 22 2c 22  34 32 2e 36 32 2e 31 31    42.19"," 42.62.11 
+000896  36 2e 31 39 22 2c 20 22  34 32 2e 36 32 2e 31 3

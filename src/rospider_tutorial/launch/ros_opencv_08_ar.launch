@@ -1,0 +1,8 @@
+<launch>
+	<arg name="model" default="bicycle" doc="model type [bicycle, chair, cow, fox, pirate-ship-fat, rat, wolf, rectangle]"/>
+	<include file="$(find rospider_peripherals)/launch/camera.launch"></include>
+	<node name="ar_node" pkg="rospider_tutorial" type="ros_opencv_08_ar.py" output="screen">
+		<param name="model" value="$(arg model)"/>
+	</node>
+</launch>
+

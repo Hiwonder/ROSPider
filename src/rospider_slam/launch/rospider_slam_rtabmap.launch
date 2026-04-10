@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+	<!-- 通用参数 -->
+	<arg name="robot_name" default="rospider"/> # 机器人名称
+	<arg name="master_name" default="rospider" />
+	<arg name="tf_prefix" default="rospider" />
+	<arg name="odom_topic" default="odom/filtered"/> # odom话题
+	<arg name="depth_camera_name" default="camera"/>  # 深度相机设备名称
+	<arg name="rtabmap_map_path" default="~/.ros/rtabmap.db" />
+	<arg name="map_topic" default="/map" />
+	<arg name="map_frame" default="$(arg tf_prefix)/map" />
+	<arg name="odom_frame" default="$(arg tf_prefix)/odom" />
+	<arg name="base_frame" default="$(arg tf_prefix)/base_link"/>
+	<arg name="move_base" default="move_base" />
+
+	<group ns="$(arg robot_name)">
+		<!-- 启动选中的SLAM算法 -->	
+		<include file="$(find rospider_slam)/launch/include/rospider_slam_base_rtabmap.launch"></include>
+		<include file="$(find rospider_slam)/launch/include/rtabmap.launch" >
+			<arg name="database_path" value="$(arg rtabmap_map_path)"/>
+			<arg name="subscribe_scan" value="true"/>
+			<arg name="depth_topic" value="/$(arg robot_name)/$(arg depth_camera_name)/depth/image_raw" />
+			<arg name="rgb_topic" value="/$(arg robot_name)/$(arg depth_camera_name)/rgb/image_raw" />
+			<arg name="camera_info_topic" value="/$(arg robot_name)/$(arg depth_camera_name)/rgb/camera_info" />
+			<arg name="scan_topic" value="/$(arg robot_name)/scan_filtered"/>
+	  		<arg name="map_topic" value="$(arg map_topic)"/>
+	  		<arg name="map_frame" value="$(arg map_frame)"/>
+			<arg name="odom_frame" value="$(arg odom_frame)"/>
+			<arg name="base_frame" value="$(arg base_frame)"/>
+			<arg name="move_base" value="$(arg move_base)"/>
+			</include>
+	</group>
+</launch>

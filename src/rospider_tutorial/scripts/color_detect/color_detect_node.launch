@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find rospider_peripherals)/launch/camera.launch"/>
+
+    <node pkg="rospider_tutorial" type="color_detect_node.py" name="color_detect_node" output="screen">
+        <rosparam file="$(find rospider_tutorial)/scripts/color_detect/roi.yaml" command="load"/>
+    </node>
+</launch>

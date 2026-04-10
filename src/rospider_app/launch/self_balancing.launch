@@ -1,0 +1,5 @@
+<launch>
+	<node name="self_balancing" pkg="rospider_app" type="self_balancing_main.py" output="screen" respawn="true">
+	</node>
+</launch>
+

@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find rospider_controller)/launch/rospider_controller.launch"></include>
+	<include file="$(find rospider_peripherals)/launch/camera.launch"></include>
+	<node name="face_tracking_node" pkg="rospider_tutorial" type="ros_ai_creative_finger_track_03.py" respawn="true" output="screen">
+	</node>
+</launch>

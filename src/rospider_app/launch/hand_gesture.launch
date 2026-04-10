@@ -1,0 +1,5 @@
+<launch>
+	<node name="hand_gesture_app" pkg="rospider_app" type="hand_gesture_main.py" output="screen" respawn="true">
+	</node>
+</launch>
+

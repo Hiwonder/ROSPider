@@ -1,0 +1,40 @@
+<launch>
+    <arg name="scan_raw" default="scan" />
+    <arg name="scan_topic" default="scan_filtered" />
+
+    <!-- 机器人的URDF描述 -->
+    <include file="$(find rospider_description)/launch/description.launch">
+        <arg name="robot_name" value="" />
+        <arg name="tf_prefix" value="" />
+    </include>
+
+    <!-- 激光雷达 -->
+    <include file="$(find rospider_peripherals)/launch/lidar.launch">
+        <arg name="tf_prefix" value="" />
+        <arg name="scan_topic" value="$(arg scan_raw)" />
+    </include>
+
+    <include file="$(find rospider_peripherals)/launch/lidar_filter.launch">
+        <arg name="scan_raw" value="$(arg scan_raw)" />
+        <arg name="scan_topic" value="$(arg scan_topic)_1" />
+	<arg name="base_frame" value="laser_link"/>
+    </include>
+
+    <include file="$(find rospider_peripherals)/launch/lidar_filter2.launch">
+        <arg name="scan_raw" value="$(arg scan_raw)" />
+        <arg name="scan_topic" value="$(arg scan_topic)_2" />
+	<arg name="base_frame" value="laser_link"/>
+    </include>
+
+    <!-- 激光雷达模拟里程计 -->
+    <include file="$(find rospider_slam)/launch/include/rf2o_laser_odometry.launch">
+    	<arg name="scan_topic" value="$(arg scan_topic)_2" />
+        <arg name="odom_topic" value="odom" />
+        <arg name="odom_frame_id" value="odom" />
+        <arg name="base_frame_id" value="base_link" />
+        <arg name="laser_frame_id" value="laser_link" />
+	<arg name="publish_tf" value="true" />
+	<arg name="freq" value="10" />
+    </include>
+
+</launch>

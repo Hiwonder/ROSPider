@@ -1,0 +1,17 @@
+<launch>
+	<include file="$(find rospider_bringup)/launch/rosbridge.launch"></include>
+	<include file="$(find rospider_description)/launch/description.launch"></include>
+	<include file="$(find rospider_peripherals)/launch/joystick_control.launch"></include>
+	<!-- <include file="$(find rospider_peripherals)/launch/oled_display.launch" /> -->
+	<include file="$(find rospider_peripherals)/launch/rgb_light.launch" /> 
+	<include file="$(find rospider_controller)/launch/rospider_controller.launch">
+		<arg name="odom_enable" value="false" />
+	</include>
+	<include file="$(find rospider_peripherals)/launch/imu.launch">
+		<arg name="freq" value="50" />
+		<arg name="start_publish" value="false" />
+	</include>
+	<include file="$(find rospider_peripherals)/launch/camera.launch"></include>	
+	<include file="$(find rospider_peripherals)/launch/lidar.launch"></include> 
+	<include file="$(find rospider_peripherals)/launch/oled_display.launch"></include> 
+</launch>

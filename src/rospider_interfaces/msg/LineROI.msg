@@ -1,0 +1,3 @@
+rospider_interfaces/ROI roi_up
+rospider_interfaces/ROI roi_center
+rospider_interfaces/ROI roi_down

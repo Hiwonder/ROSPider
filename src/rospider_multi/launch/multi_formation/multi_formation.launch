@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+    <!--row:横 column:纵-->
+    <arg name="multi_mode" default="row" doc="opt: row, column"/>
+
+    <arg name="master_name" default="$(env MASTER_NAME)"/>
+    <arg name="robot1_name" default="rospider_1"/>
+    <arg name="robot2_name" default="rospider_2"/>
+
+    <!--设定机器的初始相对位置-->
+    <include file="$(find rospider_multi)/launch/multi_formation/tf_init.launch">
+        <arg name="multi_mode" value="$(arg multi_mode)"/>
+        <arg name="master_name" value="$(arg master_name)"/>
+        <arg name="robot1_name" value="$(arg robot1_name)"/>
+        <arg name="robot2_name" value="$(arg robot2_name)"/>
+    </include>
+
+    <!--发送控制指令到rospider_1-->
+    <node name="rospider_1_tf_listener" pkg="rospider_multi" type="slave_tf_listener.py" respawn="false" output="screen">
+        <param name="base_frame_id" value="$(arg robot1_name)/base_link"/>
+        <param name="target_frame" value="$(arg multi_mode)_1"/>
+        <param name="cmd_vel" value="/$(arg robot1_name)/rospider_controller/cmd_vel"/>
+    </node>
+
+    <!--发送控制指令到rospider_2-->
+    <!--
+    <node name="rospider_2_tf_listener" pkg="rospider_multi" type="slave_tf_listener.py" respawn="false" output="screen">
+        <param name="base_frame_id" value="$(arg robot2_name)/base_link"/>
+        <param name="target_frame" value="$(arg multi_mode)_2"/>
+        <param name="cmd_vel" value="/$(arg robot2_name)/rospider_controller/cmd_vel"/>
+    </node>
+    -->
+</launch>
+

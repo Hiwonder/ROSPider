@@ -1,0 +1,557 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 0
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /navagition1/Map1
+        - /navagition1/Map1/Position1
+        - /navagition1/Map2
+        - /navagition1/Map3
+        - /MarkerArray1
+        - /MarkerArray1/Namespaces1
+        - /LaserScan1
+        - /RobotModel1
+      Splitter Ratio: 0.37613019347190857
+    Tree Height: 891
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: LaserScan
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999329447746
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: false
+        rospider/base_link:
+          Value: true
+        rospider/body_link:
+          Value: true
+        rospider/camera_base_link:
+          Value: true
+        rospider/coxa_LF:
+          Value: true
+        rospider/coxa_LM:
+          Value: true
+        rospider/coxa_LR:
+          Value: true
+        rospider/coxa_RF:
+          Value: true
+        rospider/coxa_RM:
+          Value: true
+        rospider/coxa_RR:
+          Value: true
+        rospider/endpoint_LF:
+          Value: true
+        rospider/endpoint_LM:
+          Value: true
+        rospider/endpoint_LR:
+          Value: true
+        rospider/endpoint_RF:
+          Value: true
+        rospider/endpoint_RM:
+          Value: true
+        rospider/endpoint_RR:
+          Value: true
+        rospider/femur_LF:
+          Value: true
+        rospider/femur_LM:
+          Value: true
+        rospider/femur_LR:
+          Value: true
+        rospider/femur_RF:
+          Value: true
+        rospider/femur_RM:
+          Value: true
+        rospider/femur_RR:
+          Value: true
+        rospider/imu_link:
+          Value: true
+        rospider/laser_link:
+          Value: true
+        rospider/lidar_base_link:
+          Value: true
+        rospider/map:
+          Value: true
+        rospider/odom:
+          Value: true
+        rospider/tibia_LF:
+          Value: true
+        rospider/tibia_LM:
+          Value: true
+        rospider/tibia_LR:
+          Value: true
+        rospider/tibia_RF:
+          Value: true
+        rospider/tibia_RM:
+          Value: true
+        rospider/tibia_RR:
+          Value: true
+      Marker Scale: 0.20000000298023224
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Tree:
+        rospider/map:
+          rospider/odom:
+            rospider/base_link:
+              rospider/body_link:
+                rospider/camera_base_link:
+                  {}
+                rospider/coxa_LF:
+                  rospider/femur_LF:
+                    rospider/tibia_LF:
+                      rospider/endpoint_LF:
+                        {}
+                rospider/coxa_LM:
+                  rospider/femur_LM:
+                    rospider/tibia_LM:
+                      rospider/endpoint_LM:
+                        {}
+                rospider/coxa_LR:
+                  rospider/femur_LR:
+                    rospider/tibia_LR:
+                      rospider/endpoint_LR:
+                        {}
+                rospider/coxa_RF:
+                  rospider/femur_RF:
+                    rospider/tibia_RF:
+                      rospider/endpoint_RF:
+                        {}
+                rospider/coxa_RM:
+                  rospider/femur_RM:
+                    rospider/tibia_RM:
+                      rospider/endpoint_RM:
+                        {}
+                rospider/coxa_RR:
+                  rospider/femur_RR:
+                    rospider/tibia_RR:
+                      rospider/endpoint_RR:
+                        {}
+                rospider/imu_link:
+                  {}
+                rospider/lidar_base_link:
+                  rospider/laser_link:
+                    {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 1
+      Class: rviz/Polygon
+      Color: 25; 255; 0
+      Enabled: true
+      Name: Polygon
+      Topic: /rospider/move_base_node/global_costmap/footprint
+      Unreliable: false
+      Value: true
+    - Class: rviz/Group
+      Displays:
+        - Alpha: 0.699999988079071
+          Class: rviz/Map
+          Color Scheme: map
+          Draw Behind: false
+          Enabled: true
+          Name: Map
+          Topic: /rospider/map
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 0.8999999761581421
+          Class: rviz/Map
+          Color Scheme: map
+          Draw Behind: false
+          Enabled: true
+          Name: Map
+          Topic: /rospider/move_base/global_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 0.800000011920929
+          Class: rviz/Map
+          Color Scheme: costmap
+          Draw Behind: false
+          Enabled: true
+          Name: Map
+          Topic: /rospider/move_base/local_costmap/costmap
+          Unreliable: false
+          Use Timestamp: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 255; 0; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /rospider/move_base/GlobalPlanner/plan
+          Unreliable: false
+          Value: true
+        - Alpha: 1
+          Buffer Length: 1
+          Class: rviz/Path
+          Color: 25; 255; 0
+          Enabled: true
+          Head Diameter: 0.30000001192092896
+          Head Length: 0.20000000298023224
+          Length: 0.30000001192092896
+          Line Style: Lines
+          Line Width: 0.029999999329447746
+          Name: Path
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Pose Color: 255; 85; 255
+          Pose Style: None
+          Radius: 0.029999999329447746
+          Shaft Diameter: 0.10000000149011612
+          Shaft Length: 0.10000000149011612
+          Topic: /rospider/move_base/TebLocalPlannerROS/local_plan
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: navagition
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /exploration_polygon_marker
+      Name: Marker
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /rospider/path_point
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 0.14389289915561676
+        Min Value: 0.14389289915561676
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: AxisColor
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 255; 0; 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.029999999329447746
+      Style: Flat Squares
+      Topic: /rospider/scan_filtered
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz/Image
+      Enabled: false
+      Image Topic: /rospider/astra_cam/rgb/image_raw
+      Max Value: 1
+      Median window: 5
+      Min Value: 0
+      Name: Image
+      Normalize Range: true
+      Queue Size: 2
+      Transport Hint: raw
+      Unreliable: false
+      Value: false
+    - Alpha: 1
+      Class: rviz/RobotModel
+      Collision Enabled: false
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        body_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        camera_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        coxa_LF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        coxa_LM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        coxa_LR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        coxa_RF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        coxa_RM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        coxa_RR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        endpoint_LF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        endpoint_LM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        endpoint_LR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        endpoint_RF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        endpoint_RM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        endpoint_RR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        femur_LF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        femur_LM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        femur_LR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        femur_RF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        femur_RM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        femur_RR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lidar_base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tibia_LF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tibia_LM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tibia_LR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tibia_RF:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tibia_RM:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        tibia_RR:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+      Name: RobotModel
+      Robot Description: /rospider/robot_description
+      TF Prefix: rospider
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Alpha: 1
+      Arrow Length: 0.30000001192092896
+      Axes Length: 0.30000001192092896
+      Axes Radius: 0.009999999776482582
+      Class: rviz/PoseArray
+      Color: 255; 25; 0
+      Enabled: false
+      Head Length: 0.07000000029802322
+      Head Radius: 0.029999999329447746
+      Name: PoseArray
+      Shaft Length: 0.23000000417232513
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow (Flat)
+      Topic: /rospider/particlecloud
+      Unreliable: false
+      Value: false
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: rospider/map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
+      Topic: /rospider/initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
+    - Class: rviz/SetGoal
+      Topic: /rospider/move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /rospider/clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 3.9582502841949463
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0.8172541856765747
+        Y: -0.5982140302658081
+        Z: 0.5543949007987976
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 1.3597962856292725
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 5.180900573730469
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 1025
+  Hide Left Dock: false
+  Hide Right Dock: true
+  Image:
+    collapsed: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000022b000003bbfc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005d00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000027000003bb000000cc00fffffffb0000000a0049006d00610067006500000002790000010f0000001700fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d00650072006100000002c7000000cb0000000000000000fb0000000a0049006d006100670065000000027d000000c30000000000000000000000010000010f00000334fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000002800000334000000a900fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f00000046fc0100000002fb0000000800540069006d006500000000000000073f0000045f00fffffffb0000000800540069006d006501000000000000045000000000000000000000050c000003bb00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: true
+  Width: 1853
+  X: 67
+  Y: 27

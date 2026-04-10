@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rospider_app</name>
+  <version>0.0.0</version>
+  <description>The rospider_app package</description>
+  <maintainer email="hiwonder@todo.todo">hiwonder</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospider_controller</depend>
+  <depend>rospider_interfaces</depend>
+  <depend>lab_config</depend>
+  <depend>vision_utils</depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+  </export>
+</package>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+	<!-- 通用参数 -->
+	<arg name="robot_name" default="rospider"/> # 机器人名称
+	<arg name="odom_topic" default="odom"/> # odom话题
+	<arg name="slam_methods" default="gmapping" doc="slam type [gmapping,karto,hector,cartographer]"/>
+
+	<!-- 启动选中的SLAM算法 -->	
+	<include file="$(find rospider_slam)/launch/rospider_$(arg slam_methods)_app.launch">
+		<arg name="robot_name" value="rospider"/>
+		<arg name="tf_prefix" value=""/>
+		<arg name="odom_topic" value="$(arg odom_topic)" />
+	</include>
+</launch>

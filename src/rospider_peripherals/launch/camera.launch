@@ -1,0 +1,70 @@
+<launch>
+  <arg name="camera" default="camera" />
+  <arg name="tf_prefix" default="" />
+  <arg name="camera_type" default="$(optenv CAMERA_TYPE DABAI)"/>
+
+  <arg if="$(eval tf_prefix == '')" name="source_frame" default="camera_base_link" />
+  <arg unless="$(eval tf_prefix == '')" name="source_frame" default="$(arg tf_prefix)/camera_base_link" />
+
+  <arg if="$(eval tf_prefix == '')" name="frame_id" default="camera_link" />
+  <arg unless="$(eval tf_prefix == '')" name="frame_id" default="$(arg tf_prefix)/camera_link" />
+
+  <!-- 相机型号 --> 
+  <param name="camera_type" value="$(arg camera_type)" />
+
+  <!-- 使用 DABAI 相机 -->
+  <group if="$(eval arg('camera_type')=='DABAI')">
+    <param name="camera_type" value="$(arg camera_type)" />
+    <param name="camera_rgb_prefix" value="camera/rgb" />
+    <include file="$(find rospider_peripherals)/launch/Halley.launch">
+      <arg name="camera" default="$(arg camera)" />
+      <arg name="tf_prefix" value="$(arg tf_prefix)" />
+    </include>
+  </group>
+
+  <!-- 使用 AstraPro 相机 -->
+  <group if="$(eval arg('camera_type')=='AstraPro')">
+    <param name="camera_type" value="$(arg camera_type)" />
+    <param name="camera_rgb_prefix" value="camera/rgb" />
+    <include file="$(find rospider_peripherals)/launch/astrapro.launch"> 
+      <arg name="camera" default="$(arg camera)" />
+      <arg name="tf_prefix" value="$(arg tf_prefix)" />
+    </include>
+
+    <node 
+          pkg="tf" 
+          type="static_transform_publisher" 
+          name="camera_to_camera_base" args="0.0 0.0 0.06 0 0 0 $(arg source_frame) $(arg frame_id) 50">
+    </node>
+  </group>
+
+  <!-- 使用 AstraProPlus 相机 -->
+  <group if="$(eval arg('camera_type')=='AstraProPlus')">
+    <param name="camera_type" value="$(arg camera_type)" />
+    <param name="camera_rgb_prefix" value="camera/rgb" />
+    <include file="$(find rospider_peripherals)/launch/astra_pro_plus.launch"> 
+      <arg name="camera" default="$(arg camera)" />
+      <arg name="tf_prefix" value="$(arg tf_prefix)" />
+    </include>
+
+    <node 
+          pkg="tf" 
+          type="static_transform_publisher" 
+          name="camera_to_camera_base" args="0.0 0.0 0.06 0 0 0 $(arg source_frame) $(arg frame_id) 50">
+    </node>
+  </group>
+
+  <!-- 使用 CSI 相机 -->
+  <group if="$(eval arg('camera_type')=='CSI')">
+    <param name="camera_type" value="$(arg camera_type)" />
+    <param name="camera_rgb_prefix" value="csi_camera" />
+    <include file="$(find rospider_peripherals)/launch/csi_camera.launch">
+    </include>
+  </group>
+
+  <!-- web video 流 -->
+  <node name="web_video_server" pkg="web_video_server" type="web_video_server">
+    <param name="type" value="h264" />
+  </node>
+
+</launch>

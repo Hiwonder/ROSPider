@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rospider">
+    <xacro:arg name="prefix" default="" />
+
+    <!-- Import rospider macro -->
+    <xacro:include filename="$(find rospider_description)/urdf/rospider_description.urdf.xacro" />
+
+    <!-- Import Rviz colors -->
+    <xacro:include filename="$(find rospider_description)/gazebo/rospider.materials.xacro" />
+
+    <!-- Import rospider ros_control description -->
+    <xacro:include filename="$(find rospider_description)/gazebo/rospider.gazebo.xacro" />
+    <xacro:include filename="$(find rospider_description)/gazebo/rospider.transmission.xacro" />
+
+    <!-- Used for fixing robot -->
+    <link name="$(arg prefix)base_link"/>
+    <gazebo reference="$(arg prefix)base_footprint">
+        <static>true</static>
+    </gazebo>
+
+    <xacro:rospider parent="$(arg prefix)base_link" prefix="$(arg prefix)">
+        <origin xyz="0 0 0.06" rpy="0 0 0" />
+    </xacro:rospider>
+
+    <xacro:rospider_gazebo prefix="$(arg prefix)"></xacro:rospider_gazebo>
+    <xacro:rospider_gazeboo_transmission prefix="$(arg prefix)"> </xacro:rospider_gazeboo_transmission>
+
+    <!-- <xacro:rospider_ros2_control name="rospider" prefix="$(arg prefix)" /> -->
+
+</robot>

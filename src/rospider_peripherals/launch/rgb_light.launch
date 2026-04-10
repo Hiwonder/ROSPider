@@ -1,0 +1,3 @@
+<launch>
+    <node name="rgb_light_node" pkg="rospider_peripherals" type="rgb_ring.py" output="screen" respawn="true"/>
+</launch>

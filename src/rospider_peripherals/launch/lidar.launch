@@ -1,0 +1,89 @@
+<launch>
+  <arg name="tf_prefix" default="" />
+  <arg name="scan_topic" default="scan" />
+  <arg name="lidar_type" default="$(optenv LIDAR_TYPE RPLIDAR_A1)"/> # 雷达型号, 根据雷达型号进行对应的启动过程
+  <arg name="serial_port" default="/dev/ttyUSB0" /> # 所用串口设备
+  <arg name="publish_tf" default="true" />
+  <arg name="scan_frequency" default="10" />
+	 
+  <arg if="$(eval tf_prefix == '')" name="source_frame" default="lidar_base_link" />
+  <arg unless="$(eval tf_prefix == '')" name="source_frame" default="$(arg tf_prefix)/lidar_base_link" />
+
+  <arg if="$(eval tf_prefix == '')" name="frame_id" default="laser_link" />
+  <arg unless="$(eval tf_prefix == '')" name="frame_id" default="$(arg tf_prefix)/laser_link" />
+
+  <!-- 使用 RPLIDAR_A1 雷达 -->
+  <group if="$(eval arg('lidar_type')=='RPLIDAR_A1')">
+    <include file="$(find rospider_peripherals)/launch/include/rplidar.launch">
+      <arg name="scan_topic" value="$(arg scan_topic)" />
+      <arg name="serial_port" value="$(arg serial_port)" />
+      <arg name="frame_id" value="$(arg frame_id)" />
+      <arg name="serial_baudrate" value="115200" />
+    </include>
+    <node if="$(arg publish_tf)" 
+          pkg="tf" 
+          type="static_transform_publisher" 
+          name="body_link_to_laser_link" args="0.0 0.0 0.03 3.1415926 0 0 $(arg source_frame) $(arg frame_id) 50">
+    </node>
+  </group>
+
+  <!-- 使用 RPLIDAR_A2 雷达 -->
+  <group if="$(eval arg('lidar_type')=='RPLIDAR_A2')">
+    <include file="$(find rospider_peripherals)/launch/include/rplidar.launch">
+      <arg name="scan_topic" value="$(arg scan_topic)" />
+      <arg name="serial_port" value="$(arg serial_port)" />
+      <arg name="frame_id" value="$(arg frame_id)" />
+      <arg name="serial_baudrate" value="256000" />
+    </include>
+    <node if="$(arg publish_tf)" 
+          pkg="tf" 
+          type="static_transform_publisher" 
+          name="body_link_to_laser_link" args="0.0 0.0 0.03 3.1415926 0 0 $(arg source_frame) $(arg frame_id) 50">
+    </node>
+  </group>
+
+  <!-- 使用 RPLIDAR_S2L 雷达 -->
+  <group if="$(eval arg('lidar_type')=='RPLIDAR_S2L')">
+    <include file="$(find rospider_peripherals)/launch/include/rplidar_s2l.launch">
+      <arg name="scan_topic" value="$(arg scan_topic)" />
+      <arg name="serial_port" value="$(arg serial_port)" />
+      <arg name="frame_id" value="$(arg frame_id)" />
+      <arg name="serial_baudrate" value="1000000" />
+      <arg name="scan_frequency" value="$(arg scan_frequency)" />
+    </include>
+    <node if="$(arg publish_tf)" 
+          pkg="tf" 
+          type="static_transform_publisher" 
+          name="body_link_to_laser_link" args="0.0 0.0 0.03 3.1415926 0 0 $(arg source_frame) $(arg frame_id) 50">
+    </node>
+  </group>
+
+  <!-- 使用 EAI G2 雷达 -->
+  <group if="$(eval arg('lidar_type')=='YDLIDAR_G2')">
+    <include file="$(find rospider_peripherals)/launch/include/ydlidar_g2.launch">
+      <arg name="scan_topic" value="$(arg scan_topic)" />
+      <arg name="serial_port" value="$(arg serial_port)" />
+      <arg name="frame_id" value="$(arg frame_id)" />
+    </include>
+    <node if="$(arg publish_tf)" 
+          pkg="tf" 
+          type="static_transform_publisher" 
+          name="body_link_to_laser_link" args="0.0 0.0 0.031 0.0 0 0 $(arg source_frame) $(arg frame_id) 50">
+    </node>
+  </group>
+
+  <!-- 使用 EAI G4 雷达 -->
+  <group if="$(eval arg('lidar_type')=='YDLIDAR_G4')">
+    <include file="$(find rospider_peripherals)/launch/include/ydlidar_g4.launch">
+      <arg name="scan_topic" value="$(arg scan_topic)" />
+      <arg name="serial_port" value="$(arg serial_port)" />
+      <arg name="frame_id" value="$(arg frame_id)" />
+    </include>
+    <node if="$(arg publish_tf)" 
+          pkg="tf" 
+          type="static_transform_publisher" 
+          name="body_link_to_laser_link" args="0.0 0.0 0.031 0.0 0 0 $(arg source_frame) $(arg frame_id) 50">
+    </node>
+  </group>
+
+</launch>

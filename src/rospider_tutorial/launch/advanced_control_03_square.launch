@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find rospider_controller)/launch/rospider_controller.launch"></include>
+
+	<node name="square_03" pkg="rospider_tutorial" type="advanced_control_03_square.py" output="screen">
+	</node>
+</launch>
