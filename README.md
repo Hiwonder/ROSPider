@@ -3,52 +3,52 @@
 English | [中文](README_cn.md)
 
 <p align="center">
-  A ROS-based hexapod robot workspace for locomotion, vision, SLAM, navigation, voice interaction, and multi-robot coordination.
+  ROSpider is our ROS1-based hexapod robot platform built for intelligent locomotion, AI vision, SLAM, autonomous navigation, and multi-robot experimentation on Jetson.
 </p>
 
 ## Product Overview
 
 ### About ROSpider
 
-ROSpider is an open-source hexapod robot workspace built around ROS and real hardware deployment. Instead of being just a gait demo or a single perception example, this repository combines low-level servo control, whole-body kinematics, sensor drivers, AI vision applications, SLAM, autonomous navigation, and even multi-robot formation into one integrated development stack.
+ROSpider is our open-source hexapod robot platform built on ROS1 and designed for developers, educators, makers, and robotics learners who want more than a basic walking demo. It brings together motion control, perception, mapping, navigation, voice interaction, and application-level ROS workflows in one integrated workspace, so you can move from hardware bringup to advanced autonomous behaviors with far less setup effort.
 
-The pain point it solves is straightforward: legged robots are exciting, but getting one to move stably, perceive the environment, and run real ROS applications usually means stitching together many disconnected packages yourself. ROSpider packages that work into a practical stack, so you can move from hardware bringup to vision tracking, mapping, route planning, and experimental interaction much faster.
+We built ROSpider to solve a common problem in legged robotics: many projects can demonstrate motion, and many others can demonstrate perception, but very few connect the full chain from low-level servo control to practical ROS applications on real hardware. ROSpider closes that gap by providing a ready-to-extend software stack for a real six-legged robot platform.
 
-If you are building a teaching robot, prototyping a Jetson-based legged platform, or learning how locomotion and perception fit together in ROS, ROSpider gives you a codebase that is much closer to a complete robot product than a toy example.
+Whether you are teaching robotics, prototyping interactive AI applications, or exploring how locomotion and perception work together on Jetson-based hardware, ROSpider provides a complete and approachable foundation.
 
-### The Core: A Hexapod Platform Built for Real ROS Work
+### The Core: A Hexapod Platform Designed for Real Deployment
 
-ROSpider is clearly structured as a six-legged robot system with **18 bus servos** for the legs plus a **camera pan joint**. The controller package exposes leg-level and body-level pose control, built-in poses, action-set playback, gait control, and velocity-based motion interfaces, making it suitable both for direct motion experiments and for higher-level autonomy.
+ROSpider is built around a six-legged robot architecture with **18 bus servos** for the legs and an additional **camera pan joint**, giving the platform both expressive body motion and active visual tracking capability.
 
-**Hexapod motion control**: The `rospider_controller` package handles inverse kinematics, joint control, built-in poses, action groups, and gait generation. From the code, the platform supports tripod and ripple-style locomotion, body translation/rotation transforms, head yaw control, and raw odometry publication.
+**Full-body motion control**: The `rospider_controller` package integrates inverse kinematics, joint control, built-in poses, action-set execution, gait generation, and velocity-based motion control. It supports body translation and rotation transforms, head yaw control, and raw odometry publishing for higher-level ROS integration.
 
-**Sensor-rich bringup**: The default bringup stack starts robot description, joystick control, RGB lighting, IMU, camera, LiDAR, OLED display, and the main controller together. This means the repository is designed around an actual robot with onboard sensing, not just simulation assets.
+**Rich onboard hardware integration**: Our base bringup stack launches robot description, joystick control, RGB lighting, IMU, camera, LiDAR, OLED display, and the main control node together, providing a practical starting point for real robot deployment instead of an isolated algorithm demo.
 
-**Jetson-oriented deployment**: Multiple packages use `Jetson.GPIO`, and the provided startup scripts source **ROS Melodic** plus a robot workspace under `~/rospider`. That makes this repository especially relevant for NVIDIA Jetson based educational and research robots.
+**Jetson-oriented design**: Multiple packages use `Jetson.GPIO`, and the environment scripts are configured around **ROS Melodic** workspaces on Jetson-class devices. This makes ROSpider especially well suited for Jetson-based educational and intelligent robotics applications.
 
-### The Software Stack: From Perception Demos to Autonomy
+### The Software Stack: Motion, Vision, SLAM, and Interaction
 
-ROSpider is more than locomotion. The workspace includes a broad software ecosystem:
+ROSpider is designed as a complete ROS application platform rather than a single-purpose repository.
 
-**Vision applications**: `rospider_app` and `rospider_tutorial` include color tracking, AprilTag tracking, hand gesture recognition, line following, face-related demos, pose-related demos, KCF tracking, AR overlays, color detection, and MediaPipe-based interaction experiments.
+**AI vision applications**: `rospider_app` and `rospider_tutorial` include object tracking, color tracking, AprilTag tracking, line following, hand gesture interaction, AR demos, face-related demos, pose-related demos, KCF tracking, and MediaPipe-based interaction examples.
 
-**Self-balancing and reactive behaviors**: The app layer contains a self-balancing node driven by IMU feedback and PID control, plus reactive behaviors such as line following and object tracking that connect perception directly to movement.
+**Self-balancing and reactive behaviors**: The application layer includes IMU-driven self-balancing with PID control, along with reactive behaviors such as line following and object tracking that directly connect visual perception to robot movement.
 
-**SLAM and navigation**: `rospider_slam` supports multiple mapping backends including **GMapping**, **Karto**, **Hector**, and **Cartographer**, while `rospider_navigation` integrates map loading, AMCL localization, move_base, and multi-point navigation publishing.
+**SLAM and navigation**: `rospider_slam` supports multiple mapping backends including **GMapping**, **Karto**, **Hector**, and **Cartographer**. `rospider_navigation` adds map loading, AMCL localization, move_base integration, and multi-point navigation support.
 
-**Voice interaction**: The `xf_mic_asr_offline` package adds offline speech interaction and voice-triggered behaviors, including voice-controlled movement, color tracking, and navigation workflows.
+**Offline voice interaction**: The `xf_mic_asr_offline` package enables offline speech interaction and voice-controlled robot behaviors, including motion, color-based tasks, and navigation-related workflows.
 
-**Multi-robot experiments**: `rospider_multi` includes formation and coordinated navigation launch files, making the project useful for swarm-style or classroom multi-robot experiments as well.
+**Multi-robot capability**: `rospider_multi` provides formation and coordinated navigation launch files, giving ROSpider room to grow beyond a single robot into classroom demos, formation experiments, and multi-robot research projects.
 
-### Learning & Extensibility: A Full Workspace, Not Just a Demo Folder
+### Built for Learning, Expansion, and Creative Development
 
-This repository is especially valuable as a learning platform.
+ROSpider is not just a product platform. It is also a development and teaching platform.
 
-**Tutorial coverage**: `rospider_tutorial` contains a large number of scripts and launch files covering board-level IO, servo control, gait basics, IK, OpenCV projects, AR demos, deep learning demos, and creative interaction examples.
+**Comprehensive tutorials**: `rospider_tutorial` includes a wide range of example scripts and launch files covering servo control, board-level IO, basic gait control, inverse kinematics, OpenCV projects, AR demos, deep learning demos, and creative interaction examples.
 
-**Modular ROS packages**: Core capabilities are separated into bringup, controller, SDK, peripherals, interfaces, navigation, SLAM, app, tutorial, and third-party dependency packages. That modularity makes it easier to swap sensors, add new nodes, or reuse parts of the stack in another robot.
+**Modular ROS package layout**: Core functions are split into bringup, controller, SDK, peripherals, interfaces, navigation, SLAM, applications, tutorials, and bundled third-party dependencies, making it easier to understand, customize, and extend the system.
 
-**Practical integration path**: The included environment scripts define robot names, master names, LiDAR and camera types, and network settings, which is exactly the kind of infrastructure a real deployed ROS robot needs.
+**Practical engineering workflow**: The included environment scripts already define robot naming, master naming, LiDAR type, camera type, and ROS networking parameters, helping you start from a working robot workflow instead of rebuilding infrastructure from scratch.
 
 ## Official Resources
 
@@ -91,13 +91,13 @@ catkin_make
 source devel/setup.bash
 ```
 
-4. If you are using the official robot image, you can also load the preset environment:
+4. If you are using the official system image, you can also load the preset environment:
 
 ```bash
 source ~/.hiwonderrc
 ```
 
-This script configures variables such as `ROBOT_NAME`, `MASTER_NAME`, `LIDAR_TYPE`, `CAMERA_TYPE`, `ROS_HOSTNAME`, and `ROS_MASTER_URI`, then sources ROS Melodic and the workspace setup files.
+This script sets `ROBOT_NAME`, `MASTER_NAME`, `LIDAR_TYPE`, `CAMERA_TYPE`, `ROS_HOSTNAME`, and `ROS_MASTER_URI`, then loads ROS Melodic and the ROSpider workspace environment.
 
 ### Typical Launch Commands
 
@@ -125,7 +125,7 @@ Start map-based navigation:
 roslaunch rospider_navigation rospider_navigation.launch map:=/path/to/map.yaml
 ```
 
-Start a sample app:
+Start a sample application:
 
 ```bash
 roslaunch rospider_app object_tracking.launch
@@ -142,7 +142,7 @@ roslaunch rospider_multi multi_formation/multi_formation.launch
 ## Repository Structure
 
 ```text
-ROSPider/
+ROSpider/
 └── src/
     ├── rospider_bringup/        # Base bringup, rosbridge, startup scripts
     ├── rospider_controller/     # Hexapod control, IK, gait, odometry, action sets
@@ -164,13 +164,13 @@ ROSPider/
 
 ## Community & Support
 
-- **GitHub Issues**: Report bugs, integration problems, and feature requests
+- **GitHub Issues**: Report bugs and request features
 - **Email Support**: support@hiwonder.com
-- **Tutorial Packages**: Explore `rospider_tutorial` for hands-on learning examples
+- **Documentation**: Comprehensive guides and tutorials
 
 ## License
 
-This repository does not currently include a top-level license file, and several package manifests still use placeholder license fields. If you plan to redistribute or use the code commercially, it is best to confirm the licensing terms with the maintainer first.
+This project is open-source and available for educational and research purposes.
 
 ---
 

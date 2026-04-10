@@ -3,52 +3,52 @@
 [English](README.md) | 中文
 
 <p align="center">
-  一个面向六足蜘蛛机器人的 ROS 工作区，覆盖运动控制、视觉感知、SLAM 建图、导航、语音交互和多机协同。
+  ROSpider 是我们面向 Jetson 平台打造的 ROS1 六足蜘蛛机器人开发平台，集运动控制、AI 视觉、SLAM 建图、自主导航与多机协同于一体。
 </p>
 
 ## 产品概述
 
 ### 关于 ROSpider
 
-ROSpider 是一个面向真实硬件落地的开源六足机器人 ROS 工作区。它不是单独的步态 demo，也不是只做视觉识别的小项目，而是把底层舵机控制、全身运动学、传感器驱动、AI 视觉玩法、SLAM 建图、自主导航，甚至多机编队，整合进了一套完整开发栈里。
+ROSpider 是我们基于 ROS1 打造的开源六足蜘蛛机器人平台，面向开发者、教育用户、创客和机器人学习者而设计。它不只是一个“能走路”的六足底盘，也不只是一个单独的视觉 demo，而是一套把底层控制、环境感知、建图导航、语音交互和应用层 ROS 工作流整合在一起的完整开发栈。
 
-它解决的痛点其实很现实：足式机器人很酷，但真想让机器人“又能稳走、又能看懂环境、还能跑 ROS 应用”，往往需要自己拼很多零散包。ROSpider 把这些环节提前打通了，让你能更快从硬件 bringup 走到视觉跟踪、建图、路径规划和交互实验。
+我们做 ROSpider，解决的是足式机器人开发里一个非常常见的问题: 很多项目能展示运动控制，很多项目也能展示视觉识别，但真正把底层舵机控制、全身运动学、传感器接入、SLAM、导航和交互应用串成一套完整系统的项目并不多。ROSpider 的目标，就是把这一整条链路打通，让你能更快从硬件 bringup 进入到高级应用开发。
 
-如果你想做教学机器人、想搭一个基于 Jetson 的足式平台，或者单纯想搞明白“运动控制”和“环境感知”在 ROS 里是怎么串起来的，那这个仓库比普通示例工程更像一套可以直接干活的机器人系统。
+无论你是做机器人教学、做 Jetson 平台原型验证，还是想系统学习足式机器人在 ROS 中的完整开发流程，ROSpider 都能提供一套清晰、完整、可扩展的基础平台。
 
-### 核心：一套能真正跑起来的六足机器人平台
+### 核心：面向真实部署的六足机器人平台
 
-从代码结构看，ROSpider 是一套很完整的六足蜘蛛机器人系统，包含 **18 路腿部总线舵机**，外加一个 **相机云台关节**。`rospider_controller` 对外提供了腿端控制、机体姿态控制、内置姿态、动作组播放、步态控制，以及基于速度的话题接口，既适合直接做动作实验，也方便往上接导航和自主行为。
+ROSpider 采用六足蜘蛛机器人结构，配备 **18 路腿部总线舵机**，并带有一个 **相机云台关节**，既能实现灵活稳定的全身运动，也能支持视觉跟踪和交互类应用。
 
-**六足运动控制**：`rospider_controller` 负责逆运动学、关节控制、内置姿态、动作组、步态生成和原始里程计发布。从代码里能看出来，它支持 tripod、ripple 等步态模式，支持机体平移/旋转变换、头部偏航控制，以及 `cmd_vel` 风格的运动接口。
+**完整的六足运动控制能力**：`rospider_controller` 集成了逆运动学、关节控制、内置姿态、动作组执行、步态生成以及基于速度的运动控制接口，支持机体平移与旋转姿态变换、头部偏航控制，以及原始里程计发布，方便继续对接更高层 ROS 功能。
 
-**传感器整体 bringup**：默认启动栈会一起拉起机器人模型、手柄控制、RGB 灯、IMU、相机、激光雷达、OLED 显示和主控制节点。这说明它不是只面向仿真的代码仓，而是围绕真实机器人硬件设计的。
+**面向真机的一体化硬件接入**：基础 bringup 会同时启动机器人模型、手柄控制、RGB 灯、IMU、相机、激光雷达、OLED 显示和主控制节点，开箱就是一套完整的机器人运行框架，而不是拆散的功能样例。
 
-**偏 Jetson 的部署方式**：多个包直接使用了 `Jetson.GPIO`，而且启动脚本会自动加载 **ROS Melodic** 和 `~/rospider` 工作区环境。也就是说，这个仓库天然更适合跑在 Jetson 系教育或研究机器人上。
+**针对 Jetson 平台优化**：多个功能包直接使用 `Jetson.GPIO`，环境脚本默认围绕 **ROS Melodic** 和 Jetson 工作区配置。对需要在 Jetson 平台上进行教育、开发和应用落地的用户来说，ROSpider 上手路径更直接。
 
-### 软件栈：从视觉玩法一路到自主导航
+### 软件栈：从运动控制到 AI 感知与自主导航
 
-ROSpider 的重点不只是“会走路”，它的软件层很完整：
+ROSpider 的价值不只是“能控制六足运动”，更在于它提供了完整的软件生态。
 
-**视觉应用**：`rospider_app` 和 `rospider_tutorial` 里包含颜色跟踪、AprilTag 跟踪、手势识别、巡线、人脸相关 demo、姿态相关 demo、KCF 跟踪、AR 叠加、颜色识别和基于 MediaPipe 的交互玩法。
+**AI 视觉应用**：`rospider_app` 与 `rospider_tutorial` 包含目标跟踪、颜色跟踪、AprilTag 跟踪、巡线、手势识别、AR 玩法、人脸相关 demo、姿态相关 demo、KCF 跟踪以及基于 MediaPipe 的交互示例。
 
-**自平衡和反应式行为**：应用层里有基于 IMU + PID 的自平衡节点，也有巡线、目标跟踪这种“看到什么就怎么动”的闭环行为，感知和运动控制是直接打通的。
+**自平衡与反应式行为**：应用层提供了基于 IMU + PID 的自平衡能力，也提供了巡线、目标跟踪这类“感知驱动运动”的闭环行为，让机器人不仅能动，还能根据环境实时做出反应。
 
-**SLAM 与导航**：`rospider_slam` 支持 **GMapping、Karto、Hector、Cartographer** 等多种建图方案；`rospider_navigation` 则把地图加载、AMCL 定位、move_base 和多点导航串了起来。
+**SLAM 与导航能力**：`rospider_slam` 支持 **GMapping、Karto、Hector、Cartographer** 等多种建图方案，`rospider_navigation` 则进一步整合了地图加载、AMCL 定位、move_base 和多点导航能力。
 
-**语音交互**：`xf_mic_asr_offline` 提供离线语音识别和语音控制能力，代码里已经包括语音控制移动、颜色跟踪和导航等功能入口。
+**离线语音交互**：`xf_mic_asr_offline` 提供离线语音识别与语音控制能力，可用于控制机器人运动、颜色相关任务和导航类功能。
 
-**多机协同**：`rospider_multi` 提供了编队和协同导航相关启动文件，适合做多机器人教学、实验或编队演示。
+**多机协同扩展**：`rospider_multi` 提供编队和协同导航启动文件，让 ROSpider 不只是单机平台，也能支持多机演示、教学实验和协同研究。
 
-### 学习与扩展：这不是示例文件夹，而是一整套工作区
+### 面向学习、扩展与创意开发
 
-这个仓库很适合拿来学习，也很适合继续二开。
+ROSpider 不只是产品平台，同时也是一套非常适合教学和二次开发的学习平台。
 
-**教程覆盖面广**：`rospider_tutorial` 下面有大量脚本和 launch，覆盖板载 IO、舵机控制、基础步态、逆运动学、OpenCV 玩法、AR demo、深度学习 demo、创意交互等内容。
+**教程体系完整**：`rospider_tutorial` 提供大量脚本和 launch 文件，覆盖舵机控制、板载 IO、基础步态、逆运动学、OpenCV 项目、AR demo、深度学习 demo 和创意交互玩法。
 
-**ROS 包拆分清楚**：bringup、controller、SDK、peripherals、interfaces、navigation、slam、app、tutorial、third_party 都是独立包，后续你想换传感器、加新节点、或者把某一层单独复用到别的机器人上，都比较顺手。
+**ROS 包结构清晰**：仓库将 bringup、controller、SDK、peripherals、interfaces、navigation、slam、applications、tutorials 以及 third-party 依赖做了明确拆分，方便理解整体架构，也方便后续扩展。
 
-**工程化程度比较高**：仓库自带环境初始化脚本，里面已经配置了机器人命名空间、主机名称、雷达类型、相机类型和网络参数。这种东西往往是“真机部署”时最容易踩坑的部分，这里已经提前铺好了。
+**工程化配置更省心**：我们在环境脚本中预设了机器人命名、主机命名、雷达类型、相机类型和 ROS 网络参数，帮助你从一套更接近真实部署的工作流开始开发，而不是从零拼装环境。
 
 ## 官方资源
 
@@ -71,7 +71,7 @@ ROSpider 的重点不只是“会走路”，它的软件层很完整：
 
 ### 安装
 
-1. 先把仓库克隆成一个 catkin 工作区：
+1. 将仓库克隆为 catkin 工作区：
 
 ```bash
 git clone https://github.com/hiwonder/ROSPider.git ~/rospider
@@ -91,13 +91,13 @@ catkin_make
 source devel/setup.bash
 ```
 
-4. 如果你用的是官方系统镜像，也可以直接加载预设环境：
+4. 如果你使用官方系统镜像，也可以直接加载预设环境：
 
 ```bash
 source ~/.hiwonderrc
 ```
 
-这个脚本会自动设置 `ROBOT_NAME`、`MASTER_NAME`、`LIDAR_TYPE`、`CAMERA_TYPE`、`ROS_HOSTNAME`、`ROS_MASTER_URI`，并加载 ROS Melodic 和当前工作区环境。
+该脚本会自动设置 `ROBOT_NAME`、`MASTER_NAME`、`LIDAR_TYPE`、`CAMERA_TYPE`、`ROS_HOSTNAME`、`ROS_MASTER_URI`，并加载 ROS Melodic 与 ROSpider 工作区环境。
 
 ### 常用启动命令
 
@@ -142,7 +142,7 @@ roslaunch rospider_multi multi_formation/multi_formation.launch
 ## 仓库结构
 
 ```text
-ROSPider/
+ROSpider/
 └── src/
     ├── rospider_bringup/        # 基础 bringup、rosbridge、启动脚本
     ├── rospider_controller/     # 六足控制、逆运动学、步态、里程计、动作组
@@ -153,24 +153,24 @@ ROSPider/
     ├── rospider_slam/           # GMapping、Karto、Hector、Cartographer、RTAB-Map 相关启动
     ├── rospider_multi/          # 多机编队和协同导航
     ├── rospider_sdk/            # 硬件访问封装和 SDK 工具
-    ├── rospider_interfaces/     # 应用层用到的 ROS 接口定义
+    ├── rospider_interfaces/     # 应用层使用的 ROS 接口定义
     ├── rospider_tutorial/       # 示例脚本和教程 launch
     ├── lab_config/              # LAB 颜色阈值配置工具
-    ├── dataset_capture/         # 数据采集/图像采集工具
+    ├── dataset_capture/         # 数据采集与图像采集工具
     ├── vision_utils/            # 通用视觉工具函数
     ├── xf_mic_asr_offline/      # 离线语音识别和语音控制
-    └── third_party/             # 随仓库附带的第三方 ROS 依赖
+    └── third_party/             # 仓库附带的第三方 ROS 依赖
 ```
 
 ## 社区与支持
 
-- **GitHub Issues**: 用来反馈 Bug、集成问题和功能建议
+- **GitHub Issues**: 提交问题反馈和功能建议
 - **邮件支持**: support@hiwonder.com
-- **教程入口**: 可以优先从 `rospider_tutorial` 里的示例开始上手
+- **文档资料**: 完整的教程指南
 
 ## 许可证
 
-这个仓库目前没有顶层 `LICENSE` 文件，而且多个包的 `package.xml` 里许可证字段还是占位写法。如果你后面打算分发代码，或者要商用，建议先和维护者确认具体授权方式。
+本项目开源，可用于教育和研究目的。
 
 ---
 
