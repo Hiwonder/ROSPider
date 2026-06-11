@@ -52,6 +52,10 @@ ROSpider is designed as a complete ROS application platform rather than a single
 
 **Multi-robot capability**: `rospider_multi` provides formation and coordinated navigation launch files, giving ROSpider room to grow beyond a single robot into classroom demos, formation experiments, and multi-robot research projects.
 
+<p align="center">
+  <img src="./sources/04.png" alt="ROSpider 4" width="600"/>
+</p>
+
 ### Built for Learning, Expansion, and Creative Development
 
 ROSpider is not just a product platform. It is also a development and teaching platform.
