@@ -72,7 +72,7 @@ ROSpider is not just a product platform. It is also a development and teaching p
 
 - **Official Website**: [https://www.hiwonder.com/](https://www.hiwonder.com/)
 - **Product Page**: [https://www.hiwonder.com/products/rospider](https://www.hiwonder.com/products/rospider)
-- **Official Documentation**: [https://docs.hiwonder.com/en/latest/jetson/](https://docs.hiwonder.com/en/latest/jetson/)
+- **Official Documentation**: [https://docs.hiwonder.com/projects/ROSpider/en/jetson-orin-nano-version/](https://docs.hiwonder.com/projects/ROSpider/en/jetson-orin-nano-version/)
 - **Technical Support**: support@hiwonder.com
 
 ## Getting Started
