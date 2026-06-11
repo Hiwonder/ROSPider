@@ -19,7 +19,7 @@ ROSpider is our open-source hexapod robot platform built on ROS1 and designed fo
 We built ROSpider to solve a common problem in legged robotics: many projects can demonstrate motion, and many others can demonstrate perception, but very few connect the full chain from low-level servo control to practical ROS applications on real hardware. ROSpider closes that gap by providing a ready-to-extend software stack for a real six-legged robot platform.
 
 <p align="center">
-  <img src="./sources/02.png" alt="ROSpider 2" width="600"/>
+  <img src="./sources/02.gif" alt="ROSpider 2" width="600"/>
 </p>
 
 Whether you are teaching robotics, prototyping interactive AI applications, or exploring how locomotion and perception work together on Jetson-based hardware, ROSpider provides a complete and approachable foundation.
@@ -35,7 +35,7 @@ ROSpider is built around a six-legged robot architecture with **18 bus servos** 
 **Jetson-oriented design**: Multiple packages use `Jetson.GPIO`, and the environment scripts are configured around **ROS Melodic** workspaces on Jetson-class devices. This makes ROSpider especially well suited for Jetson-based educational and intelligent robotics applications.
 
 <p align="center">
-  <img src="./sources/03.png" alt="ROSpider 3" width="600"/>
+  <img src="./sources/03.gif" alt="ROSpider 3" width="600"/>
 </p>
 
 ### The Software Stack: Motion, Vision, SLAM, and Interaction
