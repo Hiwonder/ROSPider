@@ -6,6 +6,10 @@ English | [中文](README_cn.md)
   ROSpider is our ROS1-based hexapod robot platform built for intelligent locomotion, AI vision, SLAM, autonomous navigation, and multi-robot experimentation on Jetson.
 </p>
 
+<p align="center">
+  <img src="./source/01.png" alt="ROSpider 1" width="600"/>
+</p>
+
 ## Product Overview
 
 ### About ROSpider
@@ -13,6 +17,10 @@ English | [中文](README_cn.md)
 ROSpider is our open-source hexapod robot platform built on ROS1 and designed for developers, educators, makers, and robotics learners who want more than a basic walking demo. It brings together motion control, perception, mapping, navigation, voice interaction, and application-level ROS workflows in one integrated workspace, so you can move from hardware bringup to advanced autonomous behaviors with far less setup effort.
 
 We built ROSpider to solve a common problem in legged robotics: many projects can demonstrate motion, and many others can demonstrate perception, but very few connect the full chain from low-level servo control to practical ROS applications on real hardware. ROSpider closes that gap by providing a ready-to-extend software stack for a real six-legged robot platform.
+
+<p align="center">
+  <img src="./source/02.png" alt="ROSpider 2" width="600"/>
+</p>
 
 Whether you are teaching robotics, prototyping interactive AI applications, or exploring how locomotion and perception work together on Jetson-based hardware, ROSpider provides a complete and approachable foundation.
 
@@ -25,6 +33,10 @@ ROSpider is built around a six-legged robot architecture with **18 bus servos** 
 **Rich onboard hardware integration**: Our base bringup stack launches robot description, joystick control, RGB lighting, IMU, camera, LiDAR, OLED display, and the main control node together, providing a practical starting point for real robot deployment instead of an isolated algorithm demo.
 
 **Jetson-oriented design**: Multiple packages use `Jetson.GPIO`, and the environment scripts are configured around **ROS Melodic** workspaces on Jetson-class devices. This makes ROSpider especially well suited for Jetson-based educational and intelligent robotics applications.
+
+<p align="center">
+  <img src="./source/03.png" alt="ROSpider 3" width="600"/>
+</p>
 
 ### The Software Stack: Motion, Vision, SLAM, and Interaction
 
