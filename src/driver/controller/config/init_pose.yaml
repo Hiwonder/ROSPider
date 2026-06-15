@@ -1,0 +1,13 @@
+/**:
+  ros__parameters:
+    type: "action"
+    action:
+      action_name: "01"
+    servo:
+      id19: 500
+      id20: 650
+      id21: 40
+      id22: 215
+      id23: 500
+      id24: 500
+      duration: 1

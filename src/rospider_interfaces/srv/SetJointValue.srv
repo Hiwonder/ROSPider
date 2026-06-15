@@ -1,5 +1,0 @@
-float32[] joint_value
----
-bool success
-float32[] position
-float32[] orientation

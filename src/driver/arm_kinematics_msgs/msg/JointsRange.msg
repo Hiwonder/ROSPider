@@ -1,0 +1,5 @@
+arm_kinematics_msgs/JointRange joint1
+arm_kinematics_msgs/JointRange joint2
+arm_kinematics_msgs/JointRange joint3
+arm_kinematics_msgs/JointRange joint4
+arm_kinematics_msgs/JointRange joint5

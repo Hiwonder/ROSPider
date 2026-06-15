@@ -1,0 +1,139 @@
+controller_server:
+  ros__parameters:
+    odom_topic: /odom # 里程计话题名称
+    use_sim_time: False # 是否使用仿真时间
+    controller_frequency: 10.0 # 控制器运行频率 (Hz)
+
+    # Progress checker parameters
+    progress_checker_plugin: "progress_checker" # 进度检查器插件名称
+    progress_checker:
+      plugin: "nav2_controller::SimpleProgressChecker" # 进度检查器插件类
+      required_movement_radius: 0.1 # 机器人必须移动的最小半径 (m)
+      movement_time_allowance: 20.0 # 移动 required_movement_radius 允许的最大时间 (s)
+    
+    # Goal checker parameters
+    goal_checker_plugins: ["goal_checker"] # 目标检查器插件列表
+    goal_checker:
+      stateful: True # 插件是否是有状态的
+      plugin: "nav2_controller::SimpleGoalChecker" # 目标检查器插件类
+
+      xy_goal_tolerance: 0.15 # 到达目标的 XY 位置容差 (m)
+      yaw_goal_tolerance: 0.25 # 到达目标的角度容差 (rad)
+    # 把下面两行改成 “FollowPath”，BT 里就能找到
+    controller_plugins: ["FollowPath"] # 控制器插件列表
+    controller_plugin_types: ["nav2_rotation_shim_controller::RotationShimController"] # 控制器插件类型列表
+
+    # 下面配置也是跟 “FollowPath” 绑定
+    FollowPath:
+      plugin: "nav2_rotation_shim_controller::RotationShimController" # 控制器插件类，这里使用了旋转垫片控制器
+
+      # —— 旋转阈值 —— 
+      angular_dist_threshold: 0.78    # 当与路径方向差值 > 0.5 rad 时先原地旋转
+      forward_sampling_distance: 0.3  # 用前 0.3m 路径方向作为目标朝向
+      rotate_to_heading_angular_vel: 0.2 # 原地旋转时的角速度 (rad/s)
+      max_angular_accel: 0.3 # 最大角加速度 (rad/s^2)
+      simulate_ahead_time: 0.3 # 模拟向前的时间 (s)
+
+      primary_controller: "teb_local_planner::TebLocalPlannerROS" # 主控制器，这里是 TEB 局部规划器
+      teb_autosize: 1.0 # 自动调整 TEB 优化的步长
+      dt_ref: 0.7 # 轨迹的时间分辨率 (s)
+      dt_hysteresis: 0.25 # 时间分辨率的滞后值 (s)
+      max_samples: 50 # 轨迹上的最大采样点数
+
+      # max_samples: 500
+      global_plan_overwrite_orientation: True # 是否覆盖全局规划的方向
+      allow_init_with_backwards_motion: False # 是否允许以向后运动开始
+      max_global_plan_lookahead_dist: 2.0 #3.0 # 全局规划的最大前瞻距离 (m)
+      global_plan_viapoint_sep: 0.3 #0.3 # 全局规划路径点之间的最小间隔 (m)
+      global_plan_prune_distance: 1.0 # 机器人经过后修剪全局规划的距离 (m)
+      exact_arc_length: False # 是否使用精确的弧长计算
+      feasibility_check_no_poses: 5 # 检查轨迹可行性的姿态数量
+      publish_feedback: False # 是否发布反馈信息
+          
+      # Robot
+      max_vel_x: 0.06 # 最大 X 方向速度 (m/s)
+      max_vel_theta: 0.2 # 最大旋转速度 (rad/s)
+      acc_lim_x: 0.1 # 最大 X 方向加速度 (m/s^2)
+      acc_lim_theta: 0.3 # 最大旋转加速度 (rad/s^2)
+      #max_vel_x_backwards: 0.001
+      #penalty_epsilon: 0.0001
+      #min_turning_radius: 0.0
+      #wheelbase: 0.213
+      footprint_model: # types: "point", "circular", "two_circles", "line", "polygon" # 足迹模型类型
+        type: "circular" # 圆形足迹
+        radius: 0.01 # for type "circular" # 圆形足迹的半径 (m)
+
+      # GoalTolerance
+      free_goal_vel: False # 允许机器人在目标位置以非零速度结束
+          
+      # Obstacles
+      min_obstacle_dist: 0.26 # 与障碍物的最小距离 (m)
+      inflation_dist: 0.6 # 障碍物膨胀距离 (m)
+      include_costmap_obstacles: True # 是否包含代价地图中的障碍物
+      costmap_obstacles_behind_robot_dist: 1.0 # 考虑机器人后方障碍物的距离 (m)
+      obstacle_poses_affected: 15 # 障碍物影响的姿态数量
+
+      dynamic_obstacle_inflation_dist: 0.6 # 动态障碍物膨胀距离 (m)
+      include_dynamic_obstacles: True  # 是否包含动态障碍物
+
+      costmap_converter_plugin: "costmap_converter::CostmapToPolygonsDBSMCCH" # 代价地图转换器插件
+      costmap_converter_spin_thread: True # 是否在单独的线程中运行代价地图转换器
+      costmap_converter_rate: 5 # 代价地图转换器的运行频率 (Hz)
+
+      # Optimization
+      no_inner_iterations: 3 # 内部优化迭代次数
+      no_outer_iterations: 2 # 外部优化迭代次数
+      optimization_activate: True # 是否激活优化
+      optimization_verbose: False # 是否打印优化过程的详细信息
+      penalty_epsilon: 0.1 # 惩罚项的微小值
+      obstacle_cost_exponent: 4.0 # 障碍物代价的指数
+      weight_max_vel_x: 0.5 # 最大 X 速度的权重
+      weight_max_vel_theta: 0.5 # 最大角速度的权重
+      weight_acc_lim_x: 0.5 # 最大 X 加速度的权重
+      weight_acc_lim_theta: 10.5 # 最大角加速度的权重
+      weight_kinematics_nh: 1000.0 # 非完整约束的权重
+      weight_kinematics_forward_drive: 1000.0 # 正向驱动的权重
+      weight_kinematics_turning_radius: 1.0 # 最小转弯半径的权重
+      weight_optimaltime: 1.0 # must be > 0 # 最优时间的权重
+      weight_shortest_path: 0.0 # 最短路径的权重
+      weight_obstacle: 50.0 # 障碍物的权重
+      weight_inflation: 0.2 # 膨胀的权重
+      weight_dynamic_obstacle: 10.0 # not in use yet # 动态障碍物的权重
+      weight_dynamic_obstacle_inflation: 0.2 # 动态障碍物膨胀的权重
+      weight_viapoint: 50.0 # 路径点的权重
+      weight_adapt_factor: 2.0 # 权重自适应因子
+
+      # Homotopy Class Planner
+      enable_homotopy_class_planning: False # 是否启用同伦类规划
+      enable_multithreading: True # 是否启用多线程
+      max_number_classes: 4 # 允许的最大同伦类数量
+      selection_cost_hysteresis: 5.0 # 选择路径时的滞后值
+      selection_prefer_initial_plan: 1.0 # 偏好初始规划的权重
+      selection_obst_cost_scale: 1.0 # 障碍物代价的缩放因子
+      selection_alternative_time_cost: True # 是否考虑替代路径的时间代价
+
+      roadmap_graph_no_samples: 15 # 路线图采样的数量
+      roadmap_graph_area_width: 5.0 # 路线图区域的宽度 (m)
+      roadmap_graph_area_length_scale: 1.0 # 路线图区域的长度缩放因子
+      h_signature_prescaler: 0.5 # H 签名预缩放因子
+      h_signature_threshold: 0.1 # H 签名阈值
+      obstacle_heading_threshold: 0.45 # 障碍物朝向阈值
+      switching_blocking_period: 0.0 # 切换路径的阻塞时间 (s)
+      viapoints_all_candidates: True # 是否将所有候选路径点作为路径点
+      delete_detours_backwards: True # 是否删除向后的绕路
+      max_ratio_detours_duration_best_duration: 3.0 # 绕路时间与最佳时间的比率
+      visualize_hc_graph: False # 是否可视化同伦类图
+      visualize_with_time_as_z_axis_scale: 0.0 # 可视化时时间作为 Z 轴的缩放因子
+
+      # Recovery
+      shrink_horizon_backup: True # 在恢复时是否缩小规划范围
+      shrink_horizon_min_duration: 10.0 # 缩小规划范围的最短持续时间 (s)
+      oscillation_recovery: True # 是否启用振荡恢复
+      oscillation_v_eps: 0.1 # 振荡检测的速度阈值 (m/s)
+      oscillation_omega_eps: 0.1 # 振荡检测的角速度阈值 (rad/s)
+      oscillation_recovery_min_duration: 10.0 # 振荡恢复的最短持续时间 (s)
+      oscillation_filter_duration: 10.0 # 振荡滤波器的持续时间 (s)
+controller_server_rclcpp_node:
+  ros__parameters:
+    use_sim_time: False
+

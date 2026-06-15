@@ -1,1 +1,0 @@
-jetauto_interfaces/PixelPosition[] points

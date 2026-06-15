@@ -1,0 +1,1 @@
+src/large_models_examples/large_models_examples/resources/models/FastSAM-x.pt filter=lfs diff=lfs merge=lfs -text

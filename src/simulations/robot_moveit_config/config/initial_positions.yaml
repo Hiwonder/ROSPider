@@ -1,0 +1,9 @@
+# Default initial positions for rospider's ros2_control fake system
+
+initial_positions:
+  joint1: 0
+  joint2: 0.866
+  joint3: -1.5819
+  joint4: -1.5127
+  joint5: 0
+  r_joint: 0

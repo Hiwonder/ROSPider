@@ -1,6 +1,0 @@
-<launch>
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find rospider_description)/urdf/rospider.urdf.xacro'" />
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
-    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
-    <node name="rviz_rospider" pkg="rviz" type="rviz" output="screen" args="-d $(find rospider_description)/rviz/rospider.rviz" />
-</launch>

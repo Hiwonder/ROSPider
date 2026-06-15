@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<launch>
-	<!-- 通用参数 -->
-	<arg name="robot_name" default="rospider"/> # 机器人名称
-	<group ns="$(arg robot_name)">
-		<node name="keyboard_control" pkg="rospider_controller" type="keyboard_control.py" output="screen" />
-	</group>
-</launch>

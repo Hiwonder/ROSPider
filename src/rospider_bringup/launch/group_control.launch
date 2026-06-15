@@ -1,6 +1,0 @@
-<launch>
-	<include file="$(find rospider_controller)/launch/rospider_controller_group.launch">
-		<arg name="odom_enable" value="false" />
-	</include>
-	<include file="$(find rospider_peripherals)/launch/oled_display.launch"></include>
-</launch>

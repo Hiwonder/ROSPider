@@ -1,5 +1,0 @@
-<launch>
-	<include file="$(find rospider_peripherals)/launch/imu.launch"></include>
-	<node name="self_balancing_01" pkg="rospider_tutorial" type="ros_ai_creative_selfbalancing_01.py" output="screen">
-	</node>
-</launch>

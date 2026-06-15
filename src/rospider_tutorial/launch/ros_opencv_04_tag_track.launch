@@ -1,5 +1,0 @@
-<launch>
-	<include file="$(find rospider_peripherals)/launch/camera.launch"></include>
-	<node name="tag_disp" pkg="rospider_tutorial" type="ros_opencv_04_tag_track.py" output="screen">
-	</node>
-</launch>

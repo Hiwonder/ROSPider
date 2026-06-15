@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<!-- <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rospider_description"> -->
+<robot name="body" xmlns:xacro="http://ros.org/wiki/xacro" >
+
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0.0 0.0 ${0.0965/2 + 0.0678410821576746}" rpy="0 0 0"/>
+  </joint>
+  
+    <xacro:property name="mesh_package_path" value="file://$(find rospider_description)/meshes/body/" />
+    <xacro:property name="default_color_rgba" value="0.79216 0.81961 0.93333 1" />
+    <xacro:property name="default_joint_effort" value="1" />
+    <xacro:property name="default_joint_velocity" value="1" />
+
+    <xacro:macro name="inertial_block" params="mass origin_xyz origin_rpy ixx ixy ixz iyy iyz izz">
+        <inertial>
+            <origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+            <mass value="${mass}" />
+            <inertia ixx="${ixx}" ixy="${ixy}" ixz="${ixz}" iyy="${iyy}" iyz="${iyz}" izz="${izz}" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="visual_mesh" params="mesh_filename origin_xyz:='0 0 0' origin_rpy:='0 0 0' color_rgba:='${default_color_rgba}'">
+        <visual>
+            <origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+            <geometry>
+                <mesh filename="${mesh_package_path}${mesh_filename}.STL" />
+            </geometry>
+            <material name="gray">
+                <color rgba="${color_rgba}" />
+            </material>
+        </visual>
+    </xacro:macro>
+
+    <xacro:macro name="collision_mesh" params="mesh_filename origin_xyz:='0 0 0' origin_rpy:='0 0 0'">
+        <collision>
+            <origin xyz="${origin_xyz}" rpy="${origin_rpy}" />
+            <geometry>
+                <mesh filename="${mesh_package_path}${mesh_filename}.STL" />
+            </geometry>
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="revolute_joint" params="name parent child *origin *axis lower_limit upper_limit effort velocity">
+        <joint name="${name}" type="revolute">
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${child}" />
+            <xacro:insert_block name="axis" />
+            <limit lower="${lower_limit}" upper="${upper_limit}" effort="${effort}" velocity="${velocity}" />
+        </joint>
+    </xacro:macro>
+
+     <xacro:macro name="fixed_joint" params="name parent child *origin axis_xyz:='0 0 1'">
+        <joint name="${name}" type="fixed">
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}" />
+            <child link="${child}" />
+            <axis xyz="${axis_xyz}" />
+        </joint>
+    </xacro:macro>
+
+    <link name="base_link">
+        <xacro:inertial_block mass="0.42711" origin_xyz="0.0092226 -0.00011073 0.031938" origin_rpy="0 0 0"
+            ixx="0.00016369" ixy="-1.1862E-09" ixz="7.6942E-07" iyy="0.00032482" iyz="-5.9479E-08" izz="0.00046238" />
+        <xacro:visual_mesh mesh_filename="base_link" />
+        <xacro:collision_mesh mesh_filename="base_link" />
+    </link>
+
+    <xacro:macro name="leg_segment" params="prefix parent *origin_center *origin_coxa *origin_femur *origin_tibla *origin_end
+                                            *axis_center *axis_coxa *axis_femur *axis_tibla
+                                            lower_limit_center upper_limit_center lower_limit_coxa upper_limit_coxa lower_limit_femur upper_limit_femur lower_limit_tibla upper_limit_tibla
+                                            *inertial_center *inertial_coxa *inertial_femur *inertial_tibla *inertial_end">
+        <link name="leg_center_${prefix}">
+            <xacro:insert_block name="inertial_center" />
+            <collision>
+                 <origin xyz="0 0 0" rpy="0 0 0" />
+                 <geometry><sphere radius="0.005"/></geometry>
+            </collision>
+        </link>
+        <xacro:fixed_joint name="leg_center_${prefix}_joint" parent="${parent}" child="leg_center_${prefix}">
+             <xacro:insert_block name="origin_center" />
+             </xacro:fixed_joint>
+
+        <link name="coxa_${prefix}">
+            <xacro:insert_block name="inertial_coxa" />
+            <xacro:visual_mesh mesh_filename="coxa_${prefix}" />
+            <xacro:collision_mesh mesh_filename="coxa_${prefix}" />
+        </link>
+        <xacro:revolute_joint name="coxa_${prefix}_joint" parent="leg_center_${prefix}" child="coxa_${prefix}"
+            effort="${default_joint_effort}" velocity="${default_joint_velocity}"
+            lower_limit="${lower_limit_coxa}" upper_limit="${upper_limit_coxa}">
+            <xacro:insert_block name="origin_coxa" />
+            <xacro:insert_block name="axis_coxa" />
+            </xacro:revolute_joint>
+
+        <link name="femur_${prefix}">
+             <xacro:insert_block name="inertial_femur" />
+             <xacro:visual_mesh mesh_filename="femur_${prefix}" />
+             <xacro:collision_mesh mesh_filename="femur_${prefix}" />
+        </link>
+        <xacro:revolute_joint name="femur_${prefix}_joint" parent="coxa_${prefix}" child="femur_${prefix}"
+            effort="${default_joint_effort}" velocity="${default_joint_velocity}"
+            lower_limit="${lower_limit_femur}" upper_limit="${upper_limit_femur}">
+            <xacro:insert_block name="origin_femur" />
+            <xacro:insert_block name="axis_femur" />
+            </xacro:revolute_joint>
+
+        <link name="tibla_${prefix}">
+             <xacro:insert_block name="inertial_tibla" />
+             <xacro:visual_mesh mesh_filename="tibla_${prefix}" />
+             <xacro:collision_mesh mesh_filename="tibla_${prefix}" />
+        </link>
+        <xacro:revolute_joint name="tibla_${prefix}_joint" parent="femur_${prefix}" child="tibla_${prefix}"
+            effort="${default_joint_effort}" velocity="${default_joint_velocity}"
+            lower_limit="${lower_limit_tibla}" upper_limit="${upper_limit_tibla}">
+            <xacro:insert_block name="origin_tibla" />
+            <xacro:insert_block name="axis_tibla" />
+            </xacro:revolute_joint>
+
+        <link name="end_${prefix}">
+             <xacro:insert_block name="inertial_end" />
+             <xacro:visual_mesh mesh_filename="end_${prefix}" />
+             <xacro:collision_mesh mesh_filename="end_${prefix}" />
+        </link>
+        <xacro:fixed_joint name="end_${prefix}_joint" parent="tibla_${prefix}" child="end_${prefix}">
+             <xacro:insert_block name="origin_end" />
+        </xacro:fixed_joint>
+    </xacro:macro>
+
+    <xacro:leg_segment prefix="LF" parent="base_link"
+        lower_limit_center="-1" upper_limit_center="1" lower_limit_coxa="-1" upper_limit_coxa="1.5"
+        lower_limit_femur="-1.75" upper_limit_femur="1.75" lower_limit_tibla="-1.75" upper_limit_tibla="1.35">
+        <origin xyz="0.10463 0.050629 0.016552" rpy="0 0 0" /> <origin xyz="0 0 0" rpy="-0.0010803 -0.0010787 0.78612" /> <origin xyz="0.045042 -0.00052682 0.0011277" rpy="-1.5708 0 0" />
+        <origin xyz="0.071317 0.029326 0.00086661" rpy="0.00046199 -0.0012097 1.5707" /> <origin xyz="0.11519 -0.0097341 0.001174" rpy="0 0 0" /> <axis xyz="0 0 1" /> 
+        <axis xyz="0.0010787 -0.0010802 1" /> <axis xyz="0 0 -1" /> <axis xyz="0 0 -1" /> <xacro:inertial_block mass="0.070703" origin_xyz="0.062709 0.062661 -0.028897" origin_rpy="0 0 0"
+            ixx="1.7308E-05" ixy="-1.2638E-06" ixz="6.0336E-07" iyy="1.7297E-05" iyz="5.989E-07" izz="1.2747E-05" /> <xacro:inertial_block mass="0.008009" origin_xyz="0.020827 -0.00060216 0.00091868" origin_rpy="0 0 0"
+            ixx="1.7808E-06" ixy="-5.4871E-12" ixz="3.0202E-10" iyy="2.056E-06" iyz="2.821E-11" izz="1.9917E-06" /> <xacro:inertial_block mass="0.030408" origin_xyz="0.027409 0.0020759 -0.00032968" origin_rpy="0 0 0"
+            ixx="4.5672E-06" ixy="-7.3482E-07" ixz="-2.4696E-09" iyy="6.7055E-06" iyz="3.7044E-09" izz="6.8684E-06" /> <xacro:inertial_block mass="0.032286" origin_xyz="0.034520599139345 -0.00436773919553068 0.000431221313703826" origin_rpy="0 0 0"
+            ixx="4.05019253948108E-06" ixy="1.14495771847975E-07" ixz="5.12974765521424E-10" iyy="9.69065547605506E-06" iyz="1.81843843533494E-09" izz="9.64190279112211E-06" /> <xacro:inertial_block mass="0.032286" origin_xyz="-0.080668 0.0053663 -0.00074274" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="1.145E-07" ixz="5.1297E-10" iyy="9.6907E-06" iyz="1.8184E-09" izz="9.6419E-06" /> </xacro:leg_segment>
+
+    <xacro:leg_segment prefix="LM" parent="base_link"
+        lower_limit_center="-1" upper_limit_center="1" lower_limit_coxa="-1" upper_limit_coxa="1.5"
+        lower_limit_femur="-1.75" upper_limit_femur="1.75" lower_limit_tibla="-1.75" upper_limit_tibla="1.35">
+        <origin xyz="0.011327 0.073537 0.016552" rpy="0 -0.001086 0.00072249" /> <origin xyz="0 0 0" rpy="0.001086 0 1.5701" /> <origin xyz="0.045042 -0.00039312 0.0011769" rpy="-1.5719 0 0.00072249" /> 
+        <origin xyz="0.07132 0.02932 0.0040547" rpy="0.00039899 -0.0010859 1.5707" /> <origin xyz="0.11519 -0.0097478 -0.0020999" rpy="0 0 0" /> <axis xyz="-0.0010859 0 -1" /> 
+        <axis xyz="0 0 1" /> <axis xyz="0 0 -1" /> <axis xyz="0 0 -1" /> <xacro:inertial_block mass="0.070702" origin_xyz="6.6527E-05 0.088650 -0.028898" origin_rpy="0 0 0"
+            ixx="1.8566E-05" ixy="4.0491E-09" ixz="-2.5423E-09" iyy="1.6039E-05" iyz="8.5011E-07" izz="1.2747E-05" /> <xacro:inertial_block mass="0.008008" origin_xyz="0.020823 -0.000587 0.000942" origin_rpy="0 0 0"
+            ixx="1.7807E-06" ixy="1.9716E-10" ixz="6.1589E-11" iyy="2.0554E-06" iyz="-5.3241E-11" izz="1.9909E-06" /> <xacro:inertial_block mass="0.030408" origin_xyz="0.027409 0.002076 -0.000430" origin_rpy="0 0 0"
+            ixx="4.5672E-06" ixy="-7.3482E-07" ixz="-2.4653E-09" iyy="6.7055E-06" iyz="3.7056E-09" izz="6.8684E-06" /> <xacro:inertial_block mass="0.032286" origin_xyz="0.034523 -0.004371 -0.002853" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="1.1523E-07" ixz="-2.0521E-10" iyy="9.6906E-06" iyz="1.8348E-09" izz="9.6419E-06" /> <xacro:inertial_block mass="0.032286" origin_xyz="-0.080667 0.005377 -0.000753" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="1.1523E-07" ixz="-2.0521E-10" iyy="9.6906E-06" iyz="1.8348E-09" izz="9.6419E-06" /> </xacro:leg_segment>
+
+    <xacro:leg_segment prefix="LR" parent="base_link"
+        lower_limit_center="-1" upper_limit_center="1" lower_limit_coxa="-1" upper_limit_coxa="1.5"
+        lower_limit_femur="-1.75" upper_limit_femur="1.75" lower_limit_tibla="-1.75" upper_limit_tibla="1.375">
+        <origin xyz="-0.082126 0.050982 0.016552" rpy="0 -0.001086 0.00072249" /> <origin xyz="0 0 0" rpy="0.00076805 -0.00076775 2.356" /> <origin xyz="0.045039 0.00014539 0.0011769" rpy="-1.5718 0.0010443 0" /> 
+        <origin xyz="0.071353 0.029246 0.0031441" rpy="0.00020896 -0.0010431 1.5707" /> <origin xyz="0.11519 -0.0097478 -0.00039987" rpy="-0.00020896 0 0" /> <axis xyz="0.001086 0 1" />
+         <axis xyz="0 0 1" /> <axis xyz="0 0 -1" /> <axis xyz="0 0 -1" /> <xacro:inertial_block mass="0.070703" origin_xyz="-0.063487 0.061915 -0.028829" origin_rpy="0 0 0"
+            ixx="1.7298E-05" ixy="1.2645E-06" ixz="-6.0341E-07" iyy="1.7306E-05" iyz="6.0242E-07" izz="1.2749E-05" /> <xacro:inertial_block mass="0.008009" origin_xyz="0.020826 -0.000604 0.000942" origin_rpy="0 0 0"
+            ixx="1.7808E-06" ixy="3.1957E-11" ixz="7.4205E-11" iyy="2.0560E-06" iyz="-4.1277E-11" izz="1.9917E-06" /> <xacro:inertial_block mass="0.030408" origin_xyz="0.027415 0.002047 0.000352" origin_rpy="0 0 0"
+            ixx="4.5657E-06" ixy="-7.3259E-07" ixz="-2.8659E-09" iyy="6.7070E-06" iyz="3.5772E-09" izz="6.8684E-06" /> <xacro:inertial_block mass="0.032286" origin_xyz="0.034523 -0.004371 -0.001153" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="1.1523E-07" ixz="-2.0369E-10" iyy="9.6906E-06" iyz="1.8364E-09" izz="9.6419E-06" /> <xacro:inertial_block mass="0.032286" origin_xyz="-0.080667 0.005377 -0.000752" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="1.1523E-07" ixz="-1.7961E-10" iyy="9.6906E-06" iyz="1.8466E-09" izz="9.6419E-06" /> </xacro:leg_segment>
+
+    <xacro:leg_segment prefix="RF" parent="base_link"
+        lower_limit_center="0" upper_limit_center="0" lower_limit_coxa="-1.5" upper_limit_coxa="1"
+        lower_limit_femur="-1.75" upper_limit_femur="1.75" lower_limit_tibla="-1.75" upper_limit_tibla="1.375">
+        <origin xyz="0.10463 -0.050623 0.016552" rpy="0 0 0" /> <origin xyz="0 0 0" rpy="0 0 -0.78612" /> <origin xyz="0.045041 0.0005255 0.0011769" rpy="1.5719 0 0" /> 
+        <origin xyz="0.071317 -0.029326 0.00096668" rpy="-0.00046096 -0.0010802 -1.5707" /> <origin xyz="0.11519 0.009749 0.0010888" rpy="0 0 0" /> <axis xyz="0 0 1" /> 
+        <axis xyz="0 0 1" /> <axis xyz="0 0 1" /> <axis xyz="0 0 1" /> <xacro:inertial_block mass="0.070702" origin_xyz="0.062711 -0.062663 -0.028899" origin_rpy="0 0 0"
+            ixx="1.7306E-05" ixy="1.2623E-06" ixz="6.0381E-07" iyy="1.7296E-05" iyz="-5.9910E-07" izz="1.2744E-05" /> <xacro:inertial_block mass="0.008006" origin_xyz="0.020830 0.000602 0.000943" origin_rpy="0 0 0"
+            ixx="1.7807E-06" ixy="-7.2336E-12" ixz="4.7237E-10" iyy="2.0527E-06" iyz="5.5505E-11" izz="1.9882E-06" /> <xacro:inertial_block mass="0.030409" origin_xyz="0.027409 -0.002076 -0.000330" origin_rpy="0 0 0"
+            ixx="4.5673E-06" ixy="7.3496E-07" ixz="-2.0725E-09" iyy="6.7057E-06" iyz="-3.8473E-09" izz="6.8686E-06" /> <xacro:inertial_block mass="0.032287" origin_xyz="0.034520 0.004372 0.000335" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="-1.1515E-07" ixz="-1.9195E-10" iyy="9.6909E-06" iyz="-1.8320E-09" izz="9.6421E-06" /> <xacro:inertial_block mass="0.032287" origin_xyz="-0.080667 -0.005377 -0.000753" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="-1.1515E-07" ixz="-1.9195E-10" iyy="9.6909E-06" iyz="-1.8320E-09" izz="9.6421E-06" /> </xacro:leg_segment>
+
+     <xacro:leg_segment prefix="RM" parent="base_link"
+        lower_limit_center="-1" upper_limit_center="1" lower_limit_coxa="-1" upper_limit_coxa="1.5"
+        lower_limit_femur="-1.75" upper_limit_femur="1.75" lower_limit_tibla="-1.75" upper_limit_tibla="1.375">
+        <origin xyz="0.011327 -0.073531 0.016552" rpy="0 -0.0010946 -0.00072621" /> <origin xyz="0 0 0" rpy="-0.0010945 0 -1.5708" /> <origin xyz="0.045041 0.00027583 0.0011769" rpy="1.5719 0  0" /> 
+        <origin xyz="0.071317 -0.029326 0.00061658" rpy="-0.00046804 -0.0010945 -1.5707" /> <origin xyz="0.1107 0.011377 0.016938" rpy="0 0 0" /> <axis xyz="0.0010945 0 1" /> 
+        <axis xyz="0 0 1" /> <axis xyz="0 0 1" /> <axis xyz="0 0 1" /> <xacro:inertial_block mass="0.070702" origin_xyz="6.7173E-05 -0.088653 -0.028898" origin_rpy="0 0 0"
+            ixx="1.8564E-05" ixy="-3.7009E-09" ixz="-2.4223E-09" iyy="1.6039E-05" iyz="-8.5062E-07" izz="1.2745E-05" /> <xacro:inertial_block mass="0.008007" origin_xyz="0.020833 0.000603 0.000943" origin_rpy="0 0 0"
+            ixx="1.7808E-06" ixy="-3.4930E-10" ixz="5.1199E-10" iyy="2.0534E-06" iyz="5.6600E-11" izz="1.9892E-06" /> <xacro:inertial_block mass="0.030409" origin_xyz="0.027409 -0.002076 -0.000581" origin_rpy="0 0 0"
+            ixx="4.5673E-06" ixy="7.3496E-07" ixz="-2.0688E-09" iyy="6.7057E-06" iyz="-3.8481E-09" izz="6.8687E-06" /> <xacro:inertial_block mass="0.032287" origin_xyz="0.034520 0.004372 0.000435" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="-1.1514E-07" ixz="-1.8999E-10" iyy="9.6909E-06" iyz="-1.8320E-09" izz="9.6421E-06" /> <xacro:inertial_block mass="0.032287" origin_xyz="-0.076178 -0.007005 -0.016503" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="-1.1514E-07" ixz="-1.8999E-10" iyy="9.6909E-06" iyz="-1.8320E-09" izz="9.6421E-06" /> </xacro:leg_segment>
+
+    <xacro:leg_segment prefix="RR" parent="base_link"
+        lower_limit_center="-1" upper_limit_center="1" lower_limit_coxa="-1" upper_limit_coxa="1.5"
+        lower_limit_femur="-1.75" upper_limit_femur="1.75" lower_limit_tibla="-1.75" upper_limit_tibla="1.375">
+        <origin xyz="-0.082126 -0.050977 0.016552" rpy="0 -0.0010946 -0.00072621" /> <origin xyz="0 0 0" rpy="-0.00077413 -0.00077383 -2.356" /> <origin xyz="0.045039 -0.00024527 0.0011769" rpy="1.5718 0 0" /> 
+        <origin xyz="0.071321 -0.029325 0.0017059" rpy="-0.00027645 -0.0010484 -1.5707" /> <origin xyz="0.11519 0.009749 0.00093881" rpy="0 0 0" /> <axis xyz="-0.0010946 0 -1" /> 
+        <axis xyz="0 0 1" /> <axis xyz="0 0 1" /> <axis xyz="0 0 1" /> <xacro:inertial_block mass="0.070702" origin_xyz="-0.063489 -0.061918 -0.028829" origin_rpy="0 0 0"
+            ixx="1.7297E-05" ixy="-1.2630E-06" ixz="-6.0364E-07" iyy="1.7304E-05" iyz="-6.0286E-07" izz="1.2745E-05" /> <xacro:inertial_block mass="0.008006" origin_xyz="0.020830 0.000605 0.000943" origin_rpy="0 0 0"
+            ixx="1.7807E-06" ixy="-4.4700E-11" ixz="4.7242E-10" iyy="2.0527E-06" iyz="5.5553E-11" izz="1.9882E-06" /> <xacro:inertial_block mass="0.030409" origin_xyz="0.027413 -0.002075 0.000252" origin_rpy="0 0 0"
+            ixx="4.5673E-06" ixy="7.3496E-07" ixz="-2.4736E-09" iyy="6.7057E-06" iyz="-3.7185E-09" izz="6.8686E-06" /> <xacro:inertial_block mass="0.032287" origin_xyz="0.034520 0.004372 0.000185" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="-1.1514E-07" ixz="-1.9159E-10" iyy="9.6909E-06" iyz="-1.8320E-09" izz="9.6421E-06" /> <xacro:inertial_block mass="0.032287" origin_xyz="-0.080667 -0.005377 -0.000753" origin_rpy="0 0 0"
+            ixx="4.0502E-06" ixy="-1.1514E-07" ixz="-1.9159E-10" iyy="9.6909E-06" iyz="-1.8320E-09" izz="9.6421E-06" /> </xacro:leg_segment>
+
+    </robot>

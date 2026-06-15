@@ -1,5 +1,0 @@
-string color_name
----
-bool success
-int16[] min
-int16[] max

@@ -1,6 +1,0 @@
-<launch>
-	<include file="$(find rospider_peripherals)/launch/camera.launch"></include>
-
-	<node name="hand_detect_node" pkg="rospider_tutorial" type="ros_dl_08_hand_gesture.py" output="screen">
-	</node>
-</launch>

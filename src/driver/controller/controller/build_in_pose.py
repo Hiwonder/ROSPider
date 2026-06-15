@@ -1,0 +1,85 @@
+X1 = 93.60
+Y1 = 50.805
+X2 = 0.0
+Y2 = 73.535
+
+INITIAL_X = 70.0
+INITIAL_Y = 110.0
+HOLE_INITIAL_Y = 140.0
+SHEINK_INITIAL_Y = 100.0
+INITIAL_HEIGHT = 70.0
+INITIAL_HEIGHT_M = 95
+SLAM_HEIGHT = 100.0
+SHRINK_HEIGHT = 110.0
+
+DEFAULT_POSE = ((INITIAL_X + X1, INITIAL_Y + Y1 - 20, -INITIAL_HEIGHT),\
+                (0.0, INITIAL_Y + Y2, -INITIAL_HEIGHT),\
+                (-INITIAL_X - X1, INITIAL_Y + Y1 - 20, -INITIAL_HEIGHT),\
+                (-INITIAL_X - X1, -INITIAL_Y - Y1 + 20, -INITIAL_HEIGHT),\
+                (0.0, -INITIAL_Y - Y2, -INITIAL_HEIGHT),\
+                (INITIAL_X + X1, -INITIAL_Y - Y1 + 20, -INITIAL_HEIGHT))
+
+DEFAULT_POSE_M = ((INITIAL_X + X1, INITIAL_Y + Y1 - 20, -INITIAL_HEIGHT_M),\
+                (0.0, INITIAL_Y + Y2, -INITIAL_HEIGHT_M),\
+                (-INITIAL_X - X1, INITIAL_Y + Y1 - 20, -INITIAL_HEIGHT_M),\
+                (-INITIAL_X - X1, -INITIAL_Y - Y1 + 20, -INITIAL_HEIGHT_M),\
+                (0.0, -INITIAL_Y - Y2, -INITIAL_HEIGHT_M),\
+                (INITIAL_X + X1, -INITIAL_Y - Y1 + 20, -INITIAL_HEIGHT_M))
+
+
+NARROWL_X = 30.0
+NARROWL_Y = 70.0
+NARROWL_HEIGHT = 50.0
+
+NARROW_POSE = ((NARROWL_X + X1, NARROWL_Y + Y1 - 20, -NARROWL_HEIGHT),\
+                (0.0, NARROWL_Y + Y2, -NARROWL_HEIGHT),\
+                (-NARROWL_X - X1, NARROWL_Y + Y1 - 20, -NARROWL_HEIGHT),\
+                (-NARROWL_X - X1, -NARROWL_Y - Y1 + 20, -NARROWL_HEIGHT),\
+                (0.0, -NARROWL_Y - Y2, -NARROWL_HEIGHT),\
+                (NARROWL_X + X1, -NARROWL_Y - Y1 + 20, -NARROWL_HEIGHT))
+
+SLAM_POSE = ((INITIAL_X + X1, INITIAL_Y + Y1 - 20, -SLAM_HEIGHT),\
+                (0.0, INITIAL_Y + Y2, -SLAM_HEIGHT),\
+                (-INITIAL_X - X1, INITIAL_Y + Y1 - 20, -SLAM_HEIGHT),\
+                (-INITIAL_X - X1, -INITIAL_Y - Y1 + 20, -SLAM_HEIGHT),\
+                (0.0, -INITIAL_Y - Y2, -SLAM_HEIGHT),\
+                (INITIAL_X + X1, -INITIAL_Y - Y1 + 20, -SLAM_HEIGHT))
+
+HOLE_POSE = ((INITIAL_X + X1, HOLE_INITIAL_Y + Y1 - 30, -SLAM_HEIGHT),\
+                (0.0, HOLE_INITIAL_Y + Y2, -SLAM_HEIGHT),\
+                (-INITIAL_X - X1, HOLE_INITIAL_Y + Y1 - 30, -SLAM_HEIGHT),\
+                (-INITIAL_X - X1, -HOLE_INITIAL_Y - Y1 + 30, -SLAM_HEIGHT),\
+                (0.0, -HOLE_INITIAL_Y - Y2, -SLAM_HEIGHT),\
+                (INITIAL_X + X1, -HOLE_INITIAL_Y - Y1 + 30, -SLAM_HEIGHT))
+
+SHRINK_POSE = ((INITIAL_X + X1, SHEINK_INITIAL_Y + Y1 - 30, -SHRINK_HEIGHT),\
+                (0.0, SHEINK_INITIAL_Y + Y2, -SHRINK_HEIGHT),\
+                (-INITIAL_X - X1, SHEINK_INITIAL_Y + Y1 - 30, -SHRINK_HEIGHT),\
+                (-INITIAL_X - X1, -SHEINK_INITIAL_Y - Y1 + 30, -SHRINK_HEIGHT),\
+                (0.0, -SHEINK_INITIAL_Y - Y2, -SHRINK_HEIGHT),\
+                (INITIAL_X + X1, -SHEINK_INITIAL_Y - Y1 + 30, -SHRINK_HEIGHT))
+
+DEFAULT_POSE_TRANSFORM = (0, 0, 130), (0, 0, 0)
+DEFAULT_POSE_M_TRANSFORM = (0, 0, 155), (0, 0, 0)
+NARROW_POSE_TRANSFORM = (0, 0, 130), (0, 0, 0)
+SLAM_POSE_TRANSFORM = (0, 0, 160), (0, 0, 0)
+HOLE_POSE_TRANSFORM = (0, 0, 160), (0, 0, 0)
+SHRINK_POSE_TRANSFORM = (0, 0, 180), (0, 0, 0)
+
+
+RELAX_POSE = ((INITIAL_X + X1, INITIAL_Y + Y1, 0.0), (0.0, INITIAL_Y + Y2, 0.0), (-INITIAL_X - X1, INITIAL_Y + Y1, 0.0),
+              (-INITIAL_X - X1, -INITIAL_Y - Y1, 0.0), (0.0, -INITIAL_Y - Y2, 0.0), (INITIAL_X + X1, -INITIAL_Y - Y1,
+                                                                                     0.0))
+SIDE_SHIFT_X = 0
+SIDE_SHIFT_Y = 135
+SIDE_SHIFT_HEIGHT = 70
+
+SIDE_SHIFT_POSE_TRANSFORM = (0, 0, 130), (0, 0, 0)
+SIDE_SHIFT_POSE = ((SIDE_SHIFT_X + X1, SIDE_SHIFT_Y + Y1, -SIDE_SHIFT_HEIGHT),\
+                (0.0, SIDE_SHIFT_Y + Y1, -SIDE_SHIFT_HEIGHT),\
+                (-SIDE_SHIFT_X - X1, SIDE_SHIFT_Y + Y1, -SIDE_SHIFT_HEIGHT),\
+                (-SIDE_SHIFT_X - X1, -SIDE_SHIFT_Y - Y1, -SIDE_SHIFT_HEIGHT),\
+                (0.0, -SIDE_SHIFT_Y - Y1, -SIDE_SHIFT_HEIGHT),\
+                (SIDE_SHIFT_X + X1, -SIDE_SHIFT_Y - Y1, -SIDE_SHIFT_HEIGHT))
+
+

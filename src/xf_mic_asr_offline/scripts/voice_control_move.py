@@ -1,29 +1,35 @@
 #!/usr/bin/env python3
 # encoding: utf-8
-# @data:2022/11/07
-# @author:aiden
-# 语音控制移动
+
+# 语音控制移动(voice control move)
 import os
 import json
 import math
-import rospy
-import signal
+import time
+import rclpy
+import threading
 import numpy as np
-import rospider_sdk.pid as pid
-import rospider_sdk.misc as misc
-from rospider_sdk import buzzer
-import sensor_msgs.msg as sensor_msg
+import sdk.pid as pid
+import sdk.common as common
+from rclpy.node import Node
+from std_srvs.srv import Trigger
 from geometry_msgs.msg import Twist
+from sensor_msgs.msg import LaserScan
 from std_msgs.msg import String, Int32
+from controller import controller_client
 from xf_mic_asr_offline import voice_play
-from rospider_controller import client
+from servo_controller_msgs.msg import ServosPosition
+from ros_robot_controller_msgs.msg import BuzzerState
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy
+from servo_controller.action_group_controller import ActionGroupController
 
-MAX_SCAN_ANGLE = 240 # 激光的扫描角度,去掉总是被遮挡的部分degree
-CAR_WIDTH = 0.4 # meter
+MAX_SCAN_ANGLE = 240  # 激光的扫描角度,去掉总是被遮挡的部分degree(laser scanning angle, removing obstructed degrees)
+CAR_WIDTH = 0.4  # meter
 
-class VoiceControlNode:
+class VoiceControMovelNode(Node):
     def __init__(self, name):
-        rospy.init_node(name, anonymous=True)
+        rclpy.init()
+        super().__init__(name)
         
         self.angle = None
         self.words = None
@@ -33,168 +39,153 @@ class VoiceControlNode:
         self.start_follow = False
         self.last_status = Twist()
         self.threshold = 3
-        self.speed = 0.1
+        self.speed = 0.3
         self.stop_dist = 0.4
-        self.count = 0 
-        self.scan_angle = math.radians(45)
-        self.robot = client.Client(None)
-        
+        self.count = 0
+        self.scan_angle = math.radians(90)
+        self.declare_parameter('move', False)
+        self.move = self.get_parameter('move').value
+
         self.pid_yaw = pid.PID(1.6, 0, 0.16)
         self.pid_dist = pid.PID(1.7, 0, 0.16)
-        
-        self.language = os.environ['ASR_TTS_LANG']
-        self.lidar_type = os.environ.get('LIDAR_TYPE')
-        self.mecanum_pub = rospy.Publisher('/rospider_controller/cmd_vel', Twist, queue_size=1)
-        self.lidar_sub = rospy.Subscriber('/scan', sensor_msg.LaserScan, self.lidar_callback) 
-        rospy.Subscriber('/voice_words', String, self.words_callback)
-        rospy.Subscriber('/mic/awake/angle', Int32, self.angle_callback)
-        while not rospy.is_shutdown():
-            try:
-                if rospy.get_param('/xf_asr_offline_node/start'):
-                    break
-            except:
-                rospy.sleep(0.1)         
-        self.play('running')
-        self.mecanum_pub.publish(Twist())
-        signal.signal(signal.SIGINT, self.shutdown)
 
-        rospy.loginfo('唤醒口令: 小幻小幻(Wake up word: hello hiwonder)')
-        rospy.loginfo('唤醒后15秒内可以不用再唤醒(No need to wake up within 15 seconds after waking up)')
-        rospy.loginfo('控制指令: 左转 右转 前进 后退 漂移 过来(Voice command: turn left/turn right/go forward/go backward/drift/come here)')
-        
-        self.time_stamp = rospy.get_time()
-        self.current_time_stamp = rospy.get_time()
-        self.run()
+        self.language = os.environ['ASR_LANGUAGE']
+        self.controller = controller_client.ControllerClient()
+        self.agc_controller = ActionGroupController(self.create_publisher(ServosPosition, 'servo_controller', 1), '/home/ubuntu/software/actionset_editor/ActionGroups')
+        self.cmd_vel_pub = self.create_publisher(Twist, '/controller/cmd_vel', 1)
+        self.buzzer_pub = self.create_publisher(BuzzerState, '/ros_robot_controller/set_buzzer', 1)
+        qos = QoSProfile(depth=1, reliability=QoSReliabilityPolicy.BEST_EFFORT)
+        self.create_subscription(String, '/asr_node/voice_words', self.words_callback, 1)
+        self.create_subscription(Int32, '/awake_node/angle', self.angle_callback, 1)
+
+        self.client = self.create_client(Trigger, '/asr_node/init_finish')
+        self.client.wait_for_service()  # 阻塞等待(blocking wait)
+        self.declare_parameter('delay', 0)
+        time.sleep(self.get_parameter('delay').value)
+
+        self.get_logger().info('唤醒口令: 小幻小幻(Wake up word: hello hiwonder)')
+        self.get_logger().info('唤醒后15秒内可以不用再唤醒(No need to wake up within 15 seconds after waking up)')
+        self.get_logger().info('控制指令: 左转 右转 前进 后退 过来 跳个舞吧(Voice command: turn left/turn right/go forward/go backward/come here /dance)')
+        self.time_stamp = time.time()
+        self.current_time_stamp = time.time()
+        threading.Thread(target=self.main, daemon=True).start()
+        self.create_service(Trigger, '~/init_finish', self.get_node_state)
+        self.play('running')
+
+        if self.language == 'Chinese':
+            self.get_logger().info('\033[1;32m%s\033[0m' % '准备就绪')
+        else:
+            self.get_logger().info('\033[1;32m%s\033[0m' % 'I am ready')
+
+
+
+
+    def get_node_state(self, request, response):
+        response.success = True
+        return response
 
     def play(self, name):
         voice_play.play(name, language=self.language)
 
-    def shutdown(self, signum, frame):
-        self.running = False
-        rospy.loginfo('shutdown')
-        rospy.signal_shutdown('shutdown')
-
     def words_callback(self, msg):
         self.words = json.dumps(msg.data, ensure_ascii=False)[1:-1]
-        if self.language == 'zh':
+        if self.language == 'Chinese':
             self.words = self.words.replace(' ', '')
-        print('words:', self.words)
-        if self.words is not None and self.words not in ['唤醒成功(wake-up-success)', '休眠(Sleep)', '失败5次(Fail-5-times)', '失败10次(Fail-10-times']:
+        self.get_logger().info('words:%s' % self.words)
+        if self.words is not None and self.words not in ['唤醒成功(wake-up-success)', '休眠(Sleep)', '失败5次(Fail-5-times)',
+                                                         '失败10次(Fail-10-times']:
             pass
         elif self.words == '唤醒成功(wake-up-success)':
             self.play('awake')
         elif self.words == '休眠(Sleep)':
-            buzzer.on()
-            rospy.sleep(0.05)
-            buzzer.off()
+            msg = BuzzerState()
+            msg.freq = 1000
+            msg.on_time = 0.1
+
+            msg.off_time = 0.01
+            msg.repeat = 1
+            self.buzzer_pub.publish(msg)
 
     def angle_callback(self, msg):
         self.angle = msg.data
-        print('angle:', self.angle)
+        self.get_logger().info('angle:%s' % self.angle)
         self.start_follow = False
-        #buzzer.on()
-        #rospy.sleep(0.1)
-        #buzzer.off()
-        self.mecanum_pub.publish(Twist())
+        self.start_follow = False 
 
-    def lidar_callback(self, lidar_data:sensor_msg.LaserScan):
-        twist = Twist()
-        if self.lidar_type == 'RPLIDAR_A1' or self.lidar_type == 'RPLIDAR_A2' or self.lidar_type== 'RPLIDAR_S2L':
-            max_index = int(math.radians(MAX_SCAN_ANGLE / 2.0) / lidar_data.angle_increment)
-            left_ranges = lidar_data.ranges[:max_index]  # 左半边数据
-            right_ranges = lidar_data.ranges[::-1][:max_index]  # 右半边数据
-        elif self.lidar_type == 'RPLIDAR_G4':
-            min_index = int(math.radians((360 - MAX_SCAN_ANGLE) / 2.0) / lidar_data.angle_increment)
-            max_index = int(math.radians(180) / lidar_data.angle_increment)
-            left_ranges = lidar_data.ranges[::-1][min_index:max_index][::-1] # 左半边数据
-            right_ranges = lidar_data.ranges[min_index:max_index][::-1] # 右半边数据
 
-        if self.start_follow:
-            angle = self.scan_angle / 2
-            angle_index = int(angle / lidar_data.angle_increment + 0.50)
-            left_range, right_range = np.array(left_ranges[:angle_index]), np.array(right_ranges[:angle_index])
-            
-            ranges = np.append(right_range[::-1], left_range)
-            nonzero = ranges.nonzero()
-            dist = ranges[nonzero].min()
-            min_index = list(ranges).index(dist)
-            angle = -angle + lidar_data.angle_increment * min_index  # 计算最小值对应的角度
-            if dist < self.threshold and abs(math.degrees(angle)) > 5:  # 控制左右
-                self.pid_yaw.update(-angle)
-                twist.angular.z = misc.set_range(self.pid_yaw.output, -self.speed , self.speed )
-            else:
-                self.pid_yaw.clear()
-
-            if dist < self.threshold and abs(self.stop_dist - dist) > 0.02:
-                self.pid_dist.update(self.stop_dist - dist)
-                twist.linear.x = misc.set_range(self.pid_dist.output, -self.speed, self.speed)
-            else:
-                self.pid_dist.clear()
-            if abs(twist.angular.z) < 0.008: 
-                twist.angular.z = 0
-            if abs(twist.linear.x) < 0.05:
-                twist.linear.x = 0
-            if twist.linear.x == 0 and twist.angular.z == 0:
-                self.count += 1
-            if self.count >= 10:
-                self.count = 0
-                self.start_follow = False
-            self.mecanum_pub.publish(twist)
-
-    def run(self):
-        while not rospy.is_shutdown() and self.running:
+    def main(self):
+        while True:
             if self.words is not None:
+                self.move = True
                 twist = Twist()
                 if self.words == '前进' or self.words == 'go forward':
                     self.play('go')
-                    self.time_stamp = rospy.get_time() + 5
-                    twist.linear.x = 0.1
+                    self.time_stamp = time.time() + 4
+                    twist.linear.x = 0.05
                 elif self.words == '后退' or self.words == 'go backward':
                     self.play('back')
-                    self.time_stamp = rospy.get_time() + 5
-                    twist.linear.x = -0.1
+                    self.time_stamp = time.time() + 4
+                    twist.linear.x = -0.05
                 elif self.words == '左转' or self.words == 'turn left':
                     self.play('turn_left')
-                    self.time_stamp = rospy.get_time() + 5
-                    twist.angular.z = 0.2
+                    self.time_stamp = time.time() + 4
+                    twist.angular.z = 0.3
                 elif self.words == '右转' or self.words == 'turn right':
                     self.play('turn_right')
-                    self.time_stamp = rospy.get_time() + 5
-                    twist.angular.z = -0.2
-                elif self.words == '漂移' or self.words == 'drift':
-                    self.play('drift')
+                    self.time_stamp = time.time() + 4
+                    twist.angular.z = -0.3
+                elif self.words == '左平移' or self.words == 'move left':
+                    self.play('move_left')
+                    self.time_stamp = time.time() + 4
                     twist.linear.y = 0.05
-                    twist.angular.z = -0.2
-                    self.time_stamp = rospy.get_time() + 2*math.pi/0.5                   
+                elif self.words == '右平移' or self.words == 'move right':
+                    self.play('move_right')
+                    self.time_stamp = time.time() + 4
+                    twist.linear.y = -0.05
+                elif self.words == '跳个舞吧' or self.words == 'dance':
+                    self.play('dance')
+                    self.agc_controller.run_action('twist')
+
                 elif self.words == '过来' or self.words == 'come here':
                     self.play('come')
+                    self.get_logger().info('\033[1;32m%s\033[0m' % self.angle)
+
                     if 270 > self.angle > 90:
                         twist.angular.z = -0.3
-                        self.time_stamp = rospy.get_time() + abs(1.3*math.radians(self.angle)/0.5)
+                        self.time_stamp = time.time() + abs(math.radians(self.angle - 90) / twist.angular.z)
                     else:
                         twist.angular.z = 0.3
                         if self.angle <= 90:
                             self.angle = 90 - self.angle
                         else:
                             self.angle = 450 - self.angle
-                        self.time_stamp = rospy.get_time() + abs(1.3*math.radians(self.angle)/0.5)
-                    print(self.angle)
-                    self.lidar_follow = True 
+                        self.time_stamp = time.time() + abs(math.radians(self.angle) / twist.angular.z)
+                    self.lidar_follow = True
                 elif self.words == '休眠(Sleep)':
-                    rospy.sleep(0.01)
+                    time.sleep(0.01)
                 self.words = None
                 self.haved_stop = False
-                self.mecanum_pub.publish(twist)
+                if self.move:
+                    self.cmd_vel_pub.publish(twist)
+
             else:
-                rospy.sleep(0.01)
-            self.current_time_stamp = rospy.get_time()
-            if self.time_stamp < self.current_time_stamp and not self.haved_stop:
-                self.mecanum_pub.publish(Twist())
-                self.robot.traveling(gait=-2) 
+                time.sleep(0.01)
+            self.current_time_stamp = time.time()
+            if self.time_stamp < self.current_time_stamp and not self.haved_stop and self.move:
+                self.controller.traveling(gait=-2, time=1, steps=0)
                 self.haved_stop = True
                 if self.lidar_follow:
                     self.lidar_follow = False
                     self.start_follow = True
 
+
+
+
+def main():
+    node = VoiceControMovelNode('voice_control_move')
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
 if __name__ == "__main__":
-    VoiceControlNode('voice_control')
+    main()

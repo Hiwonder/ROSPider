@@ -1,3 +1,0 @@
-<launch>
-  <test test-name="basic_test" pkg="compressed_image_transport" type="basic_test" />
-</launch>

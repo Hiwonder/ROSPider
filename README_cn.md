@@ -3,52 +3,68 @@
 [English](README.md) | 中文
 
 <p align="center">
-  ROSpider 是我们面向 Jetson 平台打造的 ROS1 六足蜘蛛机器人开发平台，集运动控制、AI 视觉、SLAM 建图、自主导航与多机协同于一体。
+  ROSpider 是我们面向 Jetson 平台打造的 ROS2 六足机器人平台，集智能运动、AI 视觉、SLAM 建图、自主导航、语音交互与多场景实验于一体。
+</p>
+
+<p align="center">
+  <img src="./sources/01.png" alt="ROSpider 1" width="600"/>
 </p>
 
 ## 产品概述
 
 ### 关于 ROSpider
 
-ROSpider 是我们基于 ROS1 打造的开源六足蜘蛛机器人平台，面向开发者、教育用户、创客和机器人学习者而设计。它不只是一个“能走路”的六足底盘，也不只是一个单独的视觉 demo，而是一套把底层控制、环境感知、建图导航、语音交互和应用层 ROS 工作流整合在一起的完整开发栈。
+ROSpider 是我们基于 ROS2 打造的开源六足机器人平台，面向开发者、教育用户、创客和机器人学习者而设计。它不只是一个基础行走演示，而是把运动控制、环境感知、建图导航、语音交互和应用层 ROS 工作流整合在同一个工作区中，让你能用更少的准备工作，从硬件 bringup 进入高级自主行为开发。
 
-我们做 ROSpider，解决的是足式机器人开发里一个非常常见的问题: 很多项目能展示运动控制，很多项目也能展示视觉识别，但真正把底层舵机控制、全身运动学、传感器接入、SLAM、导航和交互应用串成一套完整系统的项目并不多。ROSpider 的目标，就是把这一整条链路打通，让你能更快从硬件 bringup 进入到高级应用开发。
+我们做 ROSpider，是为了解决足式机器人开发中一个常见问题：很多项目能展示运动控制，很多项目也能展示感知能力，但真正把底层舵机控制到真实硬件上的 ROS 应用串成完整链路的项目并不多。ROSpider 通过一套可直接扩展的软件栈，把这条链路补齐。
 
-无论你是做机器人教学、做 Jetson 平台原型验证，还是想系统学习足式机器人在 ROS 中的完整开发流程，ROSpider 都能提供一套清晰、完整、可扩展的基础平台。
+<p align="center">
+  <img src="./sources/02.gif" alt="ROSpider 2" width="600"/>
+</p>
+
+无论你是做机器人教学、原型验证，还是想探索 Jetson 硬件上的运动与感知融合，ROSpider 都能提供一套完整且容易上手的基础平台。
 
 ### 核心：面向真实部署的六足机器人平台
 
-ROSpider 采用六足蜘蛛机器人结构，配备 **18 路腿部总线舵机**，并带有一个 **相机云台关节**，既能实现灵活稳定的全身运动，也能支持视觉跟踪和交互类应用。
+ROSpider 采用六足机器人结构，配备 **18 路腿部总线舵机**，并带有一个 **相机云台关节**，既能实现丰富的机体运动，也能支持主动视觉跟踪。
 
-**完整的六足运动控制能力**：`rospider_controller` 集成了逆运动学、关节控制、内置姿态、动作组执行、步态生成以及基于速度的运动控制接口，支持机体平移与旋转姿态变换、头部偏航控制，以及原始里程计发布，方便继续对接更高层 ROS 功能。
+**完整的全身运动控制能力**：`driver` 相关功能包提供舵机控制、运动学、内置姿态、动作组执行、步态控制、里程计发布以及六足底盘控制接口。
 
-**面向真机的一体化硬件接入**：基础 bringup 会同时启动机器人模型、手柄控制、RGB 灯、IMU、相机、激光雷达、OLED 显示和主控制节点，开箱就是一套完整的机器人运行框架，而不是拆散的功能样例。
+**面向真机的一体化硬件接入**：`bringup` 和 `peripherals` 功能包会统一启动机器人控制、手柄与键盘控制、RGB 灯、IMU、相机、激光雷达和其他板载设备，提供接近真实部署的起点，而不是分散的算法演示。
 
-**针对 Jetson 平台优化**：多个功能包直接使用 `Jetson.GPIO`，环境脚本默认围绕 **ROS Melodic** 和 Jetson 工作区配置。对需要在 Jetson 平台上进行教育、开发和应用落地的用户来说，ROSpider 上手路径更直接。
+**面向 Jetson 的 ROS2 设计**：工作区围绕 Jetson 设备上的 **ROS2 Humble** 组织，launch 文件与环境脚本也按照官方 ROSpider 系统镜像准备。
 
-### 软件栈：从运动控制到 AI 感知与自主导航
+<p align="center">
+  <img src="./sources/03.gif" alt="ROSpider 3" width="600"/>
+</p>
 
-ROSpider 的价值不只是“能控制六足运动”，更在于它提供了完整的软件生态。
+### 软件栈：运动、视觉、SLAM 与交互
 
-**AI 视觉应用**：`rospider_app` 与 `rospider_tutorial` 包含目标跟踪、颜色跟踪、AprilTag 跟踪、巡线、手势识别、AR 玩法、人脸相关 demo、姿态相关 demo、KCF 跟踪以及基于 MediaPipe 的交互示例。
+ROSpider 不是单一用途仓库，而是一套完整的 ROS2 应用平台。
 
-**自平衡与反应式行为**：应用层提供了基于 IMU + PID 的自平衡能力，也提供了巡线、目标跟踪这类“感知驱动运动”的闭环行为，让机器人不仅能动，还能根据环境实时做出反应。
+**AI 视觉应用**：`app`、`example`、`large_models` 和 `large_models_examples` 包含目标跟踪、巡线、手势交互、智能踢球、颜色与 AprilTag 示例、MediaPipe 示例、YOLO 示例以及大模型应用示例。
 
-**SLAM 与导航能力**：`rospider_slam` 支持 **GMapping、Karto、Hector、Cartographer** 等多种建图方案，`rospider_navigation` 则进一步整合了地图加载、AMCL 定位、move_base 和多点导航能力。
+**自平衡与反应式行为**：应用层包含基于 IMU 的自平衡、雷达行为、巡线、目标跟踪等从感知到运动的闭环示例，让机器人能根据环境实时做出反应。
 
-**离线语音交互**：`xf_mic_asr_offline` 提供离线语音识别与语音控制能力，可用于控制机器人运动、颜色相关任务和导航类功能。
+**SLAM 与导航能力**：`slam` 提供 SLAM Toolbox、RTAB-Map 等 ROS2 建图流程相关 launch 文件。`navigation` 提供定位、Nav2 导航、地图加载、RViz 启动文件以及 RTAB-Map 导航支持。
 
-**多机协同扩展**：`rospider_multi` 提供编队和协同导航启动文件，让 ROSpider 不只是单机平台，也能支持多机演示、教学实验和协同研究。
+**离线语音交互**：`xf_mic_asr_offline` 和 `xf_mic_asr_offline_msgs` 提供离线语音交互与语音控制能力。
+
+**竞赛与多场景示例**：`competition` 和 `example` 提供过桥、窄缝通过、抓取放置、智能搬运、导航搬运等面向课堂、比赛或场景化任务的示例。
+
+<p align="center">
+  <img src="./sources/04.png" alt="ROSpider 4" width="600"/>
+</p>
 
 ### 面向学习、扩展与创意开发
 
-ROSpider 不只是产品平台，同时也是一套非常适合教学和二次开发的学习平台。
+ROSpider 不只是产品平台，同时也是一套适合教学和二次开发的学习平台。
 
-**教程体系完整**：`rospider_tutorial` 提供大量脚本和 launch 文件，覆盖舵机控制、板载 IO、基础步态、逆运动学、OpenCV 项目、AR demo、深度学习 demo 和创意交互玩法。
+**示例体系完整**：`example` 提供大量 ROS2 脚本和 launch 文件，覆盖机体控制、步态控制、OpenCV 项目、MediaPipe 示例、导航搬运、目标分类、颜色分拣和创意交互等内容。
 
-**ROS 包结构清晰**：仓库将 bringup、controller、SDK、peripherals、interfaces、navigation、slam、applications、tutorials 以及 third-party 依赖做了明确拆分，方便理解整体架构，也方便后续扩展。
+**ROS2 包结构清晰**：仓库将 bringup、driver、peripherals、interfaces、navigation、slam、applications、competition examples、large-model examples、simulations 和 voice interaction 等功能拆分清楚，方便理解、定制和扩展。
 
-**工程化配置更省心**：我们在环境脚本中预设了机器人命名、主机命名、雷达类型、相机类型和 ROS 网络参数，帮助你从一套更接近真实部署的工作流开始开发，而不是从零拼装环境。
+**工程化工作流更省心**：仓库中的 launch 文件和官方镜像环境围绕可运行的 ROS2 机器人工作流设计，帮助你从一套可用的平台开始，而不是从零搭建基础设施。
 
 ## 官方资源
 
@@ -56,26 +72,26 @@ ROSpider 不只是产品平台，同时也是一套非常适合教学和二次�
 
 - **官方网站**: [https://www.hiwonder.com/](https://www.hiwonder.com/)
 - **产品页面**: [https://www.hiwonder.com/products/rospider](https://www.hiwonder.com/products/rospider)
-- **官方文档**: [https://docs.hiwonder.com/en/latest/jetson/](https://docs.hiwonder.com/en/latest/jetson/)
+- **官方文档**: [https://docs.hiwonder.com/projects/ROSpider/en/jetson-orin-nano-version/](https://docs.hiwonder.com/projects/ROSpider/en/jetson-orin-nano-version/)
 - **技术支持**: support@hiwonder.com
 
 ## 快速开始
 
 ### 推荐环境
 
-- Ubuntu 18.04
-- ROS Melodic
+- Ubuntu 22.04
+- ROS2 Humble
 - Python 3
 - Jetson 系主控
-- 搭载激光雷达、RGB 相机、IMU 和总线舵机的 ROSpider 硬件平台
+- 搭载激光雷达、RGB/深度相机、IMU 和总线舵机的 ROSpider 硬件平台
 
 ### 安装
 
-1. 将仓库克隆为 catkin 工作区：
+1. 将仓库克隆为 ROS2 工作区：
 
 ```bash
-git clone https://github.com/hiwonder/ROSPider.git ~/rospider
-cd ~/rospider
+git clone https://github.com/hiwonder/ROSPider.git ~/ros2_ws
+cd ~/ros2_ws
 ```
 
 2. 安装 ROS 依赖：
@@ -87,56 +103,57 @@ rosdep install --from-paths src --ignore-src -r -y
 3. 编译工作区：
 
 ```bash
-catkin_make
-source devel/setup.bash
+colcon build --event-handlers console_direct+ --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install
+source install/local_setup.bash
 ```
 
-4. 如果你使用官方系统镜像，也可以直接加载预设环境：
+4. 如果你使用官方系统镜像，可以加载 ROSpider 预设环境：
 
 ```bash
-source ~/.hiwonderrc
+source ~/.robotrc
 ```
 
-该脚本会自动设置 `ROBOT_NAME`、`MASTER_NAME`、`LIDAR_TYPE`、`CAMERA_TYPE`、`ROS_HOSTNAME`、`ROS_MASTER_URI`，并加载 ROS Melodic 与 ROSpider 工作区环境。
+该脚本会加载 ROS2 Humble、ROSpider 工作区以及官方镜像使用的设备环境。
 
 ### 常用启动命令
 
 启动基础机器人功能：
 
 ```bash
-roslaunch rospider_bringup base.launch
+ros2 launch bringup bringup.launch.py
 ```
 
 启动完整应用栈：
 
 ```bash
-roslaunch rospider_bringup app_bringup.launch
+ros2 launch app start_app.launch.py
 ```
 
 启动 SLAM：
 
 ```bash
-roslaunch rospider_slam rospider_slam.launch slam_methods:=gmapping
+ros2 launch slam slam.launch.py slam_method:=slam_toolbox
 ```
 
 启动基于地图的导航：
 
 ```bash
-roslaunch rospider_navigation rospider_navigation.launch map:=/path/to/map.yaml
+ros2 launch navigation navigation.launch.py map:=map_01
 ```
 
-启动一个典型应用：
+启动典型应用：
 
 ```bash
-roslaunch rospider_app object_tracking.launch
-roslaunch rospider_app hand_gesture.launch
-roslaunch rospider_app self_balancing.launch
+ros2 launch app object_tracking_node.launch.py
+ros2 launch app hand_gesture.launch.py
+ros2 launch app self_balancing_node.launch.py
 ```
 
-启动多机编队控制：
+启动外设可视化：
 
 ```bash
-roslaunch rospider_multi multi_formation/multi_formation.launch
+ros2 launch peripherals lidar_view.launch.py
+ros2 launch peripherals depth_camera.launch.py
 ```
 
 ## 仓库结构
@@ -144,22 +161,20 @@ roslaunch rospider_multi multi_formation/multi_formation.launch
 ```text
 ROSpider/
 └── src/
-    ├── rospider_bringup/        # 基础 bringup、rosbridge、启动脚本
-    ├── rospider_controller/     # 六足控制、逆运动学、步态、里程计、动作组
-    ├── rospider_description/    # URDF/Xacro 模型和可视化资源
-    ├── rospider_peripherals/    # 相机、雷达、IMU、OLED、手柄、RGB 等外设支持
-    ├── rospider_app/            # 目标跟踪、巡线、自平衡、手势交互等应用
-    ├── rospider_navigation/     # AMCL、move_base、地图加载、多点导航
-    ├── rospider_slam/           # GMapping、Karto、Hector、Cartographer、RTAB-Map 相关启动
-    ├── rospider_multi/          # 多机编队和协同导航
-    ├── rospider_sdk/            # 硬件访问封装和 SDK 工具
-    ├── rospider_interfaces/     # 应用层使用的 ROS 接口定义
-    ├── rospider_tutorial/       # 示例脚本和教程 launch
-    ├── lab_config/              # LAB 颜色阈值配置工具
-    ├── dataset_capture/         # 数据采集与图像采集工具
-    ├── vision_utils/            # 通用视觉工具函数
-    ├── xf_mic_asr_offline/      # 离线语音识别和语音控制
-    └── third_party/             # 仓库附带的第三方 ROS 依赖
+    ├── app/                    # 目标跟踪、巡线、自平衡、手势交互等应用
+    ├── bringup/                # 基础机器人 bringup 和启动检查
+    ├── competition/            # 竞赛和场景化机器人任务
+    ├── driver/                 # 控制器、运动学、舵机、SDK 和硬件驱动
+    ├── example/                # 机体控制、OpenCV、MediaPipe、搬运和教程示例
+    ├── interfaces/             # 应用层使用的 ROS2 服务和接口
+    ├── large_models/           # 大模型运行资源和相关代码
+    ├── large_models_examples/  # 大模型应用示例
+    ├── navigation/             # Nav2、定位、地图加载和 RTAB-Map 导航
+    ├── peripherals/            # 相机、雷达、IMU、手柄、键盘和传感器支持
+    ├── simulations/            # 仿真相关文件
+    ├── slam/                   # SLAM Toolbox、RTAB-Map、RViz 和建图 launch
+    ├── xf_mic_asr_offline/     # 离线语音识别和语音控制
+    └── xf_mic_asr_offline_msgs/# 离线语音识别消息
 ```
 
 ## 社区与支持

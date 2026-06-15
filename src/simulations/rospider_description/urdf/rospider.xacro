@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="rospider" xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:include filename="$(find rospider_description)/urdf/materials.xacro"/>
+    <xacro:include filename="$(find rospider_description)/urdf/inertial_matrix.xacro" />
+
+    <xacro:include filename="$(find rospider_description)/urdf/base.urdf.xacro"/>
+    <xacro:include filename="$(find rospider_description)/urdf/lidar.urdf.xacro"/>
+    <xacro:include filename="$(find rospider_description)/urdf/imu.urdf.xacro"/>
+    <xacro:include filename="$(find rospider_description)/urdf/depth_camera.urdf.xacro"/>
+    <xacro:include filename="$(find rospider_description)/urdf/arm.urdf.xacro"/>
+    <xacro:include filename="$(find rospider_description)/urdf/gripper.urdf.xacro"/>    
+
+
+
+</robot>

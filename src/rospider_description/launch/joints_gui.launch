@@ -1,5 +1,0 @@
-<launch>
-    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui">
-        <remap from="joint_states" to="/rospider/joint_states" />
-    </node>
-</launch>

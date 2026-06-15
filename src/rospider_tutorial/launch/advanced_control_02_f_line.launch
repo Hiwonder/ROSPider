@@ -1,6 +1,0 @@
-<launch>
-	<include file="$(find rospider_controller)/launch/rospider_controller.launch"></include>
-
-	<node name="f_line_02" pkg="rospider_tutorial" type="advanced_control_02_f_line.py" output="screen" required="true">
-	</node>
-</launch>

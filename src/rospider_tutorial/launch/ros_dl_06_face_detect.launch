@@ -1,6 +1,0 @@
-<launch>
-	<include file="$(find rospider_peripherals)/launch/camera.launch"></include>
-
-	<node name="face_detect_node" pkg="rospider_tutorial" type="ros_dl_06_face_detect.py" output="screen">
-	</node>
-</launch>

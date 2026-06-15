@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: rospider_description
+    relative_path: urdf/rospider.xacro
+  srdf:
+    relative_path: config/rospider.srdf
+  package_settings:
+    author_name: Alam
+    author_email: hiwonder@gmail.com
+    generated_timestamp: 1746600773
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

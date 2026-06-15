@@ -1,0 +1,5 @@
+string[] tools
+
+---
+bool success        # 操作是否成功
+string message      # 响应消息

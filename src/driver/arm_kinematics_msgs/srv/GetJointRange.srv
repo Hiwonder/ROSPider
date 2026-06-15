@@ -1,0 +1,4 @@
+
+---
+bool success
+arm_kinematics_msgs/JointsRange data

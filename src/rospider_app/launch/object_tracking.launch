@@ -1,5 +1,0 @@
-<launch>
-	<node name="object_tracking" pkg="rospider_app" type="object_tracking_main.py" output="screen" respawn="true">
-	</node>
-</launch>
-

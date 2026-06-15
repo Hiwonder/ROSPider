@@ -1,0 +1,31 @@
+/**:
+  ros__parameters:
+
+    filter1:
+        name: box_filter
+        type: laser_filters/LaserScanRangeFilter
+        params:
+          use_message_range_limits: false   # if not specified defaults to false
+          lower_threshold: 0.2             # if not specified defaults to 0.0
+          upper_threshold: 15.0             # if not specified defaults to 100000.0
+          lower_replacement_value: -.inf    # if not specified defaults to NaN
+          upper_replacement_value: .inf     # if not specified defaults
+
+    # filter2:
+    #   # name: polygon_filter
+    #   # type: laser_filters/LaserScanPolygonFilter
+    #   # params:z
+    #   #   polygon_frame: lidar_link
+    #   #   polygon: '[[-0.2, 0.12], [0.2, 0.12], [-0.2, -0.12], [0.2, -0.12]]'
+    #   #   invert: false
+    #   #   footprint_topic: base_footprint_exclude
+
+    #     name: box_filter
+    #     type: laser_filters/LaserScanBoxFilter
+    #     params:
+    #       box_frame: lidar_link
+    #       box_min_x: -0.2
+    #       box_max_x: 0.2
+    #       box_min_y: -0.12
+    #       box_max_y: 0.12
+    #       invert: false  

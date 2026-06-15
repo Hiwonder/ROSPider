@@ -1,5 +1,0 @@
-uint16 tag_id
----
-bool success
-string message
-

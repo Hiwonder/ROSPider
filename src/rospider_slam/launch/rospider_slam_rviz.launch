@@ -1,3 +1,0 @@
-<launch>
-	<node name="mapping_rviz" pkg="rviz" type="rviz" args="-d $(find rospider_slam)/rviz/rospider_mapping.rviz" />
-</launch>

@@ -1,4 +1,0 @@
-<launch>
-	<node name="advanced_ik_01" pkg="rospider_tutorial" type="advanced_control_ik_01.py" output="screen">
-	</node>
-</launch>

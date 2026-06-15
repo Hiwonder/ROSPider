@@ -1,0 +1,15 @@
+string platform 
+string model
+string api_key
+string base_url
+string app_id
+string conversation_id
+string token
+string app_key
+string secret_key
+string prompt
+string query
+sensor_msgs/Image image
+---
+bool success
+string message

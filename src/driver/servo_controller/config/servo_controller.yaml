@@ -1,0 +1,190 @@
+/**:
+  ros__parameters:
+    coxa_LF_joint:
+      id: 5
+      init: 500
+      min: 1000
+      max: 0
+
+    femur_LF_joint:
+      id: 3
+      init: 500
+      min: 1000
+      max: 0
+
+    tibla_LF_joint:
+      id: 1
+      init: 500
+      min: 1000
+      max: 0
+
+    coxa_LM_joint:
+      id: 11
+      init: 500
+      min: 1000
+      max: 0
+
+    femur_LM_joint:
+      id: 9
+      init: 500
+      min: 1000
+      max: 0
+      
+    tibla_LM_joint:
+      id: 7
+      init: 500
+      min: 1000
+      max: 0
+
+    coxa_LR_joint:
+      id: 17
+      init: 500
+      min: 1000
+      max: 0
+
+    femur_LR_joint:
+      id: 15
+      init: 500
+      min: 1000
+      max: 0
+      
+    tibla_LR_joint:
+      id: 13
+      init: 500
+      min: 1000
+      max: 0
+
+    coxa_RF_joint:
+      id: 6
+      init: 500
+      min: 1000
+      max: 0
+
+    femur_RF_joint:
+      id: 4
+      init: 500
+      min: 0
+      max: 1000
+
+    tibla_RF_joint:
+      id: 2
+      init: 500
+      min: 0
+      max: 1000
+
+    coxa_RM_joint:
+      id: 12
+      init: 500
+      min: 0
+      max: 1000
+
+    femur_RM_joint:
+      id: 10
+      init: 500
+      min: 0
+      max: 1000
+      
+    tibla_RM_joint:
+      id: 8
+      init: 500
+      min: 0
+      max: 1000
+
+    coxa_RR_joint:
+      id: 18
+      init: 500
+      min: 1000
+      max: 0
+
+    femur_RR_joint:
+      id: 16
+      init: 500
+      min: 0
+      max: 1000
+      
+    tibla_RR_joint:
+      id: 14
+      init: 500
+      min: 0
+      max: 1000
+
+    joint1:
+      id: 19
+      init: 500
+      min: 0
+      max: 1000
+
+    joint2:
+      id: 20
+      init: 500
+      min: 0
+      max: 1000
+
+    joint3:
+      id: 21
+      init: 500
+      min: 0
+      max: 1000
+
+    joint4:
+      id: 22
+      init: 500
+      min: 0
+      max: 1000
+
+    joint5:
+      id: 23
+      init: 500
+      min: 0
+      max: 1000
+
+    r_joint:
+      id: 24
+      init: 500
+      min: 0
+      max: 1000
+
+    leg_controller:
+      joint_trajectory_action_node:
+        min_velocity: 0.1
+        constraints:
+          goal_time: 0.05
+      joint_controllers:
+        - "coxa_LF_joint"
+        - "femur_LF_joint"
+        - "tibla_LF_joint"
+        - "coxa_LM_joint"
+        - "femur_LM_joint"
+        - "tibla_LM_joint"
+        - "coxa_LR_joint"
+        - "femur_LR_joint"
+        - "tibla_LR_joint"
+        - "coxa_RF_joint"
+        - "femur_RF_joint"
+        - "tibla_RF_joint"
+        - "coxa_RM_joint"
+        - "femur_RM_joint"
+        - "tibla_RM_joint"
+        - "coxa_RR_joint"
+        - "femur_RR_joint"
+        - "tibla_RR_joint"
+
+    arm_controller:
+      joint_trajectory_action_node:
+        min_velocity: 0.1
+        constraints:
+          goal_time: 0.05
+      joint_controllers:
+        - "joint1"
+        - "joint2"
+        - "joint3"
+        - "joint4"
+        - "joint4"
+
+    gripper_controller:
+      joint_trajectory_action_node:
+        min_velocity: 0.1
+        constraints:
+          goal_time: 0.05
+      joint_controllers:
+        - "r_joint"

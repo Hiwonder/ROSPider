@@ -1,8 +1,0 @@
-<launch>
-	<arg name="direction" default="90" />
-	<include file="$(find rospider_controller)/launch/rospider_controller.launch"></include>
-
-	<node name="simple_ctrl_06" pkg="rospider_tutorial" type="simple_control_06_diagonally.py" args="$(arg direction)" output="screen" required="true">
-	</node>
-
-</launch>

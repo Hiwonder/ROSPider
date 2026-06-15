@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="arm" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="M_PI" value="3.1415926535897931"/>
+
+  <link name="link1">
+    <inertial>
+      <origin
+        xyz="-0.000115601001310375 -0.000761364095580724 0.0238385325504478"
+        rpy="0 0 0" />
+      <mass
+        value="0.018996290781889" />
+      <inertia
+        ixx="3.52401713486466E-06"
+        ixy="-9.57766622211234E-11"
+        ixz="1.77834467690429E-11"
+        iyy="2.92480468671507E-06"
+        iyz="2.27263787135776E-08"
+        izz="2.43231516201483E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link1.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint1" type="revolute"> 
+  <origin 
+    xyz="0.065006 0 0.082583"
+    rpy="0 0 0" /> 
+    <parent link="base_link"/>  
+    <child link="link1"/>
+    <axis 
+      xyz="0.00040398 0 1" />
+    <limit lower="-${M_PI}" upper="${M_PI}" effort="1000" velocity="10"/> </joint>
+  <link name="link2">
+    <inertial>
+      <origin
+        xyz="4.1010157209101E-05 -0.000694057243827729 0.0514181827540204"
+        rpy="0 0 0" />
+      <mass
+        value="0.0329250074531705" />
+      <inertia
+        ixx="3.91620966174037E-05"
+        ixy="-5.45461883923424E-11"
+        ixz="-1.84994427464167E-07"
+        iyy="3.08453562297899E-05"
+        iyz="3.5881427402197E-09"
+        izz="1.15081900975983E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link2.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint2" type="revolute">
+    <origin
+      xyz="-2.7885E-05 0.00045188 0.043027"
+      rpy="0 0 0" />
+    <parent link="link1" />
+    <child link="link2" />
+    <axis xyz="0 -1 0" />
+    <limit
+      lower="-2.09"
+      upper="2.09"
+      effort="1000"
+      velocity="10" />
+  </joint>
+
+  <link name="link3">
+    <inertial>
+      <origin
+        xyz="4.05419618318067E-05 -0.000586002759037127 -0.0510182741398452"
+        rpy="0 0 0" />
+      <mass
+        value="0.0329250074463074" />
+      <inertia
+        ixx="3.91621699579612E-05"
+        ixy="-5.40097530558062E-11"
+        ixz="-1.73786652512013E-07"
+        iyy="3.08451969920239E-05"
+        iyz="3.63874236522223E-09"
+        izz="1.15078234912494E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="3.1416 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link3.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="3.1416 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint3" type="revolute">
+    <origin
+      xyz="0 -0.00015386 0.08"
+      rpy="0 0 1.2291E-05" />
+    <parent link="link2" />
+    <child link="link3" />
+    <axis xyz="0 -1 0" />
+    <limit
+      lower="-2.09"
+      upper="2.09"
+      effort="1000"
+      velocity="10" />
+  </joint>
+
+  <link name="link4">
+    <inertial>
+      <origin
+        xyz="0.0041154 0.00090347 0.029224"
+        rpy="0 0 0" />
+      <mass
+        value="0.00959141779390409" />
+      <inertia
+        ixx="7.94977139591732E-06"
+        ixy="-8.29446018776969E-10"
+        ixz="5.6880898756802E-08"
+        iyy="4.29063067361656E-06"
+        iyz="-1.84622131688891E-10"
+        izz="5.33833388813501E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link4.STL" />
+      </geometry>
+      <material name="gray"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint4" type="revolute">
+    <origin
+      xyz="0.00035733 0.0010042 0.080556"
+      rpy="0 -0.014429 0" />
+    <parent link="link3" />
+    <child link="link4" />
+    <axis xyz="0 -1 0" />
+    <limit
+      lower="-2.09"
+      upper="2.09"
+      effort="1000"
+      velocity="10" />
+  </joint>
+
+  <link name="link5">
+    <inertial>
+      <origin
+        xyz="-2.24666295789572E-05 3.54457229886918E-09 0.00151538744024715"
+        rpy="0 0 0" />
+      <mass
+        value="0.00101775298619909" />
+      <inertia
+        ixx="2.35834256739382E-08"
+        ixy="-1.92177809145012E-12"
+        ixz="-3.88572739181837E-12"
+        iyy="2.35740360938003E-08"
+        iyz="-1.1228386368903E-13"
+        izz="4.40224050991292E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link5.STL" />
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint5" type="revolute">
+    <origin
+      xyz="-0.0010511 0.0027762 0.049547"
+      rpy="0 0 0" />
+    <parent link="link4" />
+    <child link="link5" />
+    <axis xyz="0 0 1" />
+    <limit
+      lower="-2.09"
+      upper="2.09"
+      effort="1000"
+      velocity="10" />
+  </joint>
+
+  <link name="gripper_link">
+    <inertial>
+      <origin
+        xyz="0.0096550935887989 0.00430238900221939 0.0291009875554334"
+        rpy="0 0 0" />
+      <mass
+        value="0.0174988490314194" />
+      <inertia
+        ixx="4.12615692688456E-06"
+        ixy="-2.75102939068049E-08"
+        ixz="-7.61180742281118E-09"
+        iyy="1.57023365316943E-06"
+        iyz="2.2563082379695E-08"
+        izz="3.2612101868791E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/gripper_link.STL" />
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="gripper_joint" type="fixed">
+    <origin
+      xyz="-5.1766E-05 0 0.0034996"
+      rpy="0 0 0" />
+    <parent link="link5" />
+    <child link="gripper_link" />
+    <axis xyz="0 0 1" /> </joint>
+
+  <link name="end_effector_link" />
+  <joint name="end_effector_joint" type="fixed">
+    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+    <parent link="link5"/>
+    <child link="end_effector_link"/>
+    <axis xyz="0 0 1" /> </joint>
+
+</robot>

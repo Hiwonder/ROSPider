@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="depth_camera" xmlns:xacro="http://ros.org/wiki/xacro" >
+  <xacro:property name="M_PI"   value="3.1415926535897931"/>
+  <link
+    name="camera_connect_link">
+    <inertial>
+      <origin
+        xyz="-0.00050566 0.010186 0.0012735"
+        rpy="0 0 0" />
+      <mass
+        value="0.0029007" />
+      <inertia
+        ixx="4.5276E-07"
+        ixy="-3.2151E-10"
+        ixz="-8.627E-12"
+        iyy="5.4068E-07"
+        iyz="-1.2081E-08"
+        izz="9.9085E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/camera_connect_link.STL" />
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/camera_connect_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_connect_joint"
+    type="fixed">
+    <origin
+      xyz="-0.0417060266977644 0.0 0.04484841187764"
+      rpy="0 0 -1.57079632679489" />
+    <parent
+      link="link4" />
+    <child
+      link="camera_connect_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="depth_cam_link">
+    <inertial>
+      <origin
+        xyz="0.00232981322860787 0.000387137406184821 -2.84059740606052E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.015428" />
+      <inertia
+        ixx="1.3945E-06"
+        ixy="-1.5684E-08"
+        ixz="-2.3104E-07"
+        iyy="1.2848E-05"
+        iyz="1.3156E-09"
+        izz="1.361E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/depth_cam_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.753 0.753 0.753 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/arm/depth_cam_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="depth_cam_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0 0.014475"
+      rpy="${M_PI} -${M_PI/2} -${M_PI/2}"/>
+    <parent
+      link="camera_connect_link" />
+    <child
+      link="depth_cam_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link name="depth_cam_frame" />
+  <joint
+    name="depth_cam_joint_sim"
+    type="fixed">
+    <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+    <parent link="depth_cam_link" />
+    <child link="depth_cam_frame" />
+  </joint>
+</robot>

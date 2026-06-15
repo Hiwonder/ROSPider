@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="imu" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:property name="M_PI" value="3.1415926535897931"/>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="-0.015992956442504 -0.0186967363878791 0.0080000000000012"
+        rpy="0 0 0" />
+      <mass
+        value="0.00900725791925823" />
+      <inertia
+        ixx="6.0621502887195E-06"
+        ixy="8.2009503850481E-10"
+        ixz="1.00078505419116E-16"
+        iyy="2.95825733414683E-06"
+        iyz="4.74614002484179E-17"
+        izz="9.01656451992273E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.03 0.03 0.02"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/body/imu_link.STL" />
+      </geometry>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.03 0.03 0.02"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="file://$(find rospider_description)/meshes/body/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_joint"
+    type="fixed">
+    <origin
+      xyz="0.0048416 0.011168 -0.0057398"
+      rpy="0 0 -${M_PI/2}" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

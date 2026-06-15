@@ -1,0 +1,67 @@
+controller_server:
+  ros__parameters:
+    use_sim_time: False # 是否使用仿真时间
+    controller_frequency: 10.0 # 控制器运行频率 (Hz)
+    min_x_velocity_threshold: 0.001 # 机器人执行移动所需的最小 X 方向速度 (m/s)
+    min_y_velocity_threshold: 0.0 # 机器人执行移动所需的最小 Y 方向速度 (m/s)
+    min_theta_velocity_threshold: 0.001 # 机器人执行旋转所需的最小角速度 (rad/s)
+    failure_tolerance: 0.3 # 控制器容忍的失败时间 (s)
+
+    progress_checker_plugin: "progress_checker" # 进度检查器插件名称
+    goal_checker_plugins: ["general_goal_checker"] # 目标检查器插件列表
+    controller_plugins: ["FollowPath"] # 控制器插件列表
+
+    # Progress checker parameters
+    progress_checker:
+      plugin: "nav2_controller::SimpleProgressChecker" # 进度检查器插件类
+      required_movement_radius: 0.3 # 机器人必须移动的最小半径，以被视为在取得进展 (m)
+      movement_time_allowance: 20.0 # 机器人必须移动 required_movement_radius 的最大时间限制 (s)
+
+    general_goal_checker:
+      stateful: True # 插件是否是有状态的
+      plugin: "nav2_controller::SimpleGoalChecker" # 目标检查器插件类
+      xy_goal_tolerance: 0.05 # 到达目标的 XY 位置容差 (m)
+      yaw_goal_tolerance: 0.1 # 到达目标的角度容差 (rad)
+    # DWB parameters
+    FollowPath:
+      plugin: "dwb_core::DWBLocalPlanner" # DWB 局部规划器插件类
+      debug_trajectory_details: True # 是否发布轨迹详细调试信息
+      min_vel_x: 0.0 # X 方向最小速度 (m/s)
+      min_vel_y: 0.0 # Y 方向最小速度 (m/s)，非全向移动机器人通常为 0
+      max_vel_x: 0.05 # X 方向最大速度 (m/s)
+      max_vel_y: 0.0 # Y 方向最大速度 (m/s)
+      max_vel_theta: 0.25 # 最大旋转角速度 (rad/s)
+      min_speed_xy: 0.0 # 最小平移速度 (m/s)
+      max_speed_xy: 0.8 # 最大平移速度 (m/s)
+      min_speed_theta: 0.0 # 最小旋转速度 (rad/s)
+      acc_lim_x: 2.5 # X 方向最大加速度 (m/s^2)
+      acc_lim_y: 0.0 # Y 方向最大加速度 (m/s^2)
+      acc_lim_theta: 3.2 # 最大旋转加速度 (rad/s^2)
+      decel_lim_x: -2.5 # X 方向最大减速度 (m/s^2)
+      decel_lim_y: 0.0 # Y 方向最大减速度 (m/s^2)
+      decel_lim_theta: -3.2 # 最大旋转减速度 (rad/s^2)
+      vx_samples: 20 # X 速度采样数
+      vy_samples: 5 # Y 速度采样数
+      vtheta_samples: 20 # 角速度采样数
+      sim_time: 10.0 # 轨迹模拟时间 (s)
+      linear_granularity: 0.05 # 线性运动的粒度 (m)
+      angular_granularity: 0.025 # 角运动的粒度 (rad)
+      transform_tolerance: 0.2 # TF 变换容差 (s)
+      xy_goal_tolerance: 0.15 # 局部规划器的 XY 目标容差 (m)
+      trans_stopped_velocity: 0.25 # 机器人被认为停止的平移速度阈值 (m/s)
+      short_circuit_trajectory_evaluation: True # 如果找到最佳分数，是否停止评估
+      stateful: True # 插件是否是有状态的
+      critics: ["RotateToGoal", "Oscillation", "BaseObstacle", "GoalAlign", "PathAlign", "PathDist", "GoalDist"] # 评价标准列表
+      BaseObstacle.scale: 0.02 # 避障评价标准的权重
+      PathAlign.scale: 32.0 # 路径对齐评价标准的权重
+      PathAlign.forward_point_distance: 0.1 # 路径对齐的前瞻距离
+      GoalAlign.scale: 24.0 # 目标对齐评价标准的权重
+      GoalAlign.forward_point_distance: 0.1 # 目标对齐的前瞻距离
+      PathDist.scale: 32.0 # 路径距离评价标准的权重
+      GoalDist.scale: 24.0 # 目标距离评价标准的权重
+      RotateToGoal.scale: 32.0 # 旋转到目标评价标准的权重
+      RotateToGoal.slowing_factor: 5.0 # 接近目标时的减速因子
+      RotateToGoal.lookahead_time: -1.0 # 旋转到目标的前瞻时间 (-1 表示无效)
+controller_server_rclcpp_node:
+  ros__parameters:
+    use_sim_time: False

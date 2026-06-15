@@ -1,6 +1,0 @@
-<launch>
-	<include file="$(find rospider_peripherals)/launch/camera.launch"></include>
-
-	<node name="pose_control_node" pkg="rospider_tutorial" type="ros_ai_creative_mankind_08_pose_control.py" output="screen">
-	</node>
-</launch>

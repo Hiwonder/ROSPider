@@ -8,7 +8,6 @@
 #include "msp_cmn.h"
 #include "msp_errors.h"
 #include "speech_recognizer.h"
-#include "hidapi.h"
 #include "string.h"
 
 #define SAMPLE_RATE_16K (16000)
@@ -45,14 +44,17 @@ typedef struct _Effective_Result
 extern "C"
 {
 #endif
+
 	int build_grammar(UserData *udata);  //构建离线识别语法网络
 	int update_lexicon(UserData *udata); //更新离线识别语法词典
 
 	int build_grm_cb(int ecode, const char *info, void *udata);
 	int update_lex_cb(int ecode, const char *info, void *udata);
-	void on_result(const char *result, char is_last);
+	
+    void on_result(const char *result, char is_last);
 	void on_speech_begin();
 	void on_speech_end(int reason);
+
 	void demo_xf_mic(char *waveData, unsigned int waveLen, int audio_status);
 	void delete_asr_engine();
 	int create_asr_engine(UserData *udata);
@@ -60,6 +62,8 @@ extern "C"
 	Recognise_Result initial_asr_paramers(char *jet_path, char *grammer_path, char *bnf_path, char *lex_na);
     Recognise_Result deal_with(unsigned char *path, char *jet_path, char *grammer_path, char *bnf_path, char *lex_na);
 	int run_asr(UserData *udata, unsigned char *path);
+	
+
 #ifdef __cplusplus
 }
 #endif

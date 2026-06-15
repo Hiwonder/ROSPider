@@ -1,0 +1,9 @@
+/**:
+  ros__parameters:
+    pick_stop_pixel_coordinate:
+    - 337
+    - 316
+    place_stop_pixel_coordinate:
+    - 350
+    - 156
+    plane_height_threshold: 0.403
