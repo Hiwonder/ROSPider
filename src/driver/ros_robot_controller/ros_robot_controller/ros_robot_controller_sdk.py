@@ -520,10 +520,22 @@ class Board:
                 # self.enable_recv = False
 
                 else:
-                    print("0000000AAAAAAA")
-                    self.recv_stop.set()
-                    time.sleep(0.1)
-                    self.recv.start()
+                    # Serial read returned nothing (port hiccup / not ready yet, e.g.
+                    # early boot before the STM32 enumerates). The previous code called
+                    # self.recv.start() on this already-running Thread, which raises
+                    # "RuntimeError: threads can only be started once" and permanently
+                    # kills reception (robot boots silent: no buzzer/init/joy).
+                    # Correct recovery: reopen the port and keep this loop running.
+                    try:
+                        self.port.close()
+                    except Exception:
+                        pass
+                    time.sleep(0.5)
+                    try:
+                        self.port.open()
+                    except Exception:
+                        time.sleep(1.0)
+                    continue
 
             else:
                 time.sleep(0.01)
