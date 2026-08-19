@@ -180,7 +180,7 @@ class RosRobotController(Node):
                 if state is not None:
                     data.offset = state
             if i.get_voltage:
-                state = self.board.bus_servo_read_voltage(i.id)
+                state = self.board.bus_servo_read_vin(i.id)
                 if state is not None:
                     data.voltage = state
             if i.get_temperature:
@@ -200,7 +200,7 @@ class RosRobotController(Node):
                 if state is not None:
                     data.max_temperature_limit = state
             if i.get_torque_state:
-                state = self.board.bus_servo_read_torque(i.id)
+                state = self.board.bus_servo_read_torque_state(i.id)
                 if state is not None:
                     data.enable_torque = state
             states.append(data)
